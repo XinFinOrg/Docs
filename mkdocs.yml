@@ -6,7 +6,7 @@ site_description: >-
   Get started with XDC Chain Docs. Explore the documentation for XDC Chain
 # Repository
 repo_name: XDC Network GitHub
-repo_url: https://github.com/XinFinOrg
+repo_url: https://github.com/XinFinOrg/Docs
 edit_uri: edit/main/docs/
 
 theme:
