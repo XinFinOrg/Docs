@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../assets/xdc.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
     
@@ -814,7 +814,7 @@ nano<span class="w"> </span>.env
 sudo<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 At this point you should be able to see your masternode on the list of nodes here or as shown below:
-<p><img alt="node-sync" src="xdcchain/img/node_sync.png"></p>
+<p><img alt="node-sync" src="../../../img/node_sync.png"></p>
 <p>For Testnet run the following commands:
 </p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>testnet
 sudo<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up<span class="w"> </span>-d
@@ -842,7 +842,7 @@ You should be able to see your node listed on the [Apothem Network] page. Select
 <div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvzf<span class="w"> </span>xdcchain.tar
 </code></pre></div>
 <strong>The unpacking will take some time, and it will look like this:</strong>
-<p>img</p>
+<p><img alt="unpacking" src="../../../img/unpacking.png"></p>
 <p><strong>The following command will move the xdcchain/XDC to xdcchain/XDC_backup</strong>
 </p><div class="highlight"><pre><span></span><code>mv<span class="w">  </span>xdcchain/XDC<span class="w"> </span>xdcchain/XDC_backup
 mv<span class="w"> </span>XDC<span class="w"> </span>xdcchain
@@ -854,7 +854,7 @@ mv<span class="w"> </span>XDC<span class="w"> </span>xdcchain
 </p><div class="highlight"><pre><span></span><code>bash<span class="w"> </span>upgrade.sh
 </code></pre></div>
 <p>This command will bring your node up and it will start syncing to the network. Once up and running, your node will be synced to the network in just a few minutes. </p>
-<p>img</p>
+<p><img alt="node_upgrade" src="../../../img/node_upgrade.png"></p>
 <h1 id="apothem-snapshot">Apothem Snapshot<a class="headerlink" href="#apothem-snapshot" title="Link to this section">¶</a></h1>
 <p><strong>Bring down your node:</strong> 
 </p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>down
