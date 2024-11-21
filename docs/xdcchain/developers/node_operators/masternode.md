@@ -324,7 +324,7 @@ bash upgrade.sh
 
 This command will bring your node up and it will start syncing to the network. Once up and running, your node will be synced to the network in just a few minutes. 
 
-img
+![node_upgrade](../../img/node_upgrade.png)
 
 # Apothem Snapshot
 

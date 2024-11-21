@@ -62,7 +62,7 @@ sudo docker-compose -f docker-compose.yml up -d
 ```
 At this point you should be able to see your masternode on the list of nodes here or as shown below:
 
-![node-sync](xdcchain/img/node_sync.png)
+![node-sync](../../img/node_sync.png)
 
 For Testnet run the following commands:
 ```bash
@@ -104,7 +104,7 @@ tar -xvzf xdcchain.tar
 ```
 **The unpacking will take some time, and it will look like this:**
 
-img
+![unpacking](../../img/unpacking.png)
 
 **The following command will move the xdcchain/XDC to xdcchain/XDC_backup**
 ```bash
@@ -124,7 +124,7 @@ bash upgrade.sh
 
 This command will bring your node up and it will start syncing to the network. Once up and running, your node will be synced to the network in just a few minutes. 
 
-img
+![node_upgrade](../../img/node_upgrade.png)
 
 # Apothem Snapshot
 
