@@ -2,7 +2,6 @@
 title: Upgrading the Subnet
 ---
 # XDCZero
-default
 
 
 ## Design

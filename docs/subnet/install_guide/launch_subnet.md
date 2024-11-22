@@ -21,7 +21,9 @@ title: Upgrading the Subnet
     - https://faucet.blocksscan.io/
 
 ## Video Walkthrough
-<iframe width="720" height="400" src="https://www.youtube.com/embed/m-sPbMrB8ow" frameborder="0" allow="fullscreen"></iframe>
+
+<iframe width="768" height="432" src="https://www.youtube.com/embed/m-sPbMrB8ow" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## Generate Subnet Configs With UI
 
@@ -55,18 +57,19 @@ title: Upgrading the Subnet
       - deploy XDC-Zero (optional)
       - start Subnet Services (relayer, stats-server, frontend)
 
-  6. Once successfully deployed, you can check out [UI usage guide](../usage/ui/1_homepage.md)
+  6. Once successfully deployed, you can check out [UI usage guide](../using_subnet.md)
 
 ## Removing Subnet
 
-  ### Shutdown Subnet
+### Shutdown Subnet
   Under `generated` directory
   ```
   docker compose --env-file docker-compose.env --profile services down 
   docker compose --env-file docker-compose.env --profile machine1 down
   ```
 
-  ### Deleting Subnet 
+### Deleting Subnet 
+
   Remove `xdcchain*`, `bootnodes`, and `stats-service` directories
   Warning: this cannot be undone
   ``` 

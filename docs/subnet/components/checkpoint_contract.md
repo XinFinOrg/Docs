@@ -86,7 +86,7 @@ Lite Checkpoint is a lightweight block header checkpoint. It implements several 
 
 3. Users can get gap/epoch block information from methods such as `getHeader`.
 
-![Lite Checkpoint](../img/sc-litecheckpoint.jpg)
+![Lite Checkpoint](sc-litecheckpoint.jpg)
 
 
 #### Upgradeable module
@@ -161,7 +161,7 @@ The `ProxyGateway` smart contract plays a central role in this module. It inheri
 
 ![Alt text](../img/sc-upgradeable-upgrade.png)
 
-## spec
+## Spec
 
 ### APIs
 - Functions that have access restriction to authorized client

@@ -22,7 +22,7 @@ At high level, the relayer is able to:
 
 ## Relayer Mode
 
-There are 2 relayer modes 'Full' and 'Lite' where the default mode is 'Full'. In the full mode, all subnet block headers are checkpointed to the parent chain. In the lite mode, only the Epoch and Epoch gap subnet block headers are checkpointed in the parent chain (blocks 451,900,1351,1800, and so on). The Epoch and Epoch gap blocks stores important information regarding subnet validators selection. For further reading please check [Checkpoint Smart Contract](../checkpoint_smart_contract/design.md).
+There are 2 relayer modes 'Full' and 'Lite' where the default mode is 'Full'. In the full mode, all subnet block headers are checkpointed to the parent chain. In the lite mode, only the Epoch and Epoch gap subnet block headers are checkpointed in the parent chain (blocks 451,900,1351,1800, and so on). The Epoch and Epoch gap blocks stores important information regarding subnet validators selection. For further reading please check [Checkpoint Smart Contract](../components/checkpoint_contract.md).
 
 ### Choosing Full or Lite Relayer
 
