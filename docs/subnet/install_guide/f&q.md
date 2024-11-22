@@ -4,13 +4,13 @@ title: Upgrading the Subnet
 ---
 
 # Common Issues and Troubleshooting
-
+<!-- TODO:merge f&q -->
 ## Common Issues 
   - Subnet blocks are not being mined.
     1. First confirm that the Subnet nodes are able to communicate with each other through the network layer. Run the check peer script `generated/scripts/check-peers.sh` the number of peers should be one less than number of subnet nodes. For example, if there are 3 Subnet nodes in total, each node should have 2 peers.
 
-    2. If the nodes are peering but still not mining, it could be a low memory issue. In Docker configs you can try to increase memory or swap. Then, in case of fresh Subnet, [delete data and start the nodes again](./1_launch_subnet.md/#deleting-subnet). ![Docker Memory Config](./img/docker_mem.png)
-
+    2. If the nodes are peering but still not mining, it could be a low memory issue. In Docker configs you can try to increase memory or swap. Then, in case of fresh Subnet, [delete data and start the nodes again](./1_launch_subnet.md/#deleting-subnet). ![Docker Memory Config](../img/docker_mem.png)!
+<!-- TODO:md link   look .md )-->
     3. Docker engine in Mac OS can be inconsistent after long-running or high-load. It could help to restart the machine and [hard reset the subnet](./1_launch_subnet.md#deleting-subnet ) to get it running.
 
   - Subnet node does not boot with error log `Fatal: Error starting protocol stack: listen unix /work/xdcchain/XDC.ipc: bind: invalid argument`

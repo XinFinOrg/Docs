@@ -47,7 +47,7 @@ title: Upgrading the Subnet
 
 
   4. Config the Subnet options per your requirement.
-  ![UI](./img/ui.png)
+  ![UI](../img/ui.png)
 
   5. follow the generated instructions in `commands.txt`. In general, the steps are:
       - start Subnet Nodes

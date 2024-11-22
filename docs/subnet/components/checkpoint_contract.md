@@ -21,7 +21,7 @@ The primary function of the parent chain smart contract is to receive block data
 
    - Only three consecutive blocks of `roundNumber` can confirm the previous block, and `mainnetNum` will change from -1 to `block.number` once the block is committed.
 
-![Overview](sc-overview.jpg)
+![Overview](../img/sc-overview.jpg)
 
 ### Specifics
 
@@ -57,7 +57,7 @@ The Checkpoint contract implements a blockchain checkpoint system, which verifie
 
 3. Users can retrieve the information of each block using methods such as `getHeader`.
 
-![Checkpoint](sc-checkpoint.jpg)
+![Checkpoint](../img/sc-checkpoint.jpg)
 
 #### Lite Checkpoint
 
@@ -86,7 +86,7 @@ Lite Checkpoint is a lightweight block header checkpoint. It implements several 
 
 3. Users can get gap/epoch block information from methods such as `getHeader`.
 
-![Lite Checkpoint](sc-litecheckpoint.jpg)
+![Lite Checkpoint](../img/sc-litecheckpoint.jpg)
 
 
 #### Upgradeable module
@@ -122,7 +122,7 @@ The `ProxyGateway` smart contract plays a central role in this module. It inheri
   - Ensures the provided logic contract has a `MODE` function that returns "lite".
 
 
-![Alt text](sc-upgradeable-overview.png)
+![alt text](../img/sc-upgradeable-overview.png)
 
 **Logic Flow:**
 
@@ -159,7 +159,7 @@ The `ProxyGateway` smart contract plays a central role in this module. It inheri
 
    Through the `ProxyAdmin` functionality, the owner can further manage the proxy, such as changing the admin or even downgrading to a previous version of the logic contract if needed.
 
-![Alt text](sc-upgradeable-upgrade.png)
+![Alt text](../img/sc-upgradeable-upgrade.png)
 
 ## spec
 

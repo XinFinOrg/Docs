@@ -18,8 +18,7 @@ At high level, the relayer is able to:
 2. Process and submit subnet block data as smart contract transactions into mainnet
 3. When subnet masternodes list changes, report the new list and change height to the mainnet using grand-master account.
 
-![architectural-diagram](relayer-diagram.jpg)
-
+![architectural-diagram](../img/relayer-diagram.jpg)
 
 ## Relayer Mode
 

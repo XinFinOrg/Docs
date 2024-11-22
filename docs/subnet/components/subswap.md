@@ -48,10 +48,10 @@ Subswap is organized into three layers:
 Subswap leverages XDC Zero's powerful infrastructure to deliver an efficient cross-chain transfer service. By layering its architecture, Subswap can maintain security, scalability, and ease of use, meeting the needs of users looking for seamless asset transfers across multiple blockchain networks.
 
 ### Construction(if you want to make a cross chain transfer)
-![Alt text](image2.png)
+![Alt text](../img/subswap_image2.png)
 
 
-![Alt text](image1.png)
+![Alt text](../img/subswap_image1.png)
 
 ## Spec
 ### Subswap API Documentation
