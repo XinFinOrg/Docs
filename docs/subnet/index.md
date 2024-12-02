@@ -12,7 +12,7 @@ Are you ready to embark on a journey into the world of secure, scalable, and dec
 
 ## Motivation & Design Rationale
 
-As a leading Layer-1 (L1) public blockchain, XDC network has attrated many enterprise and institutional customers. Besides the high performance and high security that XDC already offers, these customers also demand privacy, meaning that their transactions and ledger should not be disclosed to the public. This requirement prohibits them from directly submitting transactions to XDC. Instead, they should only checkpoint snapshots of their ledger to XDC in order to extract XDC's security.
+As a leading Layer-1 (L1) public blockchain, XinFin's XDC network has attrated many enterprise and institutional customers. Besides the high performance and high security that XDC already offers, these customers also demand privacy, meaning that their transactions and ledger should not be disclosed to the public. This requirement prohibits them from directly submitting transactions to XDC. Instead, they should only checkpoint snapshots of their ledger to XDC in order to extract XDC's security.
 
 From a system perspective, "security via checkpointing" is achieved via Layer-2 (L2) techniques, such as rollups and subnets. The most popular rollup technique, namely optimistic rollup, is not suitable for our use case. This is because while transaction execution is offloaded to L2, all these L2 transactions are still submitted to L1 as a record. Another popular rollup called zero-knowledge (ZK) rollup solves this problem. But ZK computation is slow, and the type of use cases it can currently support is very limited (such as token transfers), which cannot fulfill the diverse business needs of XDC's enterprise and institutional customers.
 
