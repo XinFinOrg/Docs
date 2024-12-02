@@ -5,7 +5,7 @@ title: Upgrading the Subnet
 ## Updating Configs
 ### Upgrading Subnet Deployment
 #### Create a Subnet backup
-1. [Shutdown the subnet](./1_launch_subnet.md#shutdown-subnet )
+1. [Shutdown the subnet](install_guide/launch_subnet.md/#shutdown-subnet)
 
 2. Make a copy of `xdcchain` directory
 

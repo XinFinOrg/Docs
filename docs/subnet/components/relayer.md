@@ -18,12 +18,11 @@ At high level, the relayer is able to:
 2. Process and submit subnet block data as smart contract transactions into mainnet
 3. When subnet masternodes list changes, report the new list and change height to the mainnet using grand-master account.
 
-![architectural-diagram](relayer-diagram.jpg)
-
+![architectural-diagram](../img/relayer-diagram.jpg)
 
 ## Relayer Mode
 
-There are 2 relayer modes 'Full' and 'Lite' where the default mode is 'Full'. In the full mode, all subnet block headers are checkpointed to the parent chain. In the lite mode, only the Epoch and Epoch gap subnet block headers are checkpointed in the parent chain (blocks 451,900,1351,1800, and so on). The Epoch and Epoch gap blocks stores important information regarding subnet validators selection. For further reading please check [Checkpoint Smart Contract](../checkpoint_smart_contract/design.md).
+There are 2 relayer modes 'Full' and 'Lite' where the default mode is 'Full'. In the full mode, all subnet block headers are checkpointed to the parent chain. In the lite mode, only the Epoch and Epoch gap subnet block headers are checkpointed in the parent chain (blocks 451,900,1351,1800, and so on). The Epoch and Epoch gap blocks stores important information regarding subnet validators selection. For further reading please check [Checkpoint Smart Contract](../components/checkpoint_contract.md).
 
 ### Choosing Full or Lite Relayer
 

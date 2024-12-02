@@ -4,19 +4,17 @@ title: Upgrading the Subnet
 # Subswap
 
 ## Design
-#### Subswap Documentation
 
 **Topic**: **Design of Subswap Cross-Chain Transfer System on XDC Zero**
 
 ---
 
-##### **Overview**
 
 Subswap is cross-chain application built on XDC Zero to provide seamless cross-chain transfer capabilities. It is structured in a multi-layered architecture, with each layer handling distinct functions to ensure smooth, secure, and efficient transactions across blockchain networks. This document provides a design overview of each layer, illustrating the components and their roles within the Subswap system.
 
 ---
 
-##### **System Architecture**
+### **System Architecture**
 
 Subswap is organized into three layers:
 
@@ -37,25 +35,24 @@ Subswap is organized into three layers:
 
 ---
 
-##### **Design Considerations**
+### **Design Considerations**
 
 - **Security**: The use of locking and minting mechanisms prevents double-spending and ensures the security of cross-chain assets.
 - **User Experience**: Frontends are designed to be intuitive, making it easy for users to interact with complex cross-chain protocols.
 - **Reliability**: Oracles and relayers provide real-time data and reliable transaction relay, reducing the chance of errors in cross-chain transfers.
 
-##### **Conclusion**
+### **Conclusion**
 
 Subswap leverages XDC Zero's powerful infrastructure to deliver an efficient cross-chain transfer service. By layering its architecture, Subswap can maintain security, scalability, and ease of use, meeting the needs of users looking for seamless asset transfers across multiple blockchain networks.
 
 ### Construction(if you want to make a cross chain transfer)
-![Alt text](image2.png)
+![Alt text](../img/subswap_image2.png)
 
 
-![Alt text](image1.png)
+![Alt text](../img/subswap_image1.png)
 
 ## Spec
 ### Subswap API Documentation
----
 This document provides an API reference for the Subswap contracts, specifically for the `ParentnetTreasury` and `SubnetTreasury` contracts. These contracts facilitate cross-chain asset transfers by minting, burning, locking, and unlocking tokens between chains.
 
 ---

@@ -2,7 +2,6 @@
 title: Upgrading the Subnet
 ---
 # XDCZero
-default
 
 
 ## Design
@@ -34,19 +33,19 @@ At its core, the Endpoint functions as the orchestrator for all cross-chain data
 
 Experience a user-centric interface to manage the endpoint contracts spanning different chains. View the chain entities already synchronized with the current endpoint contract and effortlessly onboard new chain entities as per requirements.
 
-![System Architecture](image1.png)
+![System Architecture](../img/image1.png)
 
 ### Endpoint workflow
 
-![System Architecture](image2.png)
+![System Architecture](../img/image2.png)
 
 ### Workflow
 
-![System Architecture](image.png)
+![System Architecture](../img/image.png)
 
 
 ## API Documentation
-// TODO:Spec?
+ <!-- TODO:Spec? -->
 
 ### Restricted Access Functions
 
