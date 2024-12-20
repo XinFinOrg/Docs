@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/xdc.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
     
@@ -853,27 +853,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-add-candidate" class="md-nav__link">
+  <a href="#21-add-nodes-in-a-subnet" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Add candidate
+      2.1 Add Nodes in a Subnet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-change-node-delegation" class="md-nav__link">
+  <a href="#22-add-candidate" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 Change node delegation
+      2.2 Add candidate
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-remove-a-node" class="md-nav__link">
+  <a href="#23-change-node-delegation" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 Remove a node
+      2.3 Change node delegation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-remove-a-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Remove a node
     </span>
   </a>
   
@@ -1176,27 +1185,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-add-candidate" class="md-nav__link">
+  <a href="#21-add-nodes-in-a-subnet" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Add candidate
+      2.1 Add Nodes in a Subnet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-change-node-delegation" class="md-nav__link">
+  <a href="#22-add-candidate" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 Change node delegation
+      2.2 Add candidate
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-remove-a-node" class="md-nav__link">
+  <a href="#23-change-node-delegation" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 Remove a node
+      2.3 Change node delegation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-remove-a-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Remove a node
     </span>
   </a>
   
@@ -1365,13 +1383,29 @@
 <p>You will see a confirmation page like this:</p>
 <p><img alt="successful_connection_confirmation" src="../img/successful_connection_confirmation.png"></p>
 <h3 id="2-node-operations">2. Node Operations<a class="headerlink" href="#2-node-operations" title="Link to this section">¶</a></h3>
-<h4 id="21-add-candidate">2.1 Add candidate<a class="headerlink" href="#21-add-candidate" title="Link to this section">¶</a></h4>
+<h4 id="21-add-nodes-in-a-subnet">2.1 Add Nodes in a Subnet<a class="headerlink" href="#21-add-nodes-in-a-subnet" title="Link to this section">¶</a></h4>
+<p>Subnet nodes are managed by two files. To add a node, create the corresponding <code>subnetX.env</code> file and add an entry in <code>docker-compose.yml</code>. Apply the changes to add the node to the subnet. (To remove a node, delete the related configuration file)  </p>
+<p>To <strong>add a node</strong>, follow these steps:  </p>
+<ol>
+<li>
+<p>Go to the <code>generated</code> directory and run the <code>add-node.sh</code> script. Enter the key when prompted:<br>
+   </p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>.scripts/add-node.sh
+</code></pre></div>
+</li>
+<li>
+<p>Update the subnet settings with the following commands:<br>
+   </p><div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>--env-file<span class="w"> </span>docker-compose.env<span class="w"> </span>--profile<span class="w"> </span>machine1<span class="w"> </span>up<span class="w"> </span>-d
+docker-compose<span class="w"> </span>--env-file<span class="w"> </span>docker-compose.env<span class="w"> </span>--profile<span class="w"> </span>services<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+</li>
+</ol>
+<h4 id="22-add-candidate">2.2 Add candidate<a class="headerlink" href="#22-add-candidate" title="Link to this section">¶</a></h4>
 <ol>
 <li>Switch to the <strong>Master List</strong> Tab</li>
 <li>Click the <code>Add a new master candidate</code> button to add the node as a master node. <strong>Delegation amount</strong> must be at least <code>10,000,000</code> Subnet tokens.
    <img alt="add_master_node_candidate" src="../img/add_master_node_candidate.png"></li>
 </ol>
-<h4 id="22-change-node-delegation">2.2 Change node delegation<a class="headerlink" href="#22-change-node-delegation" title="Link to this section">¶</a></h4>
+<h4 id="23-change-node-delegation">2.3 Change node delegation<a class="headerlink" href="#23-change-node-delegation" title="Link to this section">¶</a></h4>
 <ul>
 <li>
 <p>In the list, select the node you want to change the delegation for, then click the <code>Promote</code> / <code>Demote</code> button and enter the new delegation amount.</p>
@@ -1384,7 +1418,7 @@
 <p><img alt="promote_node_delegate" src="../img/promote_node_delegate.png"></p>
 </li>
 </ul>
-<h4 id="23-remove-a-node">2.3 Remove a node<a class="headerlink" href="#23-remove-a-node" title="Link to this section">¶</a></h4>
+<h4 id="24-remove-a-node">2.4 Remove a node<a class="headerlink" href="#24-remove-a-node" title="Link to this section">¶</a></h4>
 <ol>
 <li>In the <strong>Master List</strong> Tab, select the node you want to remove, and click the <code>Remove</code> button.</li>
 <li>After removal, the node’s delegated XDC will be reset to zero, and the node information will be removed from the list after one epoch.
@@ -1605,7 +1639,7 @@ By default, the server is hosted on port <code>5211</code> of your machine. Then
     <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.tracking", "navigation.integration", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.prune", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="../../assets/js/mathjax.js"></script>
       
