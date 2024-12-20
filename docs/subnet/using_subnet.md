@@ -91,14 +91,28 @@ You will see a confirmation page like this:
 ![successful_connection_confirmation](img/successful_connection_confirmation.png)
 
 ### 2. Node Operations
+#### 2.1 Add Nodes in a Subnet  
+Subnet nodes are managed by two files. To add a node, create the corresponding `subnetX.env` file and add an entry in `docker-compose.yml`. Apply the changes to add the node to the subnet. (To remove a node, delete the related configuration file)  
 
-#### 2.1 Add candidate
+To **add a node**, follow these steps:  
+
+1. Go to the `generated` directory and run the `add-node.sh` script. Enter the key when prompted:  
+   ```bash
+   cd .scripts/add-node.sh
+   ```  
+
+2. Update the subnet settings with the following commands:  
+   ```bash
+   docker-compose --env-file docker-compose.env --profile machine1 up -d
+   docker-compose --env-file docker-compose.env --profile services up -d
+   ```
+#### 2.2 Add candidate
 
 1. Switch to the **Master List** Tab
 2. Click the `Add a new master candidate` button to add the node as a master node. **Delegation amount** must be at least `10,000,000` Subnet tokens.
    ![add_master_node_candidate](img/add_master_node_candidate.png)
 
-#### 2.2 Change node delegation
+#### 2.3 Change node delegation
 
 - In the list, select the node you want to change the delegation for, then click the `Promote` / `Demote` button and enter the new delegation amount.
 
@@ -107,7 +121,7 @@ You will see a confirmation page like this:
 
     ![promote_node_delegate](img/promote_node_delegate.png)
 
-#### 2.3 Remove a node
+#### 2.4 Remove a node
 
 1. In the **Master List** Tab, select the node you want to remove, and click the `Remove` button.
 2. After removal, the node’s delegated XDC will be reset to zero, and the node information will be removed from the list after one epoch.
