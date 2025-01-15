@@ -32,7 +32,7 @@ Remote Procedure Call (RPC) is a protocol that allows communication between a cl
 
 | Service          | URL                                                                    |
 |------------------|------------------------------------------------------------------------|
-| RPC              | [https://devnetstats.apothem.network/devnet](https://devnetstats.apothem.network/devnet)     |
+| RPC              | [https://devnetstats.hashlabs.apothem.network/devnet](https://devnetstats.hashlabs.apothem.network/devnet)     |
 | Chain Id         | 551             | 
 | Faucet endpoint  | [https://faucet.blocksscan.io/](https://faucet.blocksscan.io/)     |
 | Explorer         | [https://devnet.xdcscan.io/](https://devnet.xdcscan.io/) |
