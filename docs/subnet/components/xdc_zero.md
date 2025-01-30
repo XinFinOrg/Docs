@@ -1,5 +1,5 @@
 ---
-title: Upgrading the Subnet
+title: XDC Zero
 ---
 # XDCZero
 

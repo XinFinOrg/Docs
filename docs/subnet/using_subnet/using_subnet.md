@@ -1,5 +1,5 @@
 ---
-title: UI Usage Guide
+title: Using Subnet
 ---
 # UI Usage Guide
 The guide for XDC Subnet user interface
@@ -7,7 +7,7 @@ The guide for XDC Subnet user interface
 
 Once subnet is successfully deployed. The homepage will show the following.
 
-![Homepage 1](./img/homepage_1.png)
+![Homepage 1](../img/homepage_1.png)
 
 1. The Subnet blockchain state. You can see the current 'Not Confirmed' and 'Confirmed' blocks. 'Confirmed' or 'committed' blocks should be 3 blocks behind latest blocks.
 2. The Subnet blockchain AS KNOWN by the Parentchain. The Relayer periodically calls the Checkpoint Smart Contract to update the Subnet status (default every 2 minutes).
@@ -21,7 +21,7 @@ Once subnet is successfully deployed. The homepage will show the following.
 
 In the lower half of the homepage there are more information as shown.
 
-![Homepage 2](./img/homepage_2.png)
+![Homepage 2](../img/homepage_2.png)
 
 
 
@@ -36,13 +36,13 @@ In the lower half of the homepage there are more information as shown.
 
 After navigating with the left menu bar to the Confirmation Checker of the Subnet, this will be shown.
 
-![Confirmation Checker 1](./img/confirm_1.png)
+![Confirmation Checker 1](../img/confirm_1.png)
 
 The input box accepts Block height, Block hash, and even TX hash. 
 
 After your input, the search engine will traverse the chain and display the info accodingly. Below is an example of Block height search.
 
-![Confirmation Checker 2](./img/confirm_2.png)
+![Confirmation Checker 2](../img/confirm_2.png)
 
 1. Confirmation status of the block (or the block that TX belongs to)
 2. The block detailed information 
@@ -51,7 +51,7 @@ After your input, the search engine will traverse the chain and display the info
 
 Next is another example of a Block hash search.
 
-![Confirmation Checker 3](./img/confirm_3.png)
+![Confirmation Checker 3](../img/confirm_3.png)
 
 1. Confirmation status of the block (or the block that TX belongs to)
 2. The block detailed information 
@@ -72,23 +72,23 @@ When adding a Masternode address in the management, the new Masternode server sh
 
 To manage the subnet, you need to use your **Grandmaster Account**. Find the **Grandmaster Key** in the `keys.json` file and import this account into your wallet.
 
-![import_account](img/import_account.png)
+![import_account](../img/import_account.png)
 
 1. Go to the correct tab and switch to the **Grandmaster Account**.
 2. Click the `Connect Wallet` button.
-   ![connect_wallet](img/connect_wallet.png)
+   ![connect_wallet](../img/connect_wallet.png)
 
 3. Choose your wallet and allow the subnet network to be added. The wallet will automatically switch to this network, as shown below:
-   ![switch_to_subnet](img/switch_subnet.png)
+   ![switch_to_subnet](../img/switch_subnet.png)
 
    If the wallet doesn’t switch to the subnet automatically, follow the instructions on the page to fill in the network details manually and connect to the subnet.
 
 4. Connect the account and network.
-   ![account_connection](img/account_connect.png)
+   ![account_connection](../img/account_connect.png)
 
 You will see a confirmation page like this:
 
-![successful_connection_confirmation](img/successful_connection_confirmation.png)
+![successful_connection_confirmation](../img/successful_connection_confirmation.png)
 
 ### 2. Node Operations
 #### 2.1 Add Nodes in a Subnet  
@@ -110,7 +110,7 @@ To **add a node**, follow these steps:
 
 1. Switch to the **Master List** Tab
 2. Click the `Add a new master candidate` button to add the node as a master node. **Delegation amount** must be at least `10,000,000` Subnet tokens.
-   ![add_master_node_candidate](img/add_master_node_candidate.png)
+   ![add_master_node_candidate](../img/add_master_node_candidate.png)
 
 #### 2.3 Change node delegation
 
@@ -119,73 +119,15 @@ To **add a node**, follow these steps:
   - If increasing the delegation, ensure the total delegation amount is over `10,000,000` Subnet tokens; otherwise, the transaction will fail.There is no extra benefit in delegating more than 10,000,000 tokens to an address
   - If decreasing the delegation, ensure the remaining amount is still at least `10,000,000` Subnet tokens; otherwise, the transaction will fail.
 
-    ![promote_node_delegate](img/promote_node_delegate.png)
+    ![promote_node_delegate](../img/promote_node_delegate.png)
 
 #### 2.4 Remove a node
 
 1. In the **Master List** Tab, select the node you want to remove, and click the `Remove` button.
 2. After removal, the node’s delegated XDC will be reset to zero, and the node information will be removed from the list after one epoch.
-   ![remove_master_node](img/remove_master_node.png)
+   ![remove_master_node](../img/remove_master_node.png)
 
 
 
-## Faucet
-
-In Subnets, all native tokens are initially assigned to the Grandmaster Wallet. To allow users to use the Subnet, we have to distribute the tokens out of the Grandmaster. We have provided convenient scripts for you to easily share Subnet tokens to your users.
-
-### One-time Transfer
-
-Under `generated` directory run the Faucet script. 
-
-```
-./scripts/faucet.sh
-```
-
-The script will ask for your source wallet private key. You can use the Grandmaster Wallet(check `keys.json` file for the private key). 
-Then input the destination wallet and the transfer amount.
-
-![Example](./img/faucet.png)
-
-### Faucet Server
-
-Under `generated` directory run the Faucet server script.
-
-```
-./scripts/faucet-server.sh
-```
-
-The script will ask for your source wallet private key. you can use the Grandmaster Wallet(check `keys.json` for the private key).
-By default, the server is hosted on port `5211` of your machine. Then, on your browser, visit the url: `http://127.0.0.1:5211`
-
-![Example](./img/faucet-server1.png)
-
-Input your destination wallet or feel free to generate a random wallet via Address Generator.
-
-![Example](./img/faucet-server2.png)
-
-Submit and wait for confirmation.
-
-![Example](./img/faucet-server3.png)
-
-You can host this on any server and allow users to make token requests by themselves.
-
-### Transfer Subnet Funds Without Faucet
-
-The Faucet is not neccessary needed for funds transfer, most Ethereum compatible web3 wallet will also work. 
-
-First import a new wallet with the Grandmaster private key. Then add a custom network pointing to your Subnet RPC URL. Finally, use the web3 wallet for tokens transfer.
 
 
-### Faucet Source Code
-
-Please feel free to check the below repositories for the Subnet Faucet source code.
-
-https://github.com/XinFinOrg/XinFin-Node/tree/master/subnet/deployment-generator/scripts
-
-https://github.com/XinFinOrg/XinFin-Node/tree/master/subnet/deployment-generator/src/faucet.js
-
-
-
-## Blockchain Explorer
-
-You may optionally use an external blocks explorer if you require verbose browsing such as block detail, accounts browsing, contracts browsing. We can recommend [Chainlens-free](https://github.com/web3labs/chainlens-free/tree/master/docker-compose) as one of the solution. Please follow the instructions as the previous link. You only need to pass one of the Subnet's RPC as a variable in the `docker-compose` command, which will most likely be `NODE_ENDPOINT=http://localhost:8545` or `NODE_ENDPOINT=http://<MAIN_IP>:8545`.

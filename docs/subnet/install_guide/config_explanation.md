@@ -1,6 +1,5 @@
 ---
-title: Upgrading the Subnet
-# TODO: title
+title: Configs Explanation
 ---
 
 # Configs Explanation

@@ -110,24 +110,31 @@ nav:
         #     - FAQs: ./xdcchain/validator/mev/faqs.md
   
   - XDC Subnet:
-    - XDC Subnet: ./subnet/index.md
-    - User Guide: 
-          - Installation Guide: 
-                - Launch a Subnet: ./subnet/install_guide/launch_subnet.md
-                - Configs Explanation: ./subnet/install_guide/config_explanation.md
-                - Common Issues and Troubleshooting: ./subnet/install_guide/f&q.md
-                # - Subnet Deployment Generator Changelog
-          - Components:
-                - Subnet Chain: ./subnet/components/subnet_chain.md
-                - Checkpoint Smart Contract: ./subnet/components/checkpoint_contract.md
-                - Relayer: ./subnet/components/relayer.md
-                - API Library: ./subnet/components/api_library.md
-                - XDCZero: ./subnet/components/xdc_zero.md
-                - Subswap: ./subnet/components/subswap.md
-          # - XDC Subnet Official Documentation: ./subnet/Installation_guide.md
-          # - Setting Up Your Own XDC-Subnet Tutorial: ./subnet/setting_up_your_subnet.md
-          - Using the Subnet: ./subnet/using_subnet.md
-          - Upgrading the Subnet: ./subnet/upgrading_subnet.md
+    - XDC Subnet:
+      - Introduction: ./subnet/index.md
+      - Deployment Guide: 
+        - Launch a Subnet: ./subnet/install_guide/launch_subnet.md
+        - Configs Explanation: ./subnet/install_guide/config_explanation.md
+        - Common Issues and Troubleshooting: ./subnet/install_guide/common_issues.md
+        - FAQ: ./subnet/install_guide/faq.md
+        - Subnet Deployment Generator Changelog: ./subnet/install_guide/changelog.md
+        
+      # - XDC Subnet Official Documentation: ./subnet/Installation_guide.md
+      # - Setting Up Your Own XDC-Subnet Tutorial: ./subnet/setting_up_your_subnet.md
+      - Using the Subnet:
+        - UI Usage Guide: ./subnet/using_subnet/using_subnet.md
+        - Faucet: ./subnet/using_subnet/faucet.md
+        - Block Explorer: ./subnet/using_subnet/explorer.md
+      - Upgrading the Subnet: ./subnet/upgrading_subnet.md
+      - Components:
+        - Subnet Chain: ./subnet/components/subnet_chain.md
+        - Checkpoint Smart Contract: ./subnet/components/checkpoint_contract.md
+        - Relayer: ./subnet/components/relayer.md
+        - API Library: ./subnet/components/api_library.md
+        - XDCZero: ./subnet/components/xdc_zero.md
+        - Subswap: ./subnet/components/subswap.md
+        - Repositories: ./subnet/components/repos.md
+      - Contact: ./subnet/contact.md
 
   - Announcements:
     - Announcements: ./announce/index.md
