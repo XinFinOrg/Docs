@@ -1,6 +1,5 @@
 ---
-title: Upgrading the Subnet
-# TODO: title
+title: Launch a Subnet
 ---
 
 # Launch a Subnet
@@ -29,7 +28,7 @@ title: Upgrading the Subnet
 
   1. Pull `generator.sh` script from the generator Github repo
   ```
-  curl -O https://raw.githubusercontent.com/XinFinOrg/XinFin-Node/master/subnet/deployment-generator/scripts/generate.sh
+  curl -O https://raw.githubusercontent.com/XinFinOrg/Subnet-Deployment/master/deployment-generator/scripts/generate.sh
   ```
   
   2. Run the configuration generator, this will start a local webserver

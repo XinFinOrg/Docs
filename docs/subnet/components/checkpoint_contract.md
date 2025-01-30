@@ -1,5 +1,5 @@
 ---
-title: Upgrading the Subnet
+title: CSC
 ---
 # Checkpoint Smart Contract
 
