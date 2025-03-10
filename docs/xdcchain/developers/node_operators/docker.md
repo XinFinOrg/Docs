@@ -139,8 +139,15 @@ rm -rf apothem.tar
 ```
 
 **Download the snapshot**
+
+Full Node snapshot: 
 ```bash
-wget https://download.apothem.network/apothem.tar
+wget http://downloads.apothem.network/xdcchain.tar
+```
+
+Archive Node snapshot: 
+```bash
+wget http://downloads.apothem.network/xdcchain_archive.tar
 ```
 
 **Unpack the apothem.tar  file**
