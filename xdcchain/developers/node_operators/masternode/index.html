@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/xdc.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
     
@@ -1754,7 +1754,7 @@ nano<span class="w"> </span>.env
 sudo<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
 At this point you should be able to see your masternode on the list of nodes here or as shown below:
-<p><img alt="node-sync" src="xdcchain/img/node_sync.png"></p>
+<p><img alt="node-sync" src="../../../img/node_sync.png"></p>
 <p>For Testnet run the following commands:
 </p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>testnet
 sudo<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up<span class="w"> </span>-d
@@ -1783,7 +1783,7 @@ You should be able to see your node listed on the [Apothem Network] page. Select
 <div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvzf<span class="w"> </span>xdcchain.tar
 </code></pre></div>
 <strong>The unpacking will take some time, and it will look like this:</strong>
-<p>img</p>
+<p><img alt="unpacking" src="../../../img/unpacking.png"></p>
 <p><strong>The following command will move the xdcchain/XDC to xdcchain/XDC_backup</strong>
 </p><div class="highlight"><pre><span></span><code>mv<span class="w">  </span>xdcchain/XDC<span class="w"> </span>xdcchain/XDC_backup
 mv<span class="w"> </span>XDC<span class="w"> </span>xdcchain
@@ -1803,8 +1803,12 @@ mv<span class="w"> </span>XDC<span class="w"> </span>xdcchain
 <p><strong>Remove the old xdchain file from the server</strong>
 </p><div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>apothem.tar
 </code></pre></div>
-<p><strong>Download the snapshot</strong>
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://download.apothem.network/apothem.tar
+<p><strong>Download the snapshot</strong></p>
+<p>Full Node snapshot: 
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>http://downloads.apothem.network/xdcchain.tar
+</code></pre></div>
+<p>Archive Node snapshot: 
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>http://downloads.apothem.network/xdcchain_archive.tar
 </code></pre></div>
 <p><strong>Unpack the apothem.tar  file</strong>
 </p><div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvzf<span class="w"> </span>apothem.tar
