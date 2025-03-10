@@ -88,7 +88,7 @@ The XDC protocol serves as a messaging and confirmation layer for global payment
 ## **Quick Start**
 
 <div class="section-body">
-    <a href="./xdcchain/developers/quick-guide" class="grid-item">
+    <a href="./xdcchain" class="grid-item">
         <div>XDC Chain</div>
         <p>Get started with XDC Network: Unlock the power of decentralized finance and global trade.</p>
     </a>

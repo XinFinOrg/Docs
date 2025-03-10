@@ -143,31 +143,31 @@ nav:
       - XinFin Remix Upgrade: ./announce/#
     - Passed:
       - Solidity 0.8.23 Integration on XDC Mainnet: https://www.xdc.dev/anilchinchawale/stay-ahead-xdc-network-prepares-for-evm-0823-integration-on-xdc-mainnet-upgrade-details-inside-5nj 
-  # - Showcases:
-  - Showcases:
-    - Showcases: ./showcase/index.md
-    - Smart Contracts: 
-        # - Flattening Smart Contracts: 
-        - Flattening Smart Contracts: ./showcase/flattening-smart-contracts.md
-        - Flattening Smart Contracts with Remix: ./showcase/flattening-smart-contracts/#flattening-smart-contracts-with-remix
-        - Flattening Smart Contracts with Truffle: ./showcase/flattening-smart-contracts/#flattening-smart-contracts-with-truffle
-        - Flattening Smart Contracts with Hardhat: ./showcase/flattening-smart-contracts/#flattening-smart-contracts-with-hardhat
+
+  - Smart Contract Developments:
+    - Smart Contract Overview: 
+        - Smart Contract overview: ./smartcontract/index.md
+        # - Smart Contract Deployment & Verification: ./smartcontract/flattening-smart-contracts.md
+        - Flattening Smart Contracts: ./smartcontract/flattening-smart-contracts.md
+        - Flattening Smart Contracts with Remix: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-remix
+        - Flattening Smart Contracts with Truffle: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-truffle
+        - Flattening Smart Contracts with Hardhat: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-hardhat
     - Token Standards: 
-        - Tokens Overview: ./showcase/tokens.md
-        - XRC20: ./showcase/tokens/#xrc20
-        - XRC721: ./showcase/tokens/#xrc721
-        - XRC404: ./showcase/tokens/#xrc404
+        - Tokens Overview: ./smartcontract/tokens.md
+        - XRC20: ./smartcontract/tokens/#xrc20
+        - XRC721: ./smartcontract/tokens/#xrc721
+        - XRC404: ./smartcontract/tokens/#xrc404
         - XDC Stats: 
-            - XDC Stats Overview: ./showcase/xdcstats.md 
+            - XDC Stats Overview: ./smartcontract/xdcstats.md 
             - Data and analytics:  
-                    - Overview: ./showcase/data-analytics.md
-                    - XDCScan Mainnet: ./showcase/data-analytics/#xdcscan-mainnet
-                    - XDCScan Testnet (Apothem): ./showcase/data-analytics/#xdcscan-testnet-apothem
-                    - XDCScan Devnet: ./showcase/data-analytics/#xdcscan-devnet
+                    - Overview: ./smartcontract/data-analytics.md
+                    - XDCScan Mainnet: ./smartcontract/data-analytics/#xdcscan-mainnet
+                    - XDCScan Testnet (Apothem): ./smartcontract/data-analytics/#xdcscan-testnet-apothem
+                    - XDCScan Devnet: ./smartcontract/data-analytics/#xdcscan-devnet
             
 
     #  - Games:
-    #    - Telegram Mini Game on XDC Chain: ./showcase/game/minigame.md
+    #    - Telegram Mini Game on XDC Chain: ./smartcontract/game/minigame.md
     #  - Wallet:
     #    - In-app Wallet and Account Abstraction: ./#
   
