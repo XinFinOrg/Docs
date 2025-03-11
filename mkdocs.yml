@@ -95,19 +95,9 @@ nav:
         - Docker Image (WIP): ./xdcchain/developers/node_operators/dockerimg.md
         - Slashing: ./xdcchain/developers/node_operators/slashing.md  
 
-        # - EOA Paymaster:
-        #     - Overview: ./xdcchain/developers/paymaster/overview.md
-        #     - Paymaster API Spec: ./xdcchain/developers/paymaster/paymaster-api.md
-        #     - Wallet Integration: ./xdcchain/developers/paymaster/wallet-integration.md
     - Governance:
         - Overview of XDCDAO: ./xdcchain/governance/overview.md
         - User Guide: https://www.xdc.dev/0xbeny/xdcdao-understanding-the-proposal-window-39f8
-
-        # - MEV:
-        #     - Overview: ./xdcchain/validator/mev/overview.md
-        #     - Validator Guide: ./xdcchain/validator/mev/validator-integration.md
-        #     - Builder Guide: ./xdcchain/validator/mev/builder-integration.md
-        #     - FAQs: ./xdcchain/validator/mev/faqs.md
   
   - XDC Subnet:
     - XDC Subnet:
@@ -119,8 +109,6 @@ nav:
         - FAQ: ./subnet/install_guide/faq.md
         - Subnet Deployment Generator Changelog: ./subnet/install_guide/changelog.md
         
-      # - XDC Subnet Official Documentation: ./subnet/Installation_guide.md
-      # - Setting Up Your Own XDC-Subnet Tutorial: ./subnet/setting_up_your_subnet.md
       - Using the Subnet:
         - UI Usage Guide: ./subnet/using_subnet/using_subnet.md
         - Faucet: ./subnet/using_subnet/faucet.md
@@ -139,11 +127,12 @@ nav:
   - Announcements:
     - Announcements: ./announce/index.md
     - Upcoming:
-      - XDC 2.0 Mainnet Release: https://www.xdc.dev/anilchinchawale/xdpos-20-mainnet-release-key-features-and-enhancements-eeo
-      - XinFin Remix Upgrade: ./announce/#
+      - XDC Remix Upgrade: ./announce/#
     - Passed:
+      - XDC Network to Introduce EIP-1559 Support on Apothem: https://www.xdc.dev/xinfin_xdc_network/xdc-network-to-introduce-eip-1559-support-on-apothem-testnet-cl4
+      - XDC 2.0 Mainnet Release: https://www.xdc.dev/anilchinchawale/xdpos-20-mainnet-release-key-features-and-enhancements-eeo
       - Solidity 0.8.23 Integration on XDC Mainnet: https://www.xdc.dev/anilchinchawale/stay-ahead-xdc-network-prepares-for-evm-0823-integration-on-xdc-mainnet-upgrade-details-inside-5nj 
-
+      
   - Smart Contract Developments:
     - Smart Contract Overview: 
         - Smart Contract overview: ./smartcontract/index.md
