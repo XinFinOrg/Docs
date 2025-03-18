@@ -21,7 +21,7 @@ The XDC Network’s data and analytics tools are critical for understanding the 
 
 # XDCScan - Mainnet
 ## Overview:
-[XDCScan](https://xdcscan.com/) is the official block explorer for the XDC Network, providing a user-friendly interface to explore and interact with the blockchain. It allows users to search for transactions, view block details, and explore smart contracts deployed on the network. XDCScan is a vital tool for anyone interacting with the XDC Network, from developers to casual users.
+[XDCScan](https://xdcscan.io/) is the official block explorer for the XDC Network, providing a user-friendly interface to explore and interact with the blockchain. It allows users to search for transactions, view block details, and explore smart contracts deployed on the network. XDCScan is a vital tool for anyone interacting with the XDC Network, from developers to casual users.
 
 ## Key Features:
 
@@ -60,7 +60,7 @@ The [Apothem XDCScan](https://apothem.xdcscan.io/) is the XDC Network’s offici
 **Explorer links:**
 
 - [XDCScan](https://apothem.xdcscan.io/) - powered by OpenScan
-- [XDCScan](testnet.xdcscan.com) - powered by Etherscan
+- [XDCScan](https://testnet.xdcscan.com/) - powered by Etherscan
 
 ------------
 
