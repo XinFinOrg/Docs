@@ -135,14 +135,21 @@ nav:
       
   - Smart Contract Developments:
     - Smart Contract Overview: 
-        - Smart Contract overview: ./smartcontract/index.md
-        # - Smart Contract Deployment & Verification: ./smartcontract/flattening-smart-contracts.md
-        - Flattening Smart Contracts: ./smartcontract/flattening-smart-contracts.md
-        - Flattening Smart Contracts with Remix: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-remix
-        - Flattening Smart Contracts with Truffle: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-truffle
-        - Flattening Smart Contracts with Hardhat: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-hardhat
+      - Smart Contract overview: ./smartcontract/index.md
+      - Deployment & Verification: 
+        - Overview: ./smartcontract/deployment-verification.md
+        - Remix: ./smartcontract/deployment-verification/#using-remix
+        - Hardhat: ./smartcontract/deployment-verification/#using-hardhat 
+        # - Foundry: ./smartcontract/deployment-verification/#using-foudry
+        - Brownie: ./smartcontract/deployment-verification/#using-brownie
+      - Flattening Smart Contracts:
+                  - Overview: ./smartcontract/flattening-smart-contracts.md
+                  - With Remix: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-remix
+                  - With Truffle: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-truffle
+                  - With Hardhat: ./smartcontract/flattening-smart-contracts/#flattening-smart-contracts-with-hardhat
+
     - Token Standards: 
-        - Tokens Overview: ./smartcontract/tokens.md
+        - Overview: ./smartcontract/tokens.md
         - XRC20: ./smartcontract/tokens/#xrc20
         - XRC721: ./smartcontract/tokens/#xrc721
         - XRC404: ./smartcontract/tokens/#xrc404
