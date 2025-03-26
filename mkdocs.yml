@@ -160,7 +160,9 @@ nav:
                     - XDCScan Mainnet: ./smartcontract/data-analytics/#xdcscan-mainnet
                     - XDCScan Testnet (Apothem): ./smartcontract/data-analytics/#xdcscan-testnet-apothem
                     - XDCScan Devnet: ./smartcontract/data-analytics/#xdcscan-devnet
-            
+
+  - White Paper: whitepaper.md
+      #  - White paper: whitepaper.md       
 
     #  - Games:
     #    - Telegram Mini Game on XDC Chain: ./smartcontract/game/minigame.md

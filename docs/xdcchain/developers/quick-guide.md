@@ -39,7 +39,7 @@ To start using XDC, you’ll need a secure wallet—a dedicated app for storing 
 
 ## Additional Tools:
 
-- [Remix](https://remix.xinfin.network/): An online IDE for writing and deploying smart contracts on the XDC Network.
+- [Remix](https://remix.xdc.network/): An online IDE for writing and deploying smart contracts on the XDC Network.
 - Hardhat: A development environment for Ethereum-compatible blockchains, including XDC.
 - Truffle: A development framework for Ethereum and XDC-compatible blockchains.
 - Brownie: A Python-based development and testing framework for Ethereum and XDC smart contracts.
