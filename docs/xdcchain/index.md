@@ -52,11 +52,11 @@ title: XDC Chain
         <p>XDC ecosystem and developer tools</p>
     </a>
     <a href="./developers/node_operators/masternode">
-        <div>Run a Masterode</div>
+        <div>Run a Masternode</div>
         <p>How to run a XDC Masternode</p>
     </a>
-    <a href="./#">
-        <div>JSON-RPC API</div>
-        <p>Interacting with XDC requires sending requests to specific JSON-RPC API methods.</p>
+    <a href="./developers/rpc">
+        <div>RPC Endpoints</div>
+        <p>Interacting with XDC requires sending requests through a specific RPC.</p>
     </a>
 </div>
