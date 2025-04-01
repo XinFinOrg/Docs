@@ -127,7 +127,7 @@ nav:
   - Announcements:
     - Announcements: ./announce/index.md
     - Upcoming:
-      - XDC Remix Upgrade: ./announce/#
+      - Solidity 0.8.28 support on XDC Apothem: ./announce/#
     - Passed:
       - XDC Network to Introduce EIP-1559 Support on Apothem: https://www.xdc.dev/xinfin_xdc_network/xdc-network-to-introduce-eip-1559-support-on-apothem-testnet-cl4
       - XDC 2.0 Mainnet Release: https://www.xdc.dev/anilchinchawale/xdpos-20-mainnet-release-key-features-and-enhancements-eeo

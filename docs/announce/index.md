@@ -4,8 +4,8 @@
 <div class="doc-announce">
         <a href="./#">
         <div>
-            <div class="announce-title">XDC Remix Upgrade </div>
-            <div class="announce-desc">XDC Remix is getting a major upgrade and will be launching soon.</div>
+            <div class="announce-title">Solidity 0.8.28 support on XDC Apothem</div>
+            <div class="announce-desc">Latest Solidity 0.8.28 will soon be available on the XDC Apothem Testnet</div>
         </div>
         <span class="announce-date">Coming Soon!</span>
     </a>
