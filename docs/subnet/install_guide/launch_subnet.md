@@ -5,17 +5,22 @@ title: Launch a Subnet
 # Launch a Subnet
 
 ## Requirements
-  - OS: Linux. Only Linux is supported for full deployment.
+  - OS: Linux or Mac
 
-  - OS: Mac is only supported for single machine testing environment.
-  
-  - docker, docker compose V2. For manual installation of docker compose V2 please refer to: https://docs.docker.com/compose/install/linux/
-  
-  - Recommended Hardware (per single Subnet node):
-    - CPU: 2 Core
-    - Memory: 4 GB
+  - docker and docker compose. For installation of docker compose please refer to: https://docs.docker.com/compose/install/linux/
 
-  - Web3 wallet with funds. For testing we have faucets provided:
+  - Minimum Hardware Requirements:
+    - Subnet Services:
+        - CPU: 4 Core
+        - Memory: 8 GB
+        - Storage: 32 GB
+
+    - Subnet Blockchain (per single Subnet node): 
+        - CPU: 2 Core
+        - Memory: 4 GB
+        - Storage: 50 GB per year (takes up more space as blokchain grows)
+
+  - Web3 wallet with funds. For testing we have testnet faucets:
     - https://faucet.apothem.network/ 
     - https://faucet.blocksscan.io/
 
@@ -24,42 +29,39 @@ title: Launch a Subnet
 <iframe width="768" height="432" src="https://www.youtube.com/embed/m-sPbMrB8ow" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-## Generate Subnet Configs With UI
+## Generate Subnet Configs With Subnet Deployment Wizard UI
 
-  1. Pull `generator.sh` script from the generator Github repo
+  1. Pull `start.sh` script from the generator Github repo and run. This will start a local webserver
   ```
-  curl -O https://raw.githubusercontent.com/XinFinOrg/Subnet-Deployment/master/deployment-generator/scripts/generate.sh
+  curl -O https://raw.githubusercontent.com/XinFinOrg/Subnet-Deployment/v2.0.0/container-manager/start.sh
+  chmod +x start.sh
+  ./start.sh
   ```
   
-  2. Run the configuration generator, this will start a local webserver
-  ```
-  chmod +x generate.sh
-  ./generate.sh
-  cd generated
-  ```
-
-  3. Go to [http://localhost:5210/](http://localhost:5210) in your browser.
+  2. Go to [http://localhost:5210/](http://localhost:5210) in your browser.
   <details>
   <summary>If you are running this on a remote server.</summary>
   <p>
-    first use ssh tunnel: <code>ssh -N -L localhost:5210:localhost:5210 USERNAME@IP_ADDRESS -i SERVER_KEY_FILE</code>
-    **if you're using VSCode to SSH, the port might be forwarded to your machine automatically (no need for above step) 
+    - if this is running on your server, first use ssh tunnel: <code>ssh -N -L localhost:5210:localhost:5210 USERNAME@IP_ADDRESS -i SERVER_KEY_FILE</code>
+   <br> 
+    - if you are using VSCode Remote Explorer, ssh tunnel will be available by default
   </p>
   </details>
 
-
-  4. Config the Subnet options per your requirement.
+  3. Select one of the pre-defined configs or customize your Subnet.
   ![UI](../img/ui.png)
 
-  5. follow the generated instructions in `commands.txt`. In general, the steps are:
-      - start Subnet Nodes
-      - deploy CSC
-      - deploy XDC-Zero (optional)
-      - start Subnet Services (relayer, stats-server, frontend)
+  4. Follow the UI to finish the deployment, you can also check the Status monitor of your containers:
+    - Start Subnet nodes
+    - Deploy cross-chain contracts
+    - Start Subnet services
+  ![Steps](../img/steps.png)
 
-  6. Once successfully deployed, you can check out [UI usage guide](../using_subnet.md)
+  5. Once successfully deployed, you can check out [UI usage guide](../using_subnet.md)
+  
+  <!-- 6. (Optional) if you deployed Subswap, check out the usage here: -->
 
-## Removing Subnet
+<!-- ## Removing Subnet
 
 ### Shutdown Subnet
   Under `generated` directory
@@ -74,4 +76,4 @@ title: Launch a Subnet
   Warning: this cannot be undone
   ``` 
   rm -rf xdcchain* bootnodes stats-service
-  ```
+  ``` -->
