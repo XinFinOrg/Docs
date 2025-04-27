@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/xdc.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
     
@@ -30,7 +30,7 @@
     
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launch-a-subnet" class="md-skip">
+        <a href="#launch-a-subnet-in-10-minutes" class="md-skip">
           Skip to content
         </a>
       
@@ -839,44 +839,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generate-subnet-configs-with-ui" class="md-nav__link">
+  <a href="#deploy-subnet-with-subnet-deployment-wizard-ui" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate Subnet Configs With UI
+      Deploy Subnet With Subnet Deployment Wizard UI
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-subnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Removing Subnet
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Removing Subnet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#shutdown-subnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shutdown Subnet
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deleting-subnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deleting Subnet
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1357,44 +1324,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generate-subnet-configs-with-ui" class="md-nav__link">
+  <a href="#deploy-subnet-with-subnet-deployment-wizard-ui" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate Subnet Configs With UI
+      Deploy Subnet With Subnet Deployment Wizard UI
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-subnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Removing Subnet
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Removing Subnet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#shutdown-subnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shutdown Subnet
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deleting-subnet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deleting Subnet
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1422,27 +1356,38 @@
   
 
 
-<div><h1 id="launch-a-subnet">Launch a Subnet<a class="headerlink" href="#launch-a-subnet" title="Link to this section">¶</a></h1>
+<div><h1 id="launch-a-subnet-in-10-minutes">Launch a Subnet in 10 Minutes<a class="headerlink" href="#launch-a-subnet-in-10-minutes" title="Link to this section">¶</a></h1>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Link to this section">¶</a></h2>
 <ul>
 <li>
-<p>OS: Linux. Only Linux is supported for full deployment.</p>
+<p>OS: Linux or Mac</p>
 </li>
 <li>
-<p>OS: Mac is only supported for single machine testing environment.</p>
+<p>docker and docker compose. For installation of docker compose please refer to: <a href="https://docs.docker.com/compose/install/linux/">https://docs.docker.com/compose/install/linux/</a></p>
 </li>
 <li>
-<p>docker, docker compose V2. For manual installation of docker compose V2 please refer to: <a href="https://docs.docker.com/compose/install/linux/">https://docs.docker.com/compose/install/linux/</a></p>
-</li>
-<li>
-<p>Recommended Hardware (per single Subnet node):</p>
+<p>Minimum Hardware Requirements:</p>
 <ul>
-<li>CPU: 2 Core</li>
-<li>Memory: 4 GB</li>
+<li>
+<p>Subnet Services:</p>
+<ul>
+<li>CPU: 4 Core</li>
+<li>Memory: 8 GB</li>
+<li>Storage: 32 GB</li>
 </ul>
 </li>
 <li>
-<p>Web3 wallet with funds. For testing we have faucets provided:</p>
+<p>Subnet Blockchain (per single Subnet node): </p>
+<ul>
+<li>CPU: 2 Core</li>
+<li>Memory: 4 GB</li>
+<li>Storage: 50 GB per year (takes up more space as blokchain grows)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Web3 wallet with funds. For testing we have testnet faucets:</p>
 <ul>
 <li><a href="https://faucet.apothem.network/">https://faucet.apothem.network/</a> </li>
 <li><a href="https://faucet.blocksscan.io/">https://faucet.blocksscan.io/</a></li>
@@ -1450,20 +1395,15 @@
 </li>
 </ul>
 <h2 id="video-walkthrough">Video Walkthrough<a class="headerlink" href="#video-walkthrough" title="Link to this section">¶</a></h2>
-<iframe width="768" height="432" src="https://www.youtube.com/embed/m-sPbMrB8ow" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="768" height="432" src="https://www.youtube.com/embed/-SXsRbn6hN8" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h2 id="generate-subnet-configs-with-ui">Generate Subnet Configs With UI<a class="headerlink" href="#generate-subnet-configs-with-ui" title="Link to this section">¶</a></h2>
+<h2 id="deploy-subnet-with-subnet-deployment-wizard-ui">Deploy Subnet With Subnet Deployment Wizard UI<a class="headerlink" href="#deploy-subnet-with-subnet-deployment-wizard-ui" title="Link to this section">¶</a></h2>
 <ol>
 <li>
-<p>Pull <code>generator.sh</code> script from the generator Github repo
-  </p><div class="highlight"><pre><span></span><code>curl -O https://raw.githubusercontent.com/XinFinOrg/Subnet-Deployment/master/deployment-generator/scripts/generate.sh
-</code></pre></div>
-</li>
-<li>
-<p>Run the configuration generator, this will start a local webserver
-  </p><div class="highlight"><pre><span></span><code>chmod +x generate.sh
-./generate.sh
-cd generated
+<p>Pull <code>start.sh</code> script from the generator Github repo and run. This will start a local webserver
+  </p><div class="highlight"><pre><span></span><code>curl -O https://raw.githubusercontent.com/XinFinOrg/Subnet-Deployment/v2.0.0/container-manager/start.sh
+chmod +x start.sh
+./start.sh
 </code></pre></div>
 </li>
 <li>
@@ -1472,40 +1412,47 @@ cd generated
 <details>
   <summary>If you are running this on a remote server.</summary>
   <p>
-    first use ssh tunnel: <code>ssh -N -L localhost:5210:localhost:5210 USERNAME@IP_ADDRESS -i SERVER_KEY_FILE</code>
-    **if you're using VSCode to SSH, the port might be forwarded to your machine automatically (no need for above step) 
+    - if this is running on your server, first use ssh tunnel: <code>ssh -N -L localhost:5210:localhost:5210 USERNAME@IP_ADDRESS -i SERVER_KEY_FILE</code>
+   <br> 
+    - if you are using VSCode Remote Explorer, ssh tunnel will be available by default
   </p>
   </details>
 </p>
 </li>
 <li>
-<p>Config the Subnet options per your requirement.
+<p>Select one of the pre-defined configs or customize your Subnet.
   <img alt="UI" src="../../img/ui.png"></p>
 </li>
 <li>
-<p>follow the generated instructions in <code>commands.txt</code>. In general, the steps are:</p>
+<p>Follow the UI to finish the deployment, you can also check the Status monitor of your containers:</p>
 <ul>
-<li>start Subnet Nodes</li>
-<li>deploy CSC</li>
-<li>deploy XDC-Zero (optional)</li>
-<li>start Subnet Services (relayer, stats-server, frontend)</li>
+<li>Start Subnet nodes</li>
+<li>Deploy cross-chain contracts</li>
+<li>Start Subnet services
+  <img alt="Steps" src="../../img/steps.png"></li>
 </ul>
 </li>
 <li>
 <p>Once successfully deployed, you can check out <a href="../using_subnet.md">UI usage guide</a></p>
 </li>
 </ol>
-<h2 id="removing-subnet">Removing Subnet<a class="headerlink" href="#removing-subnet" title="Link to this section">¶</a></h2>
-<h3 id="shutdown-subnet">Shutdown Subnet<a class="headerlink" href="#shutdown-subnet" title="Link to this section">¶</a></h3>
-<p>Under <code>generated</code> directory
-  </p><div class="highlight"><pre><span></span><code>docker compose --env-file docker-compose.env --profile services down 
+<!-- 6. (Optional) if you deployed Subswap, check out the usage here: -->
+
+<!-- ## Removing Subnet
+
+### Shutdown Subnet
+  Under `generated` directory
+  <div class="highlight"><pre><span></span><code>docker compose --env-file docker-compose.env --profile services down 
 docker compose --env-file docker-compose.env --profile machine1 down
 </code></pre></div>
-<h3 id="deleting-subnet">Deleting Subnet<a class="headerlink" href="#deleting-subnet" title="Link to this section">¶</a></h3>
-<p>Remove <code>xdcchain*</code>, <code>bootnodes</code>, and <code>stats-service</code> directories
+
+### Deleting Subnet 
+
+  Remove `xdcchain*`, `bootnodes`, and `stats-service` directories
   Warning: this cannot be undone
-  </p><div class="highlight"><pre><span></span><code>rm -rf xdcchain* bootnodes stats-service
-</code></pre></div></div>
+  ``` 
+  rm -rf xdcchain* bootnodes stats-service
+  ``` --></div>
 
 
 
