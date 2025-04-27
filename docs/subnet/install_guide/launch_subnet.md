@@ -2,7 +2,7 @@
 title: Launch a Subnet
 ---
 
-# Launch a Subnet
+# Launch a Subnet in 10 Minutes
 
 ## Requirements
   - OS: Linux or Mac
@@ -25,11 +25,10 @@ title: Launch a Subnet
     - https://faucet.blocksscan.io/
 
 ## Video Walkthrough
+<iframe width="768" height="432" src="https://www.youtube.com/embed/-SXsRbn6hN8" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="768" height="432" src="https://www.youtube.com/embed/m-sPbMrB8ow" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-## Generate Subnet Configs With Subnet Deployment Wizard UI
+## Deploy Subnet With Subnet Deployment Wizard UI
 
   1. Pull `start.sh` script from the generator Github repo and run. This will start a local webserver
   ```
