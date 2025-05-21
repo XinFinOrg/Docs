@@ -229,17 +229,6 @@ If you are unable to connect, use your VPS provider’s web console to access th
 
 ---
 
-### RPC Node Exception
-
-If you are deploying an RPC node (e.g., for public dApp or API access), you must also allow the following ports:
-
-```bash
-sudo ufw allow 8888
-sudo ufw allow 8989
-```
-
----
-
 Once your server is secured and accessible, proceed with the standard masternode setup below.
 
 ---
