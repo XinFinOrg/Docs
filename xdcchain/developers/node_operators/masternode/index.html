@@ -1663,10 +1663,10 @@
 <p>The XDC Network runs on a globally distributed system of masternodes that participate in a Delegated Proof of Stake (DPoS) consensus mechanism. To enhance network integrity and security, Masternodes are required to complete a KYC process and stake 10,000,000 XDC. Masternodes can be identified as “Validator” or “Standby” Masternodes.</p>
 <p>Standby Masternodes (or “Standby Nodes”) are identical in form and function to Validators but do not participate in validating transactions and block creation. These nodes are on standby to fill the role of Validators that drop from network participation.</p>
 <h1 id="difference-between-full-and-archive-node">Difference between Full and Archive Node<a class="headerlink" href="#difference-between-full-and-archive-node" title="Link to this section">¶</a></h1>
-<p>A full node on the XDC Network is a masternode (validator or standby) that contains the most recent 128 blocks, also known as “Prunned” nodes. </p>
-<p><image></image></p>
-<p>An Archive node on the XDC Network is a masternode or node that contains all the data since the Genesis block. </p>
-<p><image></image></p>
+<p>A full node on the XDC Network is a masternode (validator or standby) that contains the most recent 128 blocks, also known as “Prunned” nodes.</p>
+<p><img alt="XDC Full Node" src="/xdcchain/img/xdc-full-node.png"></p>
+<p>An Archive node on the XDC Network is a masternode or node that contains all the data since the Genesis block.</p>
+<p><img alt="XDC Archive Node" src="/xdcchain/img/xdc-archive-node.png"></p>
 <p>To host an XDC Masternode/Standby node, there are specific prerequisites that you need to meet in terms of hardware, software, and staking requirements. Below is a detailed list:</p>
 <h2 id="hardware-requirements">Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this section">¶</a></h2>
 <p>To ensure smooth operation and optimal performance of the XDC Masternode, the following hardware specifications are recommended:</p>
@@ -1825,14 +1825,7 @@ sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> <
 </code></pre></div>
 <p>If you are unable to connect, use your VPS provider’s web console to access the server and make the necessary firewall or SSH configuration changes.</p>
 <hr>
-<h3 id="rpc-node-exception">RPC Node Exception<a class="headerlink" href="#rpc-node-exception" title="Link to this section">¶</a></h3>
-<p>If you are deploying an RPC node (e.g., for public dApp or API access), you must also allow the following ports:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">8888</span>
-sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">8989</span>
-</code></pre></div>
-<hr>
 <p>Once your server is secured and accessible, proceed with the standard masternode setup below.</p>
-<hr>
 <h1 id="setup-xdc-masternode-using-bootstrap-script">Setup XDC Masternode using Bootstrap Script<a class="headerlink" href="#setup-xdc-masternode-using-bootstrap-script" title="Link to this section">¶</a></h1>
 <h2 id="for-mainnet">For Mainnet<a class="headerlink" href="#for-mainnet" title="Link to this section">¶</a></h2>
 <p><strong>Bootstrap Command for XDC Masternode Setup:</strong></p>
