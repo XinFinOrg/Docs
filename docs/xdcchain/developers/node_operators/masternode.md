@@ -12,13 +12,13 @@ Standby Masternodes (or “Standby Nodes”) are identical in form and function 
 
 # Difference between Full and Archive Node
 
-A full node on the XDC Network is a masternode (validator or standby) that contains the most recent 128 blocks, also known as "Prunned" nodes. 
+A full node on the XDC Network is a masternode (validator or standby) that contains the most recent 128 blocks, also known as "Prunned" nodes.
 
-![XDC Full Node](./xdc-full-node.png)
+![XDC Full Node](/xdcchain/img/xdc-full-node.png)
 
-An Archive node on the XDC Network is a masternode or node that contains all the data since the Genesis block. 
+An Archive node on the XDC Network is a masternode or node that contains all the data since the Genesis block.
 
-![XDC Archive Node](./xdc-archive-node.png)
+![XDC Archive Node](/xdcchain/img/xdc-archive-node.png)
 
 To host an XDC Masternode/Standby node, there are specific prerequisites that you need to meet in terms of hardware, software, and staking requirements. Below is a detailed list:
 
@@ -231,7 +231,6 @@ If you are unable to connect, use your VPS provider’s web console to access th
 
 Once your server is secured and accessible, proceed with the standard masternode setup below.
 
----
 # Setup XDC Masternode using Bootstrap Script
 
 ## For Mainnet
