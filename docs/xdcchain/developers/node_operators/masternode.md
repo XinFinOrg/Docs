@@ -5,11 +5,20 @@ title: Masternode
 # Run a Node
 Nodes are computers or servers that run an application software known as clients to perform essential tasks on a blockchain network. These tasks can include transactions, block creation, consensus, network security, and other operational tasks for the network. The tasks and functionalities a node execute depend on the type of node, with each node having different system requirements and deployment processes. This section will provide details and information on how to run and maintain nodes on the XDC Network.
 
-# Masternodes
+# Masternodes and Standby Masternodes
 The XDC Network runs on a globally distributed system of masternodes that participate in a Delegated Proof of Stake (DPoS) consensus mechanism. To enhance network integrity and security, Masternodes are required to complete a KYC process and stake 10,000,000 XDC. Masternodes can be identified as “Validator” or “Standby” Masternodes.
 
-# Standby Masternodes
 Standby Masternodes (or “Standby Nodes”) are identical in form and function to Validators but do not participate in validating transactions and block creation. These nodes are on standby to fill the role of Validators that drop from network participation.
+
+# Difference between Full and Archive Node
+
+A full node on the XDC Network is a masternode (validator or standby) that contains the most recent 128 blocks, also known as "Prunned" nodes. 
+
+<Image>
+  
+An Archive node on the XDC Network is a masternode or node that contains all the data since the Genesis block. 
+
+<Image>
 
 To host an XDC Masternode/Standby node, there are specific prerequisites that you need to meet in terms of hardware, software, and staking requirements. Below is a detailed list:
 
@@ -41,6 +50,199 @@ You must set up an XDC wallet to manage your funds and staking:
 
 - **XDC Wallet Address:** A valid XDC wallet address is needed to stake and manage the **10 million XDC** tokens.
 - **Backup:** Ensure that you have securely backed up your wallet’s private keys or seed phrase to avoid any loss of funds.
+
+## Securing Your XDC Network Node
+
+Before deploying your XDC Network Node, it is critical to secure the server, especially for validator or standby nodes that do not require RPC/WebSocket access. There are two deployment scenarios:
+
+* **RPC Node**: Exposes necessary ports to allow DApps and users to interact with the blockchain.
+* **Validator/Standby Node**: Only communicates with the network and should block unnecessary ports for better security.
+
+This guide provides instructions for securing your server, changing the default SSH port, and enabling a firewall for validator/standby nodes.
+
+---
+
+### Initial Server Setup
+
+1. **Log in to your server** using credentials provided by your cloud provider:
+
+   ```bash
+   ssh user@your-server-ip
+   ```
+
+2. **Update OS packages**:
+
+   ```bash
+   sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
+   ```
+
+---
+
+### Setting Up SSH Key Authentication
+
+**Step 1: Generate SSH Key (on your local machine or computer. Not the server)**
+
+If you don’t already have an SSH key:
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+* Save the key in the default path (usually `~/.ssh/id_rsa`)
+* You may optionally add a passphrase or password (Recommended for highest safety)
+
+**Step 2: Upload the Public Key to the Server**
+
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@your-server-ip
+```
+
+**Step 3: Test Login**
+
+```bash
+ssh user@your-server-ip
+```
+
+**Optional: Disable Password Authentication**
+
+Edit the SSH config file:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Set the following:
+
+```
+PasswordAuthentication no
+```
+
+Restart the SSH service:
+
+```bash
+sudo systemctl restart ssh
+```
+
+Keep your private key (`~/.ssh/id_rsa`) safe. You will need it for all future logins. 
+**Do not upload it to the server**
+
+---
+
+### Locking Down Validator/Standby Nodes
+
+If your masternode is being used only for the purpose of maintaining the XDC blockchain and does not require RPC/WebSocket access, the following hardening steps are recommended:
+
+1. Change the default SSH port
+2. Block all incoming traffic using a firewall
+3. Open only the required ports (30303 for XDC P2P and your new SSH port)
+
+---
+
+### Change the SSH Port
+
+1. Edit the SSH config file:
+
+   ```bash
+   sudo nano /etc/ssh/sshd_config
+   ```
+
+2. Find the line:
+
+   ```
+   #Port 22
+   ```
+
+3. Remove the `#` and change `22` to a new custom port (for example, 2222):
+
+   ```
+   Port 2222
+   ```
+
+4. Save and exit:
+
+   * Press `CTRL+X`, then `Y`, then `ENTER`
+
+5. Restart the SSH service:
+
+   ```bash
+   sudo systemctl restart ssh
+   ```
+
+To connect from now on:
+
+```bash
+ssh -p 2222 user@your-server-ip
+```
+
+---
+
+### Configure UFW (Uncomplicated Firewall)
+
+1. **Install UFW**:
+
+   ```bash
+   sudo apt install ufw
+   ```
+
+2. **Set default policies**:
+
+   ```bash
+   sudo ufw default deny incoming
+   sudo ufw default allow outgoing
+   ```
+
+3. **Allow XDC P2P port**:
+
+   ```bash
+   sudo ufw allow 30303
+   ```
+
+4. **Allow your SSH port** (replace `2222` with your actual port):
+
+   ```bash
+   sudo ufw allow 2222
+   ```
+
+5. **Enable UFW**:
+
+   ```bash
+   sudo ufw enable
+   ```
+
+6. **Reboot the server**:
+
+   ```bash
+   reboot
+   ```
+
+---
+
+### Testing Access
+
+After rebooting, reconnect to your server using the new SSH port:
+
+```bash
+ssh -p 2222 user@your-server-ip
+```
+
+If you are unable to connect, use your VPS provider’s web console to access the server and make the necessary firewall or SSH configuration changes.
+
+---
+
+### RPC Node Exception
+
+If you are deploying an RPC node (e.g., for public dApp or API access), you must also allow the following ports:
+
+```bash
+sudo ufw allow 8888
+sudo ufw allow 8989
+```
+
+---
+
+Once your server is secured and accessible, proceed with the standard masternode setup below.
+
+---
 
 # Setup XDC Masternode using Bootstrap Script
 
