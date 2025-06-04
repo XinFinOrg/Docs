@@ -56,7 +56,7 @@ title: XDC Chain
         <p>How to run a XDC Masternode</p>
     </a>
     <a href="./developers/rpc">
-        <div>RPC Endpoints</div>
+        <div>JSON-RPC-Endpoint</div>
         <p>Interacting with XDC requires sending requests through a specific RPC.</p>
     </a>
 </div>

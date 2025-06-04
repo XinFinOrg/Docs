@@ -75,7 +75,8 @@ nav:
         - Faucet: https://faucet.blocksscan.io/
         - Migrating from EVM to XDC: ./xdcchain/evmtoxdc.md
         - Wallet Configuration: ./xdcchain/developers/wallet-configuration.md
-
+        - Get XDC Listed: ./xdcchain/developers/getxdclisted.md
+    
     - Node Operators:
         - Node Architecture: ./xdcchain/developers/node_operators/node_architecture.md
         - Rewards mechanism(WIP): ./xdcchain/rewards.md
@@ -98,7 +99,10 @@ nav:
     - Governance:
         - Overview of XDCDAO: ./xdcchain/governance/overview.md
         - User Guide: https://www.xdc.dev/0xbeny/xdcdao-understanding-the-proposal-window-39f8
-  
+
+    - FAQ: 
+        - FAQs: ./xdcchain/faq.md  
+
   - XDC Subnet:
     - XDC Subnet:
       - Introduction: ./subnet/index.md

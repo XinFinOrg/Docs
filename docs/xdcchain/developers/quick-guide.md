@@ -30,8 +30,14 @@ The XDC Devnet is a development-focused environment that allows developers to te
 
 - **Devnet Explorer:** Track and analyze transactions, smart contracts, and other activities on the XDC Devnet. [Devnet Explorer](https://devnet.xdcscan.io/)
 
-## Useful Links
-Here are some additional tools and resources that will help you interact with the XDC Network more effectively:
+
+## Developer Resources
+
+- **Quick Tools Guide:** https://xinfin.org/quick-tools-guide
+- **API Documentation:** https://apidocs.xinfin.network/docs/#xinfin-apis | https://apidocs.xinfin.network/
+- **Developer Documentation:** https://docs.xdc.network
+- **Full Node Setup Instructions:** https://github.com/XinFinOrg/XinFin-Node
+
 
 ## XDC Wallets:
 
@@ -47,6 +53,8 @@ To start using XDC, you’ll need a secure wallet—a dedicated app for storing 
 ## Community and Support
 Join the vibrant community of developers, validators, and users who are actively contributing to the XDC Network's growth and innovation. Engage with the community, ask questions, and share your knowledge.
 
+
+
 - **Dev Forum:** 
 Participate in discussions, ask questions, and collaborate with other developers. [XDC Dev Forum](https://www.xdc.dev/)
 
@@ -58,4 +66,3 @@ It's unnecessary to review every document to have a working knowledge of the XDC
 
 Happy building on the XDC Network!
 
-For more tools and details, you can refer to [XDC Chain Network Tools and Documents](https://xinfin.org/quick-tools-guide).
