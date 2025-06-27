@@ -56,7 +56,7 @@ title: Launch a Subnet
     - Start Subnet services
   ![Steps](../img/steps.png)
 
-  5. Once successfully deployed, you can check out [UI usage guide](../using_subnet.md)
+  5. Once successfully deployed, you can check out [UI usage guide](../using_subnet/using_subnet.md)
   
   <!-- 6. (Optional) if you deployed Subswap, check out the usage here: -->
 
