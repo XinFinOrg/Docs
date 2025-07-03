@@ -28,7 +28,7 @@ title: Launch a Subnet
 <iframe width="768" height="432" src="https://www.youtube.com/embed/-SXsRbn6hN8" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-## Deploy Subnet With Subnet Deployment Wizard UI
+## Deploy With Wizard UI
 
   1. Pull `start.sh` script from the generator Github repo and run. This will start a local webserver
   ```
@@ -59,6 +59,56 @@ title: Launch a Subnet
   5. Once successfully deployed, you can check out [UI usage guide](../using_subnet/using_subnet.md)
   
   <!-- 6. (Optional) if you deployed Subswap, check out the usage here: -->
+
+### Multiple Machines Deployment
+
+To deploy a subnet with multiple machines , access the Deployment Wizard in your browser and follow these steps:
+
+1. Select "Custom Subnet" and click the button:
+   ![Custom Subnet](<../img/custom_subnet.png>)
+
+2. Configure the subnet options as per your requirements and fill in the details:
+   ![Configureuration](<../img/configureuration.png>)
+
+3. Click the `Submit` button. You should see a success message:
+   ![success message](<../img/success_message.png>)
+
+4. Return to the Deployment Wizard page and click the "Start" button.
+
+5. Copy the generated files `subnetX.env`, `docker-compose.yml`, and `genesis.json` to the other machines (make sure to modify the paths as needed).
+
+6. On `machineX`, place the `subnetX.env`, `docker-compose.yml`, and `genesis.json` files in the same directory. Then, use the following commands to start the corresponding subnet:
+   ```bash
+   export HOSTPWD=$(pwd)
+   docker compose --profile machineX pull;  
+   docker compose --profile machineX up -d;
+   ```
+
+7. Back in the Deployment Wizard, You can monitor the number of peers in the Status column on the left, or use the script `generated/scripts/check-peer.sh` to confirm if the multi-machine deployment was successful:
+
+   ![Status](<../img/status.png>)
+
+## Exposing Subnet Services and Frontend
+
+Update the following parameters in `common.env`, replacing `<YOUR_SERVER_IP>` with your actual server IP address or domain name:
+```bash
+SUBNET_URL=http://<YOUR_SERVER_IP>:8545
+VITE_SUBNET_URL=http://<YOUR_SERVER_IP>:5213
+VITE_SUBNET_RPC=http://<YOUR_SERVER_IP>:8545
+```
+
+Modify the ports in `docker-compose.yml` as follows:
+```yaml
+  stats:
+    ports:
+      - "0.0.0.0:5213:5213"
+  frontend:
+    ports:
+      - "0.0.0.0:5214:5214"
+```
+
+Visit the Deployment Wizard and restart the subnet and services in the Deployment Wizard to apply these settings.
+
 
 <!-- ## Removing Subnet
 
