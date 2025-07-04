@@ -5,8 +5,8 @@ title: Masternode
 # Run a Node
 Nodes are computers or servers that run an application software known as clients to perform essential tasks on a blockchain network. These tasks can include transactions, block creation, consensus, network security, and other operational tasks for the network. The tasks and functionalities a node execute depend on the type of node, with each node having different system requirements and deployment processes. This section will provide details and information on how to run and maintain nodes on the XDC Network.
 
-# Masternodes and Standby Masternodes
-The XDC Network runs on a globally distributed system of masternodes that participate in a Delegated Proof of Stake (DPoS) consensus mechanism. To enhance network integrity and security, Masternodes are required to complete a KYC process and stake 10,000,000 XDC. Masternodes can be identified as “Validator” or “Standby” Masternodes.
+# Masternodes(Full Node) and Standby Masternodes
+The XDC Network runs on a globally distributed system of masternodes that participate in a [XDC 2.0](https://xinfin.org/xdpos) consensus mechanism. To enhance network integrity and security, Masternodes are required to complete a KYC process and stake 10,000,000 XDC. Masternodes can be identified as “Validator” or “Standby” Masternodes.
 
 Standby Masternodes (or “Standby Nodes”) are identical in form and function to Validators but do not participate in validating transactions and block creation. These nodes are on standby to fill the role of Validators that drop from network participation.
 

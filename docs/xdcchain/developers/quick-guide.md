@@ -53,8 +53,6 @@ To start using XDC, you’ll need a secure wallet—a dedicated app for storing 
 ## Community and Support
 Join the vibrant community of developers, validators, and users who are actively contributing to the XDC Network's growth and innovation. Engage with the community, ask questions, and share your knowledge.
 
-
-
 - **Dev Forum:** 
 Participate in discussions, ask questions, and collaborate with other developers. [XDC Dev Forum](https://www.xdc.dev/)
 
