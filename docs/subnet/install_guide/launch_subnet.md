@@ -28,7 +28,7 @@ title: Launch a Subnet
 <iframe width="768" height="432" src="https://www.youtube.com/embed/-SXsRbn6hN8" title="Setting Up Your Own XDC-Subnet Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-## Deploy Subnet With Subnet Deployment Wizard UI
+## Deploy With Wizard UI
 
   1. Pull `start.sh` script from the generator Github repo and run. This will start a local webserver
   ```
@@ -56,7 +56,7 @@ title: Launch a Subnet
     - Start Subnet services
   ![Steps](../img/steps.png)
 
-  5. Once successfully deployed, you can check out [UI usage guide](../using_subnet.md)
+  5. Once successfully deployed, you can check out [UI usage guide](../using_subnet/using_subnet.md)
   
   <!-- 6. (Optional) if you deployed Subswap, check out the usage here: -->
 

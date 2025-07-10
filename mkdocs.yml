@@ -108,6 +108,8 @@ nav:
       - Introduction: ./subnet/index.md
       - Deployment Guide: 
         - Launch a Subnet: ./subnet/install_guide/launch_subnet.md
+        - Multi-Machines Deployment: ./subnet/install_guide/multi_machines_deployment.md
+        - Exposing Subnet Frontend: ./subnet/install_guide/exposing_services_frontend.md
         - Configs Explanation: ./subnet/install_guide/config_explanation.md
         - Common Issues and Troubleshooting: ./subnet/install_guide/common_issues.md
         - FAQ: ./subnet/install_guide/faq.md
