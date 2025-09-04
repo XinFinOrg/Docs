@@ -467,6 +467,94 @@ sudo docker-compose -f docker-compose.yml down
 
 ---------------------------------------------------------------
 
+# Setup XDC Masternode(Full Node)/Standby node using Snapshots
+
+### Prerequisites
+
+* A server or cloud instance (minimum 16 GB RAM, 1.5 TB storage)
+* Ubuntuoperating system
+* Basic Linux command-line knowledge
+
+### Setting up the Node Environment using Bootstrap
+
+Its the primary options for setting up your XDC Network node environment: using the bootstrap.sh script for a quick setup
+
+Using the Bootstrap Command for Quick Setup
+This command automates the installation of necessary dependencies and sets up the basic node environment.
+
+```
+sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/XinFinOrg/XinFin-Node/master/setup/bootstrap.sh)" root
+```
+
+**You will be prompted to enter:**
+
+- **XinFin Network (mainnet/testnet/devnet):** Type mainnet for the main XDC Network.
+
+- **XinFin MasterNode Name:** Provide a name for your node (e.g.,Rushabh-Snapshot-Node).
+
+- **Generate new private key and wallet address:** If you have your own key, you can change after this and restart the node: Enter y or Y and continue.
+
+![node-sync](../../img/installation.png)
+
+Once the installation on your Ubuntu server is complete, attach to the node using the following command to verify that the blockchain synchronization has begun
+
+```
+bash xdc-attach.sh
+```
+
+![node-sync](../../img/installation1.png)
+
+You can monitor the status of your node using the above command or by visiting the official stats page at https://xinfin.network/#stats Once you've confirmed that the node has begun syncing from the genesis block, stop the node by running:
+
+```
+bash docker-down.sh
+```
+![node-sync](../../img/installation2.png)
+
+After stopping your node, proceed to delete the existing XDC directory to prepare for the snapshot data
+
+![node-sync](../../img/installation3.png)
+
+After deleting the XDC folder, you can now proceed to download and apply the latest snapshot.
+
+To download the XDC Network Mainnet snapshot, use the appropriate command based on the type of node you’re setting up:
+
+- **For a Full Node (latest state only):** https://download.xinfin.network/xdcchain.tar
+
+- **For an Archive Node (complete history):** http://downloads.xinfin.network/xdcchain_archive.tar
+
+**Note: Snapshots are updated approximately every 20 days.**
+
+![node-sync](../../img/installation4.png)
+
+Once the xdc.tar file has been downloaded, extract the snapshot by running the following command:
+
+```
+tar -xvzf xdc.tar
+```
+
+This will unpack the archive and create the XDC directory containing the necessary blockchain data.
+
+![node-sync](../../img/installation5.png)
+
+### Once the XDC folder has been extracted, navigate into it and perform the following cleanup steps:
+
+**Delete the nodekey file:**
+
+```
+rm -rf nodekey
+```
+
+**Delete the transactions.rlp file:**
+
+```
+rm -rf transactions.rlp
+```
+![node-sync](../../img/cleanup.png)
+
+
+---------------------------------------------------------------
+
 # Downloading a Network Snapshot (Mainnet or Apothem)
 
 The following steps are to expedite the syncing process of your node with the XDC Network.  If you followed the steps above, your node will take 3-4 days to sync up with the network fully.  You can reduce that time by downloading a network snapshot and bringing your node back up after the chain has been downloaded and unpacked. 
