@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/xdc.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
     
@@ -2116,6 +2116,68 @@ You should be able to see your node listed on the [Apothem Network] page. Select
 </p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>down
 </code></pre></div>
 <hr>
+<h1 id="setup-xdc-masternodefull-nodestandby-node-using-snapshots">Setup XDC Masternode(Full Node)/Standby node using Snapshots<a class="headerlink" href="#setup-xdc-masternodefull-nodestandby-node-using-snapshots" title="Link to this section">¶</a></h1>
+<h3 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Link to this section">¶</a></h3>
+<ul>
+<li>A server or cloud instance (minimum 16 GB RAM, 1.5 TB storage)</li>
+<li>Ubuntuoperating system</li>
+<li>Basic Linux command-line knowledge</li>
+</ul>
+<h3 id="setting-up-the-node-environment-using-bootstrap">Setting up the Node Environment using Bootstrap<a class="headerlink" href="#setting-up-the-node-environment-using-bootstrap" title="Link to this section">¶</a></h3>
+<p>Its the primary options for setting up your XDC Network node environment: using the bootstrap.sh script for a quick setup</p>
+<p>Using the Bootstrap Command for Quick Setup
+This command automates the installation of necessary dependencies and sets up the basic node environment.</p>
+<div class="highlight"><pre><span></span><code>sudo su -c "bash &lt;(wget -qO- https://raw.githubusercontent.com/XinFinOrg/XinFin-Node/master/setup/bootstrap.sh)" root
+</code></pre></div>
+<p><strong>You will be prompted to enter:</strong></p>
+<ul>
+<li>
+<p><strong>XinFin Network (mainnet/testnet/devnet):</strong> Type mainnet for the main XDC Network.</p>
+</li>
+<li>
+<p><strong>XinFin MasterNode Name:</strong> Provide a name for your node (e.g.,Rushabh-Snapshot-Node).</p>
+</li>
+<li>
+<p><strong>Generate new private key and wallet address:</strong> If you have your own key, you can change after this and restart the node: Enter y or Y and continue.</p>
+</li>
+</ul>
+<p><img alt="node-sync" src="../../../img/installation.png"></p>
+<p>Once the installation on your Ubuntu server is complete, attach to the node using the following command to verify that the blockchain synchronization has begun</p>
+<div class="highlight"><pre><span></span><code>bash xdc-attach.sh
+</code></pre></div>
+<p><img alt="node-sync" src="../../../img/installation1.png"></p>
+<p>You can monitor the status of your node using the above command or by visiting the official stats page at <a href="https://xinfin.network/#stats">https://xinfin.network/#stats</a> Once you’ve confirmed that the node has begun syncing from the genesis block, stop the node by running:</p>
+<p></p><div class="highlight"><pre><span></span><code>bash docker-down.sh
+</code></pre></div>
+<img alt="node-sync" src="../../../img/installation2.png">
+<p>After stopping your node, proceed to delete the existing XDC directory to prepare for the snapshot data</p>
+<p><img alt="node-sync" src="../../../img/installation3.png"></p>
+<p>After deleting the XDC folder, you can now proceed to download and apply the latest snapshot.</p>
+<p>To download the XDC Network Mainnet snapshot, use the appropriate command based on the type of node you’re setting up:</p>
+<ul>
+<li>
+<p><strong>For a Full Node (latest state only):</strong> <a href="https://download.xinfin.network/xdcchain.tar">https://download.xinfin.network/xdcchain.tar</a></p>
+</li>
+<li>
+<p><strong>For an Archive Node (complete history):</strong> <a href="http://downloads.xinfin.network/xdcchain_archive.tar">http://downloads.xinfin.network/xdcchain_archive.tar</a></p>
+</li>
+</ul>
+<p><strong>Note: Snapshots are updated approximately every 20 days.</strong></p>
+<p><img alt="node-sync" src="../../../img/installation4.png"></p>
+<p>Once the xdc.tar file has been downloaded, extract the snapshot by running the following command:</p>
+<div class="highlight"><pre><span></span><code>tar -xvzf xdc.tar
+</code></pre></div>
+<p>This will unpack the archive and create the XDC directory containing the necessary blockchain data.</p>
+<p><img alt="node-sync" src="../../../img/installation5.png"></p>
+<h3 id="once-the-xdc-folder-has-been-extracted-navigate-into-it-and-perform-the-following-cleanup-steps">Once the XDC folder has been extracted, navigate into it and perform the following cleanup steps:<a class="headerlink" href="#once-the-xdc-folder-has-been-extracted-navigate-into-it-and-perform-the-following-cleanup-steps" title="Link to this section">¶</a></h3>
+<p><strong>Delete the nodekey file:</strong></p>
+<div class="highlight"><pre><span></span><code>rm -rf nodekey
+</code></pre></div>
+<p><strong>Delete the transactions.rlp file:</strong></p>
+<p></p><div class="highlight"><pre><span></span><code>rm -rf transactions.rlp
+</code></pre></div>
+<img alt="node-sync" src="../../../img/cleanup.png">
+<hr>
 <h1 id="downloading-a-network-snapshot-mainnet-or-apothem">Downloading a Network Snapshot (Mainnet or Apothem)<a class="headerlink" href="#downloading-a-network-snapshot-mainnet-or-apothem" title="Link to this section">¶</a></h1>
 <p>The following steps are to expedite the syncing process of your node with the XDC Network.  If you followed the steps above, your node will take 3-4 days to sync up with the network fully.  You can reduce that time by downloading a network snapshot and bringing your node back up after the chain has been downloaded and unpacked. </p>
 <iframe width="768" height="432" src="https://www.youtube.com/embed/ZQF3f0Zd6-k" title="Downloading an XDC Network Snapshot to Expedite Node Syncing to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -2369,10 +2431,10 @@ This type of node is used to query data, providing everything in the full node p
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.tracking", "navigation.integration", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.prune", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.tracking", "navigation.integration", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.prune", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../../assets/js/mathjax.js"></script>
       
