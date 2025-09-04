@@ -86,6 +86,7 @@ nav:
               - Using Bootstrap Script: ./xdcchain/developers/node_operators/masternode/#setup-xdc-masternode-using-bootstrap-script
               - Using One-Click-Installer: ./xdcchain/developers/node_operators/masternode/#setup-xdc-masternodestandby-node-using-one-click-installer
               - Using Docker: ./xdcchain/developers/node_operators/masternode/#setup-xdc-masternodestandby-node-using-docker
+              - Using Snapshot: ./xdcchain/developers/node_operators/masternode/#setup-xdc-masternodefull-nodestandby-node-using-snapshots
               - Downloading Mainnet Snapshot: ./xdcchain/developers/node_operators/masternode/#mainnet-snapshot 
               - Downloading Apothem Snapshot: ./xdcchain/developers/node_operators/masternode/#apothem-snapshot   
               # - How to Secure Mastecrnode(WIP): ./xdcchain/developers/node_operators/node_architecture
