@@ -66,7 +66,7 @@ nav:
     - XDC Ecosystem: https://xinfin.org/ecosystem-dapps
     - Developers:
         - Quick Guide: ./xdcchain/developers/quick-guide.md
-        - USDC Quickstart: ./xdcchain/developers/usdc-quickstart
+        - USDC Quickstart: ./xdcchain/developers/usdc-quickstart.md
         - Dev-Tools: https://xinfin.org/quick-tools-guide
         - RPC Endpoints:
             - RPC: ./xdcchain/developers/rpc.md/
