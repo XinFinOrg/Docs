@@ -202,8 +202,6 @@ Explorer: https://testnet.xdcscan.com/tx/0xabc123...def456
 
 ## Learn More
 
-Explore the full Circle USDC integration guide in the [Circle Developer Docs](https://developers.circle.com/docs/usdc).
+Explore the full Circle USDC integration guide in the [Circle Developer Docs](https://developers.circle.com).
 
-```
 
----
