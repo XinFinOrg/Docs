@@ -832,6 +832,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#2-create-environment-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create Environment File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#3-create-your-script-file" class="md-nav__link">
     <span class="md-ellipsis">
       3. Create Your Script File
@@ -970,15 +979,11 @@
 <h3 id="1-initialize-project-install-dependencies">1. Initialize Project &amp; Install Dependencies<a class="headerlink" href="#1-initialize-project-install-dependencies" title="Link to this section">¶</a></h3>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>init<span class="w"> </span>-y
 npm<span class="w"> </span>install<span class="w"> </span>viem<span class="w"> </span>dotenv
-<span class="sb">````</span>
-
-<span class="c1">### 2. Create Environment File</span>
-
-In<span class="w"> </span>your<span class="w"> </span>project<span class="w"> </span>root,<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span><span class="sb">`</span>.env<span class="sb">`</span><span class="w"> </span>file<span class="w"> </span>and<span class="w"> </span>add:
-
-<span class="sb">```</span>env
-<span class="nv">PRIVATE_KEY</span><span class="o">=</span>&lt;YOUR_PRIVATE_KEY&gt;<span class="w">         </span><span class="c1"># Must be 0x-prefixed 64-character hex</span>
-<span class="nv">RECIPIENT_ADDRESS</span><span class="o">=</span>0x&lt;RECIPIENT_ADDRESS&gt;
+</code></pre></div>
+<h3 id="2-create-environment-file">2. Create Environment File<a class="headerlink" href="#2-create-environment-file" title="Link to this section">¶</a></h3>
+<p>In your project root, create a <code>.env</code> file and add:</p>
+<div class="highlight"><pre><span></span><code>PRIVATE_KEY=&lt;YOUR_PRIVATE_KEY&gt;         # Must be 0x-prefixed 64-character hex
+RECIPIENT_ADDRESS=0x&lt;RECIPIENT_ADDRESS&gt;
 </code></pre></div>
 <h3 id="3-create-your-script-file">3. Create Your Script File<a class="headerlink" href="#3-create-your-script-file" title="Link to this section">¶</a></h3>
 <p>In the same directory, create a file named <code>index.js</code>.</p>
