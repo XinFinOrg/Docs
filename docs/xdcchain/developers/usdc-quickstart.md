@@ -34,7 +34,7 @@ This guide walks you through building a standalone `index.js` script using **Vie
 ```bash
 npm init -y
 npm install viem dotenv
-````
+```
 
 ### 2. Create Environment File
 
