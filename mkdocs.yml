@@ -77,6 +77,7 @@ nav:
         - Migrating from EVM to XDC: ./xdcchain/evmtoxdc.md
         - Wallet Configuration: ./xdcchain/developers/wallet-configuration.md
         - Get XDC Listed: ./xdcchain/developers/getxdclisted.md
+        - XDC2.0 Private Network: ./xdcchain/developers/xdposchain_privatenet.md
     
     - Node Operators:
         - Node Architecture: ./xdcchain/developers/node_operators/node_architecture.md
