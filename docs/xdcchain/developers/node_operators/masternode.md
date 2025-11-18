@@ -519,11 +519,11 @@ After deleting the XDC folder, you can now proceed to download and apply the lat
 
 To download the XDC Network Mainnet snapshot, use the appropriate command based on the type of node you’re setting up:
 
-- **For a Full Node (latest state only):** https://download.xinfin.network/xdcchain.tar
+- **For a Full Node (latest state only):** https://rpc.xdc.network/snapshots/mainnet/full/
 
-- **For an Archive Node (complete history):** http://downloads.xinfin.network/xdcchain_archive.tar
+- **For an Archive Node (complete history):** https://rpc.xdc.network/snapshots/mainnet/archive/
 
-**Note: Snapshots are updated approximately every 20 days.**
+**Note: Snapshots are updated approximately every 20 days at https://rpc.xdc.network/snapshots/**
 
 ![node-sync](../../img/installation4.png)
 
