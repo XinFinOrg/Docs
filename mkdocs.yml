@@ -107,8 +107,17 @@ nav:
         - FAQs: ./xdcchain/faq.md  
 
   - XDC Subnet:
-    - XDC Subnet:
-      - Introduction: ./subnet/index.md
+    - Overview: 
+      - Design and Architecture: ./subnet/overview.md
+      - Components:
+        - Subnet Chain: ./subnet/components/subnet_chain.md
+        - Checkpoint Smart Contract: ./subnet/components/checkpoint_contract.md
+        - Relayer: ./subnet/components/relayer.md
+        - API Library: ./subnet/components/api_library.md
+        - XDCZero: ./subnet/components/xdc_zero.md
+        - Subswap: ./subnet/components/subswap.md
+
+    - Deployment and Usage:
       - Deployment Guide: 
         - Launch a Subnet: ./subnet/install_guide/launch_subnet.md
         - Multi-Machines Deployment: ./subnet/install_guide/multi_machines_deployment.md
@@ -123,14 +132,10 @@ nav:
         - Faucet: ./subnet/using_subnet/faucet.md
         - Block Explorer: ./subnet/using_subnet/explorer.md
       - Upgrading the Subnet: ./subnet/upgrading_subnet.md
-      - Components:
-        - Subnet Chain: ./subnet/components/subnet_chain.md
-        - Checkpoint Smart Contract: ./subnet/components/checkpoint_contract.md
-        - Relayer: ./subnet/components/relayer.md
-        - API Library: ./subnet/components/api_library.md
-        - XDCZero: ./subnet/components/xdc_zero.md
-        - Subswap: ./subnet/components/subswap.md
-        - Repositories: ./subnet/components/repos.md
+
+    - Resources:
+      - GitHub Repositories: ./subnet/resources/repos.md
+      - Changelog: ./subnet/resources/changelog.md
       - Contact: ./subnet/contact.md
 
   - Announcements:

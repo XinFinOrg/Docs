@@ -4,6 +4,24 @@ title: Changelog
 
 # Subnet Deployment Generator Changelog
 
+### [v2.1.0](https://github.com/XinFinOrg/Subnet-Deployment/releases/tag/v2.1.0) - 2025/09/23
+- New XDPoS Generator - Added complete XDPoS (XinFin Delegated Proof of Stake) subnet deployment support with dedicated web interface and generation module
+- Deployment Wizard - New user-friendly interface for configuring and managing XDPoS-based subnets
+- Enhanced Docker Scripts - Improved startup and shutdown procedures for better container management
+- Expanded API - Added XDPoS-specific endpoints to Express server
+- Execution Library - New utilities for enhanced command execution and process management
+- Versioning Fixes - Resolved version display and handling issues across configuration files
+
+### [v2.0.0](https://github.com/XinFinOrg/Subnet-Deployment/releases/tag/v2.0.0) - 2025/09/23
+- Container Manager System - Complete containerized deployment solution with Express.js web server, real-time state monitoring, and Docker orchestration
+- Interactive Web UI - Modern interface with real-time state detection, dynamic controls, command streaming, and auto-collapsing history
+- Comprehensive Generators - Automated generation of configurations, docker-compose files, environment variables, and helper scripts
+- Faucet System - Integrated faucet server with dedicated web interface for token distribution
+- Advanced State Management - Real-time monitoring of blocks, peers, contracts, and mining status
+- Utility Scripts - node addition script, mining checks, peer monitoring, and docker management tools
+- Refactored Codebase - Major improvements to deployment-generator with cleaner architecture
+
+
 ### v1.0.0 - 2024/10/03
   - Added Configuration Generator UI
   - Added XDC-Zero configuration generation
