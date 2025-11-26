@@ -38,3 +38,14 @@ The architecture consists of the following key components owned by the customer:
 
 ![subnet-image](./img/xdc-subnet-architecture.svg)
 
+
+<div class="section-body">
+    <a href="../components/subnet_chain/" class="grid-item">
+        <div>Components</div>
+        <p>Continue reading on individual components of the Subnet architecture</p>
+    </a>
+    <a href="../install_guide/launch_subnet/" class="grid-item">
+        <div>Launch a Subnet in 10 Minutes</div>
+        <p>Start your own Subnet with our intuitive and easy to use Deployment Wizard</p>
+    </a>
+</div>
