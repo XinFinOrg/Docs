@@ -14,7 +14,7 @@ title: Deploy Private Blockchain With XDC2.0 Consensus
   ./start_xdpos.sh
   ```
   
-  2. Go to [http://localhost:5210/](http://localhost:5210) in your browser.
+  2. Go to [http://localhost:5210/gen_xdpos](http://localhost:5210/gen_xdpos) in your browser.
   <details>
   <summary>If you are running this on a remote server.</summary>
   <p>
