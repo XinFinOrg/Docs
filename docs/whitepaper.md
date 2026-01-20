@@ -8,8 +8,8 @@ title: White Paper
         <div>Technical White Paper</div>
         <p>Technical White Paper of XDC Network</p>
     </a>
-        <a href="https://xinfin.org/docs/whitepaper-business.pdf" class="grid-item">
-        <div>Business White Paper</div>
-        <p>Business White Paper of XDC Network</p>
+        <a href="https://xinfin.org/docs/xdc-mica-whitepaper.pdf" class="grid-item">
+        <div>MICA White Paper</div>
+        <p>MICA White Paper of XDC Network</p>
     </a>
 </div>
