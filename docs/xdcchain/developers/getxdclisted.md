@@ -23,7 +23,7 @@ This page is intended to streamline the listing and integration process with tec
 - **Block Explorer:** https://xdcscan.io | https://xdcscan.com
 - **Official Website:** https://www.xinfin.org
 - **Technical White Paper:** https://xinfin.org/docs/whitepaper-tech.pdf
-- **Business White Paper:** https://xinfin.org/docs/whitepaper-business.pdf
+- **MICA White Paper:** https://xinfin.org/docs/xdc-mica-whitepaper.pdf
 - **Logo Files (SVG/PNG):** [Download Here](https://xinfin.org/brand-assets)
 
 ## Network Endpoints
