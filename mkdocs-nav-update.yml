@@ -1,0 +1,110 @@
+# PROPOSED NAVIGATION UPDATE FOR mkdocs.yml
+# This file shows the new nav structure to add
+# Merge this into the existing mkdocs.yml nav section
+
+nav:
+  - Home: index.md
+  
+  # NEW: Learn Section (for newcomers)
+  - Learn:
+    - Overview: ./learn/index.md
+    - Blockchain Basics: ./learn/blockchain-basics.md
+    - XDC Architecture: ./learn/xdc-architecture.md
+    - XDPoS Explained: ./learn/xdpos-explained.md
+    - Gas & Fees: ./learn/gas-fees.md
+    - Glossary: ./learn/glossary.md
+    - FAQ: ./learn/faq.md
+  
+  - XDC Chain:
+    - XDC Chain Overview: ./xdcchain/index.md
+    - XDPoS Consensus: ./xdcchain/xdpos.md
+    - XDPoS 2.0: ./xdcchain/xdpos2.md
+    - XDC Ecosystem: https://xinfin.org/ecosystem-dapps
+    - Developers:
+        - Quick Guide: ./xdcchain/developers/quick-guide.md
+        - USDC Quickstart: ./xdcchain/developers/usdc-quickstart.md
+        - Dev-Tools: https://xinfin.org/quick-tools-guide
+        - RPC Endpoints:
+            - RPC: ./xdcchain/developers/rpc.md
+            - Mainnet RPC: ./xdcchain/developers/mainnetrpc.md
+            - Apothem Testnet RPC: ./xdcchain/developers/apothemrpc.md
+            - Devnet RPC: ./xdcchain/developers/devnetrpc.md
+        - Faucet: https://faucet.blocksscan.io/
+        - Migrating from EVM to XDC: ./xdcchain/evmtoxdc.md
+        - Wallet Configuration: ./xdcchain/developers/wallet-configuration.md
+        - Get XDC Listed: ./xdcchain/developers/getxdclisted.md
+        - XDC2.0 Private Network: ./xdcchain/developers/xdposchain_privatenet.md
+    
+    - Node Operators:
+        - Node Architecture: ./xdcchain/developers/node_operators/node_architecture.md
+        - Rewards Mechanism: ./xdcchain/rewards.md
+        - Masternode Setup: ./xdcchain/developers/node_operators/masternode.md
+        - Docker Image: ./xdcchain/developers/node_operators/dockerimg.md
+        - Slashing: ./xdcchain/developers/node_operators/slashing.md
+
+    - Governance:
+        - Overview of XDCDAO: ./xdcchain/governance/overview.md
+
+    - FAQ: ./xdcchain/faq.md
+
+  - XDC Subnet:
+    - Overview: 
+      - Design and Architecture: ./subnet/overview.md
+      - Components:
+        - Subnet Chain: ./subnet/components/subnet_chain.md
+        - Checkpoint Smart Contract: ./subnet/components/checkpoint_contract.md
+        - Relayer: ./subnet/components/relayer.md
+        - API Library: ./subnet/components/api_library.md
+        - XDCZero: ./subnet/components/xdc_zero.md
+        - Subswap: ./subnet/components/subswap.md
+
+    - Deployment and Usage:
+      - Deployment Guide: 
+        - Launch a Subnet: ./subnet/install_guide/launch_subnet.md
+        - Multi-Machines Deployment: ./subnet/install_guide/multi_machines_deployment.md
+        - Exposing Subnet Frontend: ./subnet/install_guide/exposing_services_frontend.md
+        - Configs Explanation: ./subnet/install_guide/config_explanation.md
+        - Common Issues: ./subnet/install_guide/common_issues.md
+        - FAQ: ./subnet/install_guide/faq.md
+        
+      - Using the Subnet:
+        - UI Usage Guide: ./subnet/using_subnet/using_subnet.md
+        - Faucet: ./subnet/using_subnet/faucet.md
+        - Block Explorer: ./subnet/using_subnet/explorer.md
+      - Upgrading the Subnet: ./subnet/upgrading_subnet.md
+
+    - Resources:
+      - GitHub Repositories: ./subnet/resources/repos.md
+      - Changelog: ./subnet/resources/changelog.md
+      - Contact: ./subnet/contact.md
+
+  # NEW: Enterprise Section
+  - Enterprise:
+    - Overview: ./enterprise/index.md
+    - Trade Finance: ./enterprise/trade-finance.md
+    - RWA Tokenization: ./enterprise/rwa-tokenization.md
+    - ISO 20022 Integration: ./enterprise/iso-20022.md
+    - Private Subnets: ./enterprise/private-subnets.md
+
+  # NEW: API Reference Section
+  - API Reference:
+    - Overview: ./api/index.md
+    - JSON-RPC: ./api/json-rpc.md
+    - WebSocket: ./api/websocket.md
+    - Error Codes: ./api/error-codes.md
+
+  - Smart Contracts:
+    - Overview: ./smartcontract/index.md
+    - Deployment & Verification: ./smartcontract/deployment-verification.md
+    - Flattening Contracts: ./smartcontract/flattening-smart-contracts.md
+    - Token Standards:
+        - Overview: ./smartcontract/tokens.md
+        - XRC20: ./smartcontract/tokens.md#xrc20
+        - XRC721: ./smartcontract/tokens.md#xrc721
+        - XRC404: ./smartcontract/tokens.md#xrc404
+    - XDC Stats: ./smartcontract/xdcstats.md
+    - Data & Analytics: ./smartcontract/data-analytics.md
+
+  - Announcements: ./announce/index.md
+  
+  - White Paper: whitepaper.md
