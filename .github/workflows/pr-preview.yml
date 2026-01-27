@@ -1,11 +1,11 @@
 name: PR Preview Deploy
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened, closed]
 
 concurrency:
-  group: preview-${{ github.ref }}
+  group: preview-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
@@ -15,8 +15,10 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - name: Checkout repository
+      - name: Checkout PR head
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,3 +41,4 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
+          token: ${{ secrets.GITHUB_TOKEN }}
