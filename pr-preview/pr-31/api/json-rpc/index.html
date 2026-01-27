@@ -1,0 +1,1798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Get started with XDC Chain Docs. Explore the documentation for XDC Chain">
+      
+      
+        <meta name="author" content="XDC Network">
+      
+      
+        <link rel="canonical" href="https://xinfin.org/api/json-rpc/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/xdc.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+    
+        <title>JSON-RPC API Reference</title>
+    
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+    
+      <link rel="stylesheet" href="../../assets/style/index.css">
+    
+      <link rel="stylesheet" href="../../assets/style/components/banner.css">
+    
+      <link rel="stylesheet" href="../../assets/style/components/nav.css">
+    
+      <link rel="stylesheet" href="../../assets/style/components/sidebar.css">
+    
+      <link rel="stylesheet" href="../../assets/style/components/content.css">
+    
+      <link rel="stylesheet" href="../../assets/style/components/footer-nav.css">
+    
+      <link rel="stylesheet" href="../../assets/style/components/footer.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0.16.10/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#json-rpc-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine classes -->
+
+
+
+
+
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+
+        <!-- Link to home -->
+        <a
+                href="../../#"
+                title="Documentation"
+                class="md-header__button md-logo"
+                aria-label="Documentation"
+                data-md-component="logo"
+        >
+            
+  <img src="../../assets/logo.svg" alt="logo">
+
+        </a>
+
+        <!-- Button to open drawer -->
+        <label class="md-header__button md-icon" for="__drawer">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        </label>
+
+        <!-- Header title -->
+        <div class="md-header__title" data-md-component="header-title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__site_name">
+                  <span class="md-ellipsis">
+                    Documentation
+                  </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color palette toggle -->
+        
+            
+                <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14m0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11m-5.657.157a.75.75 0 0 1 0 1.06l-1.768 1.768a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734l1.767-1.768a.75.75 0 0 1 1.061 0M3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L3.515 4.575a.75.75 0 0 1 0-1.06M12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0M4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12m8 8a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20m12-8a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12m-6.343 5.657a.75.75 0 0 1 1.06 0l1.768 1.768a.75.75 0 0 1-.018 1.042.75.75 0 0 1-1.042.018l-1.768-1.767a.75.75 0 0 1 0-1.061m2.828-14.142a.75.75 0 0 1 0 1.06l-1.768 1.768a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l1.767-1.768a.75.75 0 0 1 1.061 0"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.768 3.96zl-.002-.005a9 9 0 0 0-.218-.779c-.13-.394.21-.8.602-.67q.435.144.855.328l.01.005A10.002 10.002 0 0 1 12 22a10 10 0 0 1-9.162-5.985l-.004-.01a10 10 0 0 1-.329-.855c-.13-.392.277-.732.67-.602q.386.126.78.218l.004.002A9 9 0 0 0 14.999 6a9 9 0 0 0-.231-2.04M16.5 6c0 5.799-4.701 10.5-10.5 10.5q-.64 0-1.26-.075A8.5 8.5 0 1 0 16.425 4.74q.075.62.075 1.259Z"/></svg>
+      </label>
+    
+  
+</form>
+            
+        
+
+        <!-- User preference: color palette -->
+        
+            <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+        
+
+        <!-- Site language selector -->
+        
+
+        <!-- Button to open search modal -->
+        
+            <label class="md-header__button md-icon" for="__search">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+            </label>
+
+            <!-- Search interface -->
+            <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5.5a3.498 3.498 0 0 1-6.062 2.385l-5.112 3.021a3.5 3.5 0 0 1 0 2.188l5.112 3.021a3.5 3.5 0 1 1-.764 1.29l-5.112-3.02a3.499 3.499 0 1 1-3.843-5.642 3.5 3.5 0 0 1 3.843.872l5.112-3.021A3.5 3.5 0 1 1 20 5.5m-1.5 13a2 2 0 1 0-3.999-.001 2 2 0 0 0 3.999.001m0-13a2 2 0 1 0-3.999-.001A2 2 0 0 0 18.5 5.5M5.5 14a2 2 0 1 0 .001-3.999A2 2 0 0 0 5.5 14"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+
+        <!-- Repository information -->
+        
+        <div class="md-header__source">
+            <a href="https://github.com/XinFinOrg/Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XDC Network GitHub
+  </div>
+</a>
+        </div>
+        
+    </nav>
+
+    <!-- Navigation tabs (sticky) -->
+    
+        
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../xdcchain/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  XDC Chain
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../subnet/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  XDC Subnet
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../announce/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Announcements
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../smartcontract/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Smart Contract Developments
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../whitepaper/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  White Paper
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../#" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/XinFinOrg/Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    XDC Network GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../xdcchain/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XDC Chain
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../subnet/overview/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XDC Subnet
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../announce/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Announcements
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../smartcontract/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Contract Developments
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whitepaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    White Paper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#making-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making Requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethereum-namespace-eth_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ethereum Namespace (eth_)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethereum Namespace (eth_)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eth_blocknumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_blockNumber
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_getbalance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getBalance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_gettransactioncount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getTransactionCount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_sendrawtransaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_sendRawTransaction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_call
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_estimategas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_estimateGas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_gasprice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_gasPrice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_getblockbynumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getBlockByNumber
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_getblockbyhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getBlockByHash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_gettransactionbyhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getTransactionByHash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_gettransactionreceipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getTransactionReceipt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_getlogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getLogs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_chainid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_chainId
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_getcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getCode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eth_getstorageat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eth_getStorageAt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net-namespace-net_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Net Namespace (net_)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Net Namespace (net_)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        net_version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net_listening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        net_listening
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net_peercount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        net_peerCount
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web3-namespace-web3_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web3 Namespace (web3_)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web3 Namespace (web3_)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web3_clientversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        web3_clientVersion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web3_sha3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        web3_sha3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/XinFinOrg/Docs/edit/main/docs/api/json-rpc.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<div><h1 id="json-rpc-api-reference">JSON-RPC API Reference<a class="headerlink" href="#json-rpc-api-reference" title="Link to this section">¶</a></h1>
+<p>Complete reference for XDC Network JSON-RPC methods. XDC is fully compatible with Ethereum JSON-RPC API.</p>
+<h2 id="making-requests">Making Requests<a class="headerlink" href="#making-requests" title="Link to this section">¶</a></h2>
+<p>All requests follow the JSON-RPC 2.0 specification:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"method_name"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="ethereum-namespace-eth_">Ethereum Namespace (<code>eth_</code>)<a class="headerlink" href="#ethereum-namespace-eth_" title="Link to this section">¶</a></h2>
+<h3 id="eth_blocknumber">eth_blockNumber<a class="headerlink" href="#eth_blocknumber" title="Link to this section">¶</a></h3>
+<p>Returns the current block number.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Request</label><label for="__tabbed_1_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5e4b8c3"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_getbalance">eth_getBalance<a class="headerlink" href="#eth_getbalance" title="Link to this section">¶</a></h3>
+<p>Returns the balance of an address.</p>
+<p><strong>Parameters:</strong>
+1. <code>address</code> - Address to check
+2. <code>block</code> - Block number or “latest”, “earliest”, “pending”</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Request</label><label for="__tabbed_2_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_getBalance",</span>
+<span class="s1">    "params":["0x71C7656EC7ab88b098defB751B7401B5f6d8976F", "latest"],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x8ac7230489e80000"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_gettransactioncount">eth_getTransactionCount<a class="headerlink" href="#eth_gettransactioncount" title="Link to this section">¶</a></h3>
+<p>Returns the number of transactions sent from an address (nonce).</p>
+<p><strong>Parameters:</strong>
+1. <code>address</code> - Address
+2. <code>block</code> - Block number or tag</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Request</label><label for="__tabbed_3_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_getTransactionCount",</span>
+<span class="s1">    "params":["0x71C7656EC7ab88b098defB751B7401B5f6d8976F", "latest"],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x29"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_sendrawtransaction">eth_sendRawTransaction<a class="headerlink" href="#eth_sendrawtransaction" title="Link to this section">¶</a></h3>
+<p>Submits a signed transaction to the network.</p>
+<p><strong>Parameters:</strong>
+1. <code>data</code> - Signed transaction data</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Request</label><label for="__tabbed_4_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_sendRawTransaction",</span>
+<span class="s1">    "params":["0xf86c0a8502540be400825208..."],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_call">eth_call<a class="headerlink" href="#eth_call" title="Link to this section">¶</a></h3>
+<p>Executes a call without creating a transaction.</p>
+<p><strong>Parameters:</strong>
+1. <code>object</code> - Transaction call object
+2. <code>block</code> - Block number or tag</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Request</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_call",</span>
+<span class="s1">    "params":[{</span>
+<span class="s1">      "to": "0xContractAddress",</span>
+<span class="s1">      "data": "0x70a08231000000000000000000000000..."</span>
+<span class="s1">    }, "latest"],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_estimategas">eth_estimateGas<a class="headerlink" href="#eth_estimategas" title="Link to this section">¶</a></h3>
+<p>Estimates gas needed for a transaction.</p>
+<p><strong>Parameters:</strong>
+1. <code>object</code> - Transaction object</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Request</label><label for="__tabbed_6_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_estimateGas",</span>
+<span class="s1">    "params":[{</span>
+<span class="s1">      "from": "0x...",</span>
+<span class="s1">      "to": "0x...",</span>
+<span class="s1">      "value": "0xde0b6b3a7640000"</span>
+<span class="s1">    }],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5208"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_gasprice">eth_gasPrice<a class="headerlink" href="#eth_gasprice" title="Link to this section">¶</a></h3>
+<p>Returns the current gas price in wei.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Request</label><label for="__tabbed_7_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x3b9aca00"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_getblockbynumber">eth_getBlockByNumber<a class="headerlink" href="#eth_getblockbynumber" title="Link to this section">¶</a></h3>
+<p>Returns block information by number.</p>
+<p><strong>Parameters:</strong>
+1. <code>block</code> - Block number (hex) or tag
+2. <code>full</code> - If true, returns full transaction objects</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Request</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_getBlockByNumber",</span>
+<span class="s1">    "params":["latest", false],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_getblockbyhash">eth_getBlockByHash<a class="headerlink" href="#eth_getblockbyhash" title="Link to this section">¶</a></h3>
+<p>Returns block information by hash.</p>
+<p><strong>Parameters:</strong>
+1. <code>hash</code> - Block hash
+2. <code>full</code> - If true, returns full transaction objects</p>
+<hr>
+<h3 id="eth_gettransactionbyhash">eth_getTransactionByHash<a class="headerlink" href="#eth_gettransactionbyhash" title="Link to this section">¶</a></h3>
+<p>Returns transaction information by hash.</p>
+<p><strong>Parameters:</strong>
+1. <code>hash</code> - Transaction hash</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">Request</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_getTransactionByHash",</span>
+<span class="s1">    "params":["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_gettransactionreceipt">eth_getTransactionReceipt<a class="headerlink" href="#eth_gettransactionreceipt" title="Link to this section">¶</a></h3>
+<p>Returns the receipt of a mined transaction.</p>
+<p><strong>Parameters:</strong>
+1. <code>hash</code> - Transaction hash</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"transactionHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x..."</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"blockHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x..."</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"blockNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5e4b8c3"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"contractAddress"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"cumulativeGasUsed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5208"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"gasUsed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5208"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"logs"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x1"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_getlogs">eth_getLogs<a class="headerlink" href="#eth_getlogs" title="Link to this section">¶</a></h3>
+<p>Returns logs matching filter criteria.</p>
+<p><strong>Parameters:</strong>
+1. <code>object</code> - Filter object with:
+    - <code>fromBlock</code> - Start block
+    - <code>toBlock</code> - End block
+    - <code>address</code> - Contract address
+    - <code>topics</code> - Array of topics</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked id="__tabbed_11_1" name="__tabbed_11" type="radio"><div class="tabbed-labels"><label for="__tabbed_11_1">Request</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">    "jsonrpc":"2.0",</span>
+<span class="s1">    "method":"eth_getLogs",</span>
+<span class="s1">    "params":[{</span>
+<span class="s1">      "fromBlock": "0x5e4b8c0",</span>
+<span class="s1">      "toBlock": "latest",</span>
+<span class="s1">      "address": "0xContractAddress",</span>
+<span class="s1">      "topics": ["0xddf252ad..."]</span>
+<span class="s1">    }],</span>
+<span class="s1">    "id":1</span>
+<span class="s1">  }'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="eth_chainid">eth_chainId<a class="headerlink" href="#eth_chainid" title="Link to this section">¶</a></h3>
+<p>Returns the chain ID.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked id="__tabbed_12_1" name="__tabbed_12" type="radio"><input id="__tabbed_12_2" name="__tabbed_12" type="radio"><div class="tabbed-labels"><label for="__tabbed_12_1">Request</label><label for="__tabbed_12_2">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x32"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>Chain ID (Hex)</th>
+<th>Chain ID (Dec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mainnet</td>
+<td>0x32</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Apothem</td>
+<td>0x33</td>
+<td>51</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="eth_getcode">eth_getCode<a class="headerlink" href="#eth_getcode" title="Link to this section">¶</a></h3>
+<p>Returns code at a given address.</p>
+<p><strong>Parameters:</strong>
+1. <code>address</code> - Contract address
+2. <code>block</code> - Block number or tag</p>
+<hr>
+<h3 id="eth_getstorageat">eth_getStorageAt<a class="headerlink" href="#eth_getstorageat" title="Link to this section">¶</a></h3>
+<p>Returns storage at a specific position.</p>
+<p><strong>Parameters:</strong>
+1. <code>address</code> - Contract address
+2. <code>position</code> - Storage slot
+3. <code>block</code> - Block number or tag</p>
+<h2 id="net-namespace-net_">Net Namespace (<code>net_</code>)<a class="headerlink" href="#net-namespace-net_" title="Link to this section">¶</a></h2>
+<h3 id="net_version">net_version<a class="headerlink" href="#net_version" title="Link to this section">¶</a></h3>
+<p>Returns network ID.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked id="__tabbed_13_1" name="__tabbed_13" type="radio"><div class="tabbed-labels"><label for="__tabbed_13_1">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="net_listening">net_listening<a class="headerlink" href="#net_listening" title="Link to this section">¶</a></h3>
+<p>Returns true if client is listening for connections.</p>
+<h3 id="net_peercount">net_peerCount<a class="headerlink" href="#net_peercount" title="Link to this section">¶</a></h3>
+<p>Returns number of connected peers.</p>
+<h2 id="web3-namespace-web3_">Web3 Namespace (<code>web3_</code>)<a class="headerlink" href="#web3-namespace-web3_" title="Link to this section">¶</a></h2>
+<h3 id="web3_clientversion">web3_clientVersion<a class="headerlink" href="#web3_clientversion" title="Link to this section">¶</a></h3>
+<p>Returns the client version.</p>
+<h3 id="web3_sha3">web3_sha3<a class="headerlink" href="#web3_sha3" title="Link to this section">¶</a></h3>
+<p>Returns Keccak-256 hash of the given data.</p>
+<h2 id="method-summary">Method Summary<a class="headerlink" href="#method-summary" title="Link to this section">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eth_blockNumber</code></td>
+<td>Current block number</td>
+</tr>
+<tr>
+<td><code>eth_getBalance</code></td>
+<td>Account balance</td>
+</tr>
+<tr>
+<td><code>eth_getTransactionCount</code></td>
+<td>Account nonce</td>
+</tr>
+<tr>
+<td><code>eth_sendRawTransaction</code></td>
+<td>Submit signed tx</td>
+</tr>
+<tr>
+<td><code>eth_call</code></td>
+<td>Execute call</td>
+</tr>
+<tr>
+<td><code>eth_estimateGas</code></td>
+<td>Estimate gas</td>
+</tr>
+<tr>
+<td><code>eth_gasPrice</code></td>
+<td>Current gas price</td>
+</tr>
+<tr>
+<td><code>eth_getBlockByNumber</code></td>
+<td>Block by number</td>
+</tr>
+<tr>
+<td><code>eth_getBlockByHash</code></td>
+<td>Block by hash</td>
+</tr>
+<tr>
+<td><code>eth_getTransactionByHash</code></td>
+<td>Transaction details</td>
+</tr>
+<tr>
+<td><code>eth_getTransactionReceipt</code></td>
+<td>Transaction receipt</td>
+</tr>
+<tr>
+<td><code>eth_getLogs</code></td>
+<td>Filter logs</td>
+</tr>
+<tr>
+<td><code>eth_chainId</code></td>
+<td>Chain ID</td>
+</tr>
+<tr>
+<td><code>eth_getCode</code></td>
+<td>Contract code</td>
+</tr>
+<tr>
+<td><code>eth_getStorageAt</code></td>
+<td>Storage value</td>
+</tr>
+<tr>
+<td><code>net_version</code></td>
+<td>Network ID</td>
+</tr>
+<tr>
+<td><code>web3_clientVersion</code></td>
+<td>Client version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="batch-requests">Batch Requests<a class="headerlink" href="#batch-requests" title="Link to this section">¶</a></h2>
+<p>Send multiple requests in one call:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://rpc.xinfin.network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'[</span>
+<span class="s1">    {"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1},</span>
+<span class="s1">    {"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":2}</span>
+<span class="s1">  ]'</span>
+</code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+<div class="doc-footer">
+    <div class="doc-footer__inner md-grid">
+        <div>
+            <div>Explore</div>
+            <ul>
+                <li><a href="https://xinfin.org/" target="_blank">Official Website</a></li>
+                <li><a href="https://xinfin.org/get-xdc" target="_blank">Get XDC</a></li>
+                <li><a href="https://xinfin.org/wallets" target="_blank">XDC Wallets</a></li>
+                <li><a href="https://xinfin.org/xdc-subnet" target="_blank">XDC Subnet</a></li>
+            </ul>
+        </div>
+        <div>
+        <div>Community</div>
+            <ul>
+                <li><a href="https://xinfin.org/developers-ecosystem-partners" target="_blank">Dev Ecosystem Partners</a></li>
+                <li><a href="https://xinfin.org/join-community" target="_blank">Join Community</a></li>
+                <li><a href="https://xinfin.org/events" target="_blank">Events</a></li>
+                <li><a href="https://xinfin.org/community-bounty" target="_blank">Community Bounty</a></li>
+            </ul>
+        </div>
+        <div>
+            <div>Other Links</div>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="https://xinfin.org/join-community" target="_blank">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="doc-copyright">
+    <div class="doc-copyright__inner md-grid">
+        © 2025 XDC Network. All rights reserved.
+    </div>
+</div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.tracking", "navigation.integration", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.prune", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/js/mathjax.js"></script>
+      
+        <script src="../../assets/js/custom.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0.16.10/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
