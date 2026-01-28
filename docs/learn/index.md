@@ -88,7 +88,7 @@ Welcome to the XDC Network learning center! Whether you're new to blockchain or 
 !!! info "Coming Soon"
     Video tutorials are being developed. In the meantime, check out:
     
-    - [XDC Network YouTube](https://youtube.com/@xaboratory)
+    - [XDC Network YouTube](https://www.youtube.com/@XDCNetwork_TV)
     - [Developer Workshops](https://xdc.dev)
 
 ## Community Resources
@@ -101,4 +101,4 @@ Welcome to the XDC Network learning center! Whether you're new to blockchain or 
 ---
 
 !!! tip "Stuck?"
-    Can't find what you're looking for? Ask in our [Discord](https://discord.gg/xdc) or check the [FAQ](faq.md).
+    Can't find what you're looking for? Ask in our [Discord](https://discord.gg/xdc) or  [XDC Forum](https://XDC.dev).

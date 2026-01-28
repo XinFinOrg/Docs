@@ -9,7 +9,7 @@ XDC Network provides multiple APIs for developers to interact with the blockchai
 | API Type | Use Case | Documentation |
 |----------|----------|---------------|
 | **JSON-RPC** | Standard blockchain queries | [JSON-RPC Reference](json-rpc.md) |
-| **WebSocket** | Real-time subscriptions | [WebSocket API](websocket.md) |
+| **WebSocket** | Real-time subscriptions | [WebSocket API](./#websocket-endpoints) |
 | **GraphQL** | Complex queries (via indexers) | Coming Soon |
 
 ## Quick Start
@@ -148,8 +148,6 @@ Common error codes and their meanings:
 | -32603 | Internal error | Server error |
 | -32000 | Server error | Generic server error |
 
-See [Error Codes](error-codes.md) for complete reference.
-
 ## Rate Limiting
 
 Public RPC endpoints have rate limits to ensure fair usage:
@@ -178,5 +176,5 @@ For high-volume applications:
 ## Next Steps
 
 - [JSON-RPC Reference](json-rpc.md) - Complete method documentation
-- [WebSocket API](websocket.md) - Real-time subscriptions
-- [Error Codes](error-codes.md) - Error handling guide
+- [WebSocket API](./#websocket-endpoints) - Real-time subscriptions
+- [Error Codes](./#error-handling) - Error handling guide

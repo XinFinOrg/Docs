@@ -59,6 +59,17 @@ theme:
 # Page tree
 nav:
   - Home: index.md
+
+# NEW: Learn Section (for newcomers)
+  - Learn:
+    - Overview: ./learn/index.md
+    - Blockchain Basics: ./learn/blockchain-basics.md
+    - XDC Architecture: ./learn/xdc-architecture.md
+    - XDPoS Explained: https://xinfin.org/xdpos
+    - Gas & Fees: ./learn/gas-fees.md
+    - Glossary: ./learn/glossary.md
+    # - FAQ: ./learn/faq.md
+
   - XDC Chain:
     - XDC Chain Overview: ./xdcchain/index.md
     - XDPoS Consensus: ./xdcchain/xdpos.md
@@ -138,6 +149,33 @@ nav:
       - Changelog: ./subnet/resources/changelog.md
       - Contact: ./subnet/contact.md
 
+  # NEW: Enterprise Section
+  - Enterprise:
+    - Overview: ./enterprise/index.md
+    - Trade Finance: ./enterprise/trade-finance.md
+    - RWA Tokenization: ./enterprise/rwa-tokenization.md
+    - ISO 20022 Integration: ./enterprise/iso-20022.md
+    - Private Subnets: ./enterprise/private-subnets.md
+
+  # NEW: API Reference Section
+  - API Reference:
+    - Overview: ./api/index.md
+    - JSON-RPC: ./api/json-rpc.md
+    - WebSocket: ./api/#websocket-endpoints
+    - Error Codes: ./api/#error-handling
+
+  - Smart Contracts:
+    - Overview: ./smartcontract/index.md
+    - Deployment & Verification: ./smartcontract/deployment-verification.md
+    - Flattening Contracts: ./smartcontract/flattening-smart-contracts.md
+    - Token Standards:
+        - Overview: ./smartcontract/tokens.md
+        - XRC20: ./smartcontract/tokens.md#xrc20
+        - XRC721: ./smartcontract/tokens.md#xrc721
+        - XRC404: ./smartcontract/tokens.md#xrc404
+    - XDC Stats: ./smartcontract/xdcstats.md
+    - Data & Analytics: ./smartcontract/data-analytics.md
+
   - Announcements:
     - Announcements: ./announce/index.md
     - Upcoming:
@@ -176,7 +214,7 @@ nav:
                     - XDCScan Devnet: ./smartcontract/data-analytics/#xdcscan-devnet
 
   - White Paper: whitepaper.md
-      #  - White paper: whitepaper.md       
+    #  - White paper: whitepaper.md       
 
     #  - Games:
     #    - Telegram Mini Game on XDC Chain: ./smartcontract/game/minigame.md

@@ -190,6 +190,6 @@ async function submitDocuments(lcId, documentHash) {
 ## Resources
 
 - [TradeFinex Platform](https://tradefinex.org)
-- [XDC Trade Finance Whitepaper](https://xdc.org/whitepaper)
-- [API Documentation](../api/index.md)
-- [Smart Contract Templates](https://github.com/XinFinOrg)
+- [XDC Trade Finance](https://xdc.org/solutions/trade-finance)
+<!-- - [API Documentation](../api/index.md)
+- [Smart Contract Templates](https://github.com/XinFinOrg) -->

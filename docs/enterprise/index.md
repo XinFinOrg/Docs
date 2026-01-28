@@ -52,7 +52,7 @@ Deploy sovereign, application-specific blockchains connected to XDC mainnet. Ide
 ### Cross-Border Payments
 Send payments globally in seconds, not days. Reduce transaction costs by 99% compared to traditional correspondent banking.
 
-[Learn More →](cross-border-payments.md)
+[Learn More →](https://xinfin.org/xdc-payments/index.html)
 
 ## Getting Started
 
