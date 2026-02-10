@@ -155,9 +155,9 @@ XDC Network combines the best of both worlds:
 
 Ready to explore XDC Network?
 
-1. **Get a Wallet**: [Set up XDCPay](../xdcchain/developers/wallet-configuration.md)
-2. **Get Test XDC**: [Faucet](https://faucet.blocksscan.io)
-3. **Explore**: [Block Explorer](https://xdc.blocksscan.io)
+1. **Get a Wallet**: [Set up XDCPay](https://chromewebstore.google.com/detail/xdcpay/dgimfmajflciajjbhbkibdbfmpncbnmj) | [Wallet Configuration](../xdcchain/developers/wallet-configuration.md)
+2. **Get Test XDC**: https://faucet.apothem.network/ | https://faucet.blocksscan.io
+3. **Explore**: https://xdcscan.com | https://xdc.blocksscan.io
 4. **Build**: [Developer Quick Start](../xdcchain/developers/quick-guide.md)
 
 ## Next Steps
@@ -169,4 +169,4 @@ Ready to explore XDC Network?
 ---
 
 !!! question "Still have questions?"
-    Check our [FAQ](faq.md) or ask in [Discord](https://discord.gg/xdc).
+    Check our [FAQ](https://xinfin.org/faqs) or ask in [Discord](https://discord.gg/xdc).

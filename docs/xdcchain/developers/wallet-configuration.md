@@ -61,7 +61,7 @@ Any EVM-compatible wallet (Rabby, Coinbase Wallet, etc.) can connect to XDC usin
 
 For optimal performance based on your location, you can:
 
-1. Visit [Chainlist.org](https://chainlist.org/?search=xdc) to test RPC latency
+1. Visit [Chainlist.org](https://chainlist.org/?search=xdc) | [XDC RPC](https://xdcrpc.com/) to test RPC latency
 2. Choose the endpoint with the lowest latency for your region
 
 ## Troubleshooting
