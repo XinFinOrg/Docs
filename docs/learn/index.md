@@ -28,7 +28,7 @@ Welcome to the XDC Network learning center! Whether you're new to blockchain or 
 
     Want to run infrastructure? Understand consensus and nodes.
 
-    [:octicons-arrow-right-24: XDPoS Consensus](xdpos-explained.md)
+    [:octicons-arrow-right-24: XDPoS Consensus](https://xinfin.org/xdpos)
 
 -   :material-briefcase:{ .lg .middle } **Enterprise**
 
@@ -58,18 +58,18 @@ Welcome to the XDC Network learning center! Whether you're new to blockchain or 
 ### Fundamentals
 - [Blockchain Basics](blockchain-basics.md) - What is blockchain and how does it work?
 - [XDC Architecture](xdc-architecture.md) - How XDC Network is designed
-- [XDPoS Consensus](xdpos-explained.md) - Understanding XDC's consensus mechanism
+- [XDPoS Consensus](https://xinfin.org/xdpos) - Understanding XDC's consensus mechanism
 
 ### Economics
 - [Gas & Fees](gas-fees.md) - How transaction costs work on XDC
-- [Tokenomics](tokenomics.md) - XDC token distribution and economics
+<!-- - [Tokenomics](tokenomics.md) - XDC token distribution and economics -->
 
 ### Technical
-- [Security Model](security.md) - How XDC secures the network
+<!-- - [Security Model](security.md) - How XDC secures the network -->
 - [Glossary](glossary.md) - Key terms and definitions
 
 ### Help
-- [FAQ](faq.md) - Frequently asked questions
+- [FAQ](https://xinfin.org/faqs) - Frequently asked questions
 
 ## XDC vs Other Blockchains
 
