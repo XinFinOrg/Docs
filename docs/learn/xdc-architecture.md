@@ -237,7 +237,8 @@ Example:
 | Block Time | ~2 seconds |
 | Epoch Length | 900 blocks |
 | RPC | https://rpc.xinfin.network |
-| Explorer | https://xdc.blocksscan.io |
+| Explorer | https://xdcscan.com |
+|| https://xdc.blocksscan.io |
 
 ### Apothem Testnet
 
@@ -247,12 +248,14 @@ Example:
 | Native Token | TXDC (test) |
 | Block Time | ~2 seconds |
 | RPC | https://rpc.apothem.network |
-| Explorer | https://apothem.blocksscan.io |
-| Faucet | https://faucet.blocksscan.io |
+| Explorer | https://testnet.xdcscan.com | 
+| | https://apothem.blocksscan.io |
+| Faucet | https://faucet.apothem.network | 
+|| https://faucet.blocksscan.io |
 
 ## Next Steps
 
-- [XDPoS Consensus Deep Dive](xdpos-explained.md)
+- [XDPoS Consensus Deep Dive](https://xinfin.org/xdpos)
 - [Gas & Fees](gas-fees.md)
 - [Run a Node](../xdcchain/developers/node_operators/masternode.md)
 - [Deploy Smart Contracts](../smartcontract/deployment-verification.md)

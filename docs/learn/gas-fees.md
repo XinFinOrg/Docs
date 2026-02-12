@@ -219,4 +219,4 @@ try {
 ---
 
 !!! tip "Calculate Your Costs"
-    Use the [XDC Gas Station](https://xdc.blocksscan.io/gastracker) to check current network gas prices.
+    Use the [XDC Gas Station](https://xdcscan.io/gastracker) to check current network gas prices.
