@@ -163,7 +163,7 @@ Ready to explore XDC Network?
 ## Next Steps
 
 - [XDC Architecture](xdc-architecture.md) - Deep dive into XDC's design
-- [XDPoS Consensus](xdpos-explained.md) - How XDC achieves consensus
+- [XDPoS Consensus](https://xinfin.org/xdpos) - How XDC achieves consensus
 - [Gas & Fees](gas-fees.md) - Understanding transaction costs
 
 ---

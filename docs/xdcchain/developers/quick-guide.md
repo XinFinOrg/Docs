@@ -13,7 +13,7 @@ The XDC Network is a powerful, enterprise-grade blockchain platform designed to 
 The XDC Network's Mainnet is the live, operational blockchain where actual transactions take place. Understanding the Mainnet is crucial for interacting with the XDC Network in a real-world environment.
 
 - **Mainnet Details:** Learn more about the XDC Mainnet, its architecture, and operational specifics. [Network Information and RPC Providers](./rpc.md)
-- **Explorer:** Track transactions, smart contracts, and more on the XDC Mainnet using the official blockchain explorer. [Mainnet Explorer](https://xdcscan.io/)
+- **Explorer:** Track transactions, smart contracts, and more on the XDC Mainnet using the official blockchain explorer. https://xdcscan.com | https://xdcscan.io
 - **Stats:** Access real-time statistics about the XDC Mainnet, including transaction volumes, network health, and more. [Mainnet Stats](https://stats.xdc.org/) | [XinFin Network Stats](https://xinfin.network/#stats)
 
 ## Apothem Testnet
@@ -21,7 +21,7 @@ The XDC Network's Mainnet is the live, operational blockchain where actual trans
 The Apothem Testnet is the testing environment for the XDC Network. It's an ideal place to experiment with your DApps, smart contracts, and other blockchain-based solutions before deploying them on the Mainnet.
 
 - **Testnet Details:** Get an in-depth understanding of the Apothem Testnet and how to use it effectively. [Testnet Details](./rpc.md)
-- **Explorer:** View and track transactions on the Apothem Testnet using the official Testnet explorer. [Apothem/Testnet Explorer](https://apothem.xdcscan.io/)
+- **Explorer:** View and track transactions on the Apothem Testnet using the official Testnet explorer. https://testnet.xdcscan.com/ | https://apothem.xdcscan.io/
 - **Stats:** Monitor the performance and activity on the Apothem Testnet. [Testnet Stats](https://apothem.network/#stats)
 - **Faucet:** Need test XDC tokens? Use the Apothem Testnet faucet to get free tokens for testing. [Get Test XDC](https://faucet.blocksscan.io/)
 
@@ -34,7 +34,7 @@ The XDC Devnet is a development-focused environment that allows developers to te
 ## Developer Resources
 
 - **Quick Tools Guide:** https://xinfin.org/quick-tools-guide
-- **API Documentation:** https://apidocs.xinfin.network/docs/#xinfin-apis | https://apidocs.xinfin.network/
+- **API Documentation:** https://docs.etherscan.io/etherscan-v2 | https://docs.blocksscan.io/
 - **Developer Documentation:** https://docs.xdc.network
 - **Full Node Setup Instructions:** https://github.com/XinFinOrg/XinFin-Node
 

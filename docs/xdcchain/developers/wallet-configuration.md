@@ -29,7 +29,8 @@ If you prefer manual setup or need testnet access:
 | RPC URL | `https://erpc.xinfin.network` |
 | Chain ID | 50 |
 | Symbol | XDC |
-| Block Explorer | `https://xdcscan.io/` |
+| Block Explorer | `https://xdcscan.com` |
+|| `https://xdc.blocksscan.io` |
 
 **Alternative RPC URLs:**
 - `https://rpc.xdc.org`
@@ -43,7 +44,8 @@ If you prefer manual setup or need testnet access:
 | RPC URL | `https://rpc.apothem.network` |
 | Chain ID | 51 |
 | Symbol | TXDC |
-| Block Explorer | `https://apothem.xdcscan.io/` |
+| Block Explorer | `https://testnet.xdcscan.com` | 
+| | `https://apothem.blocksscan.io` |
 
 ## Trust Wallet
 

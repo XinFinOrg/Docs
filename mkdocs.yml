@@ -84,7 +84,7 @@ nav:
             - Mainnet RPC: ./xdcchain/developers/mainnetrpc.md
             - Apothem Testnet RPC: ./xdcchain/developers/apothemrpc.md
             - Devnet RPC: ./xdcchain/developers/devnetrpc.md
-        - Faucet: https://faucet.blocksscan.io/
+        - Faucet: https://faucet.apothem.network/
         - Migrating from EVM to XDC: ./xdcchain/evmtoxdc.md
         - Wallet Configuration: ./xdcchain/developers/wallet-configuration.md
         - Get XDC Listed: ./xdcchain/developers/getxdclisted.md

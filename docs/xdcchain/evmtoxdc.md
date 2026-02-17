@@ -38,4 +38,4 @@ After deploying the contract, it is important to thoroughly test it on the XDC n
 
 Once the contract has been migrated and tested, any clients or interfaces that interact with the contract must be updated to be compatible with the XDC network by having them point to the appropriate RPCs on the xdc network.
 
-For a How-To guide showing migration of a dApp from Ethereum to the XDC Network please go to [this link](https://docs.xdc.community/learn/how-to-articles/how-to-migrate-a-dapp-from-ethereum-to-the-xdc-network-using-truffle).
+For a How-To guide showing migration of a dApp from Ethereum to the XDC Network please go to [this link](https://ruslanwing100.medium.com/how-to-migrate-any-dapp-from-ethereum-to-xdc-network-using-truffle-b6a5b705bb01).
