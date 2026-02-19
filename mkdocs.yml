@@ -112,6 +112,7 @@ nav:
 
     - Governance:
         - Overview of XDCDAO: ./xdcchain/governance/overview.md
+        - Proposal: Reward Mechanism Upgrade (XDC 2.0): ./xdcchain/governance/proposal-reward-mechanism-upgrade.md
         - User Guide: https://www.xdc.dev/0xbeny/xdcdao-understanding-the-proposal-window-39f8
 
     - FAQ: 
