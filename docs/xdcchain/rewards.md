@@ -14,10 +14,96 @@ Reward active participation in the network, such as block validation and staking
 Ensure the economic sustainability of the XDC Network over time.
 
 ## Masternode Operator Rewards
-Masternodes are critical to the XDC Network’s operations, responsible for validating transactions and maintaining consensus. To compensate for their role, Masternode operators receive rewards for every block they validate.
+The reward mechanism on the XDC Network is designed to incentivize both Masternodes (active validators) and Standby Nodes (backup validators) for maintaining network security, uptime, and performance.
+**Rewards are distributed based on:**
+- Staking 10 M XDC
+- Node activity (block validation / signatures)
+- Participation within each epoch
 
-- **Eligibility:** To run a Masternode, an operator must stake a minimum of 10 million XDC tokens.
-- **Reward Distribution:** Masternode operators are rewarded for validating blocks, and the rewards are distributed proportionally based on their performance and uptime.
-- **Block Rewards:** A fixed reward is allocated for each block validated by the network. These block rewards are divided among Masternodes based on their contribution to the network.
+To improve efficiency and transparency, the proposed system introduces:
+- Smart contract-based reward automation
+- Activity-based reward validation
+- Flexible distribution cycles (daily / weekly / monthly)
 
-**Note:** Masternodes with better uptime and performance will receive a higher portion of the rewards.
+### Staking Requirements								
+
+| Node Type          | Minimum Stake  |
+|------------------|------------------------------------------------------------------------|
+| Masternode   | 10,000,000 XDC  | 
+| Standby Node | 10,000,000 XDC 
+
+**All participating nodes must lock the required stake to:**
+- Become eligible for rewards
+- Participate in consensus or standby operations
+
+### Annual Reward Rates (APR Model)
+The reward system follows a fixed annual percentage return model:
+
+| Node Type          | Annual Reward Rate  | Yearly ROI |
+|------------------|-------------------|------------------------------------------------------------------------|
+| Masternode   | 10% |   1,000,000 XDC  | 
+| Standby Node | 8%  |   1,000,000 XDC 
+
+**Monthly Reward Breakdown**
+
+| Node Type          | Monthly Reward  |
+|------------------|------------------------------------------------------------------------|
+| Masternode   | 83,333.33 XDC  | 
+| Standby Node | 66,666.67 XDC
+
+**These values are derived as:**
+
+- Masternode → 1000,000 / 12
+- Standby Node → 800,000 / 12
+
+### Epoch-Based Reward Distribution
+
+The XDC Network operates on an epoch-based reward system, ensuring continuous and fair distribution.
+
+**Epoch Configuration**
+
+- 1 Epoch = 900 blocks (~30 minutes)
+- Epochs per day = 48
+
+**Total Reward per Epoch**
+
+| Component          | Amount  |
+|------------------|------------------------------------------------------------------------|
+| Total Epoch Reward   | 5,000 XDC  | 
+| Foundation Share (10%) | 500 XDC  |
+| Remaining for Nodes  | 4,500 XDC  |
+
+**Distribution Logic**
+
+After deducting the foundation share:
+
+- The remaining 4,500 XDC is distributed among eligible nodes
+- Rewards are allocated based on:
+    - Block validation (masternodes)
+    - Signature participation (standby nodes)
+
+### Per Node Reward (Masternodes)
+
+| Metric          | Value  |
+|------------------|------------------------------------------------------------------------|
+| Reward per Epoch   | 2,000 XDC  | 
+| Daily Reward | 96,000 XDC (2,000 × 48) |
+| Monthly Reward  | ~60,000 XDC  |
+
+**Actual rewards may vary slightly based on:**
+- Participation rate
+- Network conditions
+- Validator set size
+
+### Standby Node Reward Logic
+
+**Standby nodes:**
+
+- Do not produce blocks actively
+- Earn rewards based on:
+    - Uptime
+    - Block signature verification
+    - Availability for failover
+- They receive:
+    - Lower APR (8%) compared to masternodes (10%)
+    - Rewards proportional to verified participation
