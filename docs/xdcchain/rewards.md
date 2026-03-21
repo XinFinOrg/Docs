@@ -7,6 +7,7 @@ title: Rewards Mechanism
 The XDC Network operates on a Delegated Proof of Stake (XDPoS) consensus mechanism, which allows for high transaction throughput, energy efficiency, and security. The network’s rewards mechanism is designed to incentivize Masternode operators and participants who contribute to the stability, security, and growth of the network. This document outlines how the XDC rewards mechanism works, who is eligible for rewards, and how rewards are distributed.
 
 ## Overview of XDC Rewards System
+
 In the XDC Network, rewards are primarily distributed to Masternode operators who validate transactions, secure the network, and propose new blocks. Additionally, XDC token holders who delegate their tokens to Masternodes also earn a share of the rewards. The rewards mechanism is structured to:
 
 Incentivize decentralization by encouraging more participants to run Masternodes or delegate their tokens.
@@ -14,8 +15,11 @@ Reward active participation in the network, such as block validation and staking
 Ensure the economic sustainability of the XDC Network over time.
 
 ## Masternode Operator Rewards
+
 The reward mechanism on the XDC Network is designed to incentivize both Masternodes (active validators) and Standby Nodes (backup validators) for maintaining network security, uptime, and performance.
+
 **Rewards are distributed based on:**
+
 - Staking 10 M XDC
 - Node activity (block validation / signatures)
 - Participation within each epoch
@@ -33,10 +37,12 @@ To improve efficiency and transparency, the proposed system introduces:
 | Standby Node | 10,000,000 XDC 
 
 **All participating nodes must lock the required stake to:**
+
 - Become eligible for rewards
 - Participate in consensus or standby operations
 
 ### Annual Reward Rates (APR Model)
+
 The reward system follows a fixed annual percentage return model:
 
 | Node Type          | Annual Reward Rate  | Yearly ROI |
@@ -91,6 +97,7 @@ After deducting the foundation share:
 | Monthly Reward  | ~60,000 XDC  |
 
 **Actual rewards may vary slightly based on:**
+
 - Participation rate
 - Network conditions
 - Validator set size
