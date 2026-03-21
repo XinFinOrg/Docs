@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/xdc.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
     
@@ -1402,6 +1402,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Masternode Operator Rewards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staking-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Staking Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annual-reward-rates-apr-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annual Reward Rates (APR Model)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epoch-based-reward-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Epoch-Based Reward Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-node-reward-masternodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per Node Reward (Masternodes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standby-node-reward-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standby Node Reward Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2249,6 +2310,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Masternode Operator Rewards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staking-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Staking Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annual-reward-rates-apr-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annual Reward Rates (APR Model)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epoch-based-reward-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Epoch-Based Reward Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-node-reward-masternodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per Node Reward (Masternodes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standby-node-reward-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standby Node Reward Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2350,13 +2472,167 @@
 Reward active participation in the network, such as block validation and staking.
 Ensure the economic sustainability of the XDC Network over time.</p>
 <h2 id="masternode-operator-rewards">Masternode Operator Rewards<a class="headerlink" href="#masternode-operator-rewards" title="Link to this section">¶</a></h2>
-<p>Masternodes are critical to the XDC Network’s operations, responsible for validating transactions and maintaining consensus. To compensate for their role, Masternode operators receive rewards for every block they validate.</p>
+<p>The reward mechanism on the XDC Network is designed to incentivize both Masternodes (active validators) and Standby Nodes (backup validators) for maintaining network security, uptime, and performance.
+<strong>Rewards are distributed based on:</strong>
+- Staking 10 M XDC
+- Node activity (block validation / signatures)
+- Participation within each epoch</p>
+<p>To improve efficiency and transparency, the proposed system introduces:
+- Smart contract-based reward automation
+- Activity-based reward validation
+- Flexible distribution cycles (daily / weekly / monthly)</p>
+<h3 id="staking-requirements">Staking Requirements<a class="headerlink" href="#staking-requirements" title="Link to this section">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Minimum Stake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Masternode</td>
+<td>10,000,000 XDC</td>
+</tr>
+<tr>
+<td>Standby Node</td>
+<td>10,000,000 XDC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>All participating nodes must lock the required stake to:</strong>
+- Become eligible for rewards
+- Participate in consensus or standby operations</p>
+<h3 id="annual-reward-rates-apr-model">Annual Reward Rates (APR Model)<a class="headerlink" href="#annual-reward-rates-apr-model" title="Link to this section">¶</a></h3>
+<p>The reward system follows a fixed annual percentage return model:</p>
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Annual Reward Rate</th>
+<th>Yearly ROI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Masternode</td>
+<td>10%</td>
+<td>1,000,000 XDC</td>
+</tr>
+<tr>
+<td>Standby Node</td>
+<td>8%</td>
+<td>1,000,000 XDC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Monthly Reward Breakdown</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node Type</th>
+<th>Monthly Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Masternode</td>
+<td>83,333.33 XDC</td>
+</tr>
+<tr>
+<td>Standby Node</td>
+<td>66,666.67 XDC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>These values are derived as:</strong></p>
 <ul>
-<li><strong>Eligibility:</strong> To run a Masternode, an operator must stake a minimum of 10 million XDC tokens.</li>
-<li><strong>Reward Distribution:</strong> Masternode operators are rewarded for validating blocks, and the rewards are distributed proportionally based on their performance and uptime.</li>
-<li><strong>Block Rewards:</strong> A fixed reward is allocated for each block validated by the network. These block rewards are divided among Masternodes based on their contribution to the network.</li>
+<li>Masternode → 1000,000 / 12</li>
+<li>Standby Node → 800,000 / 12</li>
 </ul>
-<p><strong>Note:</strong> Masternodes with better uptime and performance will receive a higher portion of the rewards.</p></div>
+<h3 id="epoch-based-reward-distribution">Epoch-Based Reward Distribution<a class="headerlink" href="#epoch-based-reward-distribution" title="Link to this section">¶</a></h3>
+<p>The XDC Network operates on an epoch-based reward system, ensuring continuous and fair distribution.</p>
+<p><strong>Epoch Configuration</strong></p>
+<ul>
+<li>1 Epoch = 900 blocks (~30 minutes)</li>
+<li>Epochs per day = 48</li>
+</ul>
+<p><strong>Total Reward per Epoch</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Epoch Reward</td>
+<td>5,000 XDC</td>
+</tr>
+<tr>
+<td>Foundation Share (10%)</td>
+<td>500 XDC</td>
+</tr>
+<tr>
+<td>Remaining for Nodes</td>
+<td>4,500 XDC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Distribution Logic</strong></p>
+<p>After deducting the foundation share:</p>
+<ul>
+<li>The remaining 4,500 XDC is distributed among eligible nodes</li>
+<li>Rewards are allocated based on:<ul>
+<li>Block validation (masternodes)</li>
+<li>Signature participation (standby nodes)</li>
+</ul>
+</li>
+</ul>
+<h3 id="per-node-reward-masternodes">Per Node Reward (Masternodes)<a class="headerlink" href="#per-node-reward-masternodes" title="Link to this section">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reward per Epoch</td>
+<td>2,000 XDC</td>
+</tr>
+<tr>
+<td>Daily Reward</td>
+<td>96,000 XDC (2,000 × 48)</td>
+</tr>
+<tr>
+<td>Monthly Reward</td>
+<td>~60,000 XDC</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Actual rewards may vary slightly based on:</strong>
+- Participation rate
+- Network conditions
+- Validator set size</p>
+<h3 id="standby-node-reward-logic">Standby Node Reward Logic<a class="headerlink" href="#standby-node-reward-logic" title="Link to this section">¶</a></h3>
+<p><strong>Standby nodes:</strong></p>
+<ul>
+<li>Do not produce blocks actively</li>
+<li>Earn rewards based on:<ul>
+<li>Uptime</li>
+<li>Block signature verification</li>
+<li>Availability for failover</li>
+</ul>
+</li>
+<li>They receive:<ul>
+<li>Lower APR (8%) compared to masternodes (10%)</li>
+<li>Rewards proportional to verified participation</li>
+</ul>
+</li>
+</ul></div>
 
 
 
