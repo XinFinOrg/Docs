@@ -48,7 +48,7 @@ The reward system follows a fixed annual percentage return model:
 | Node Type          | Annual Reward Rate  | Yearly ROI |
 |------------------|-------------------|------------------------------------------------------------------------|
 | Masternode   | 10% |   1,000,000 XDC  | 
-| Standby Node | 8%  |   1,000,000 XDC 
+| Standby Node | 8%  |   800,000 XDC 
 
 **Monthly Reward Breakdown**
 
@@ -92,9 +92,10 @@ After deducting the foundation share:
 
 | Metric          | Value  |
 |------------------|------------------------------------------------------------------------|
-| Reward per Epoch   | 2,000 XDC  | 
-| Daily Reward | 96,000 XDC (2,000 × 48) |
-| Monthly Reward  | ~60,000 XDC  |
+| Reward per epoch (per node)   | ~41.67 XDC  | 
+| Epochs per day   | 48  |
+| Daily Reward | ~2,000.16 XDC (41.67 × 48 = 2000.16) |
+| Monthly Reward  | ~60,000 XDC (2000.16 × 30 = 60,004.8) |
 
 **Actual rewards may vary slightly based on:**
 
