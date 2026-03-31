@@ -1717,10 +1717,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-filter-methods" class="md-nav__link">
+  <a href="#filter-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method Filter methods
+        Filter methods
       
     </span>
   </a>
@@ -1731,7 +1731,7 @@
   <a href="#method-eth_getfilterchanges" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method# eth_getFilterChanges
+        Method eth_getFilterChanges
       
     </span>
   </a>
@@ -1742,7 +1742,7 @@
   <a href="#method-eth_getfilterlogs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method# eth_getFilterLogs
+        Method eth_getFilterLogs
       
     </span>
   </a>
@@ -1758,10 +1758,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Method eth_newBlockFilter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#method-eth_newfilter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1769,11 +1768,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1786,10 +1780,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Method eth_newPendingTransactionFilter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#method-eth_uninstallfilter" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1797,11 +1790,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3085,7 +3073,7 @@
 <span class="s1">  "id": 1001,</span>
 <span class="s1">  "method": "eth_sign",</span>
 <span class="s1">  "params":[</span>
-<span class="s1">    "0xD4CE02705041F04135f1949Bc835c1Fe0885513c", </span>
+<span class="s1">    "0xD4CE02705041F04135f1949Bc835c1Fe0885513c",</span>
 <span class="s1">    "0x1234abcd"</span>
 <span class="s1">  ]</span>
 <span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
@@ -3192,8 +3180,8 @@
 <span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="method-filter-methods">Method Filter methods<a class="headerlink" href="#method-filter-methods" title="Link to this section">¶</a></h2>
-<h2 id="method-eth_getfilterchanges">Method# eth_getFilterChanges<a class="headerlink" href="#method-eth_getfilterchanges" title="Link to this section">¶</a></h2>
+<h2 id="filter-methods">Filter methods<a class="headerlink" href="#filter-methods" title="Link to this section">¶</a></h2>
+<h2 id="method-eth_getfilterchanges">Method eth_getFilterChanges<a class="headerlink" href="#method-eth_getfilterchanges" title="Link to this section">¶</a></h2>
 <p>The <code>getFilterChanges</code> method polling method for a filter, which returns an array of logs which occurred since the last poll. Filter must be created by calling either <code>eth_newFilter</code> or <code>eth_newBlockFilter</code>.</p>
 <p>Parameters:</p>
 <ul>
@@ -3218,7 +3206,7 @@
 <span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="method-eth_getfilterlogs">Method# eth_getFilterLogs<a class="headerlink" href="#method-eth_getfilterlogs" title="Link to this section">¶</a></h2>
+<h2 id="method-eth_getfilterlogs">Method eth_getFilterLogs<a class="headerlink" href="#method-eth_getfilterlogs" title="Link to this section">¶</a></h2>
 <p>The <code>getFilterLogs</code> method returns an array of all logs matching the filter with the given filter ID.</p>
 <p>Parameters:</p>
 <ul>
@@ -3267,7 +3255,7 @@
 <span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x2b5dddffaad1435838168a59fd0b7bd0"</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="method-eth_newfilter">Method eth_newFilter<a class="headerlink" href="#method-eth_newfilter" title="Link to this section">¶</a></h3>
+<h2 id="method-eth_newfilter">Method eth_newFilter<a class="headerlink" href="#method-eth_newfilter" title="Link to this section">¶</a></h2>
 <p>The <code>newFilter</code> method creates a filter object based on the given filter options, to notify when the state changes (logs). To check if the state has changed, call <code>eth_getFilterChanges</code>.</p>
 <p>Parameters:</p>
 <ul>
@@ -3323,7 +3311,7 @@
 <span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x6c6a174e72b1d72d44f3b212269bfcf8"</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="method-eth_uninstallfilter">Method eth_uninstallFilter<a class="headerlink" href="#method-eth_uninstallfilter" title="Link to this section">¶</a></h3>
+<h2 id="method-eth_uninstallfilter">Method eth_uninstallFilter<a class="headerlink" href="#method-eth_uninstallfilter" title="Link to this section">¶</a></h2>
 <p>The <code>uninstallFilter</code> method uninstalls a filter with given ID. This method should always be called when watching is no longer needed. Additionally, filters time out when they aren’t requested with <code>eth_getFilterChanges</code> for a period of time.</p>
 <p>Parameters:</p>
 <ul>

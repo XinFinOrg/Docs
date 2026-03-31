@@ -1376,17 +1376,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-debug_seedhash" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method debug_seedHash
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#method-debug_setblockprofilerate" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1756,7 +1745,7 @@
 <span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </code></pre></div>
 <p>Response:</p>
-<p>See <a href="../debug_dumpBlock_response.json">debug_dumpBlock.json</a> </p>
+<p>See <a href="../debug_dumpBlock_response.json">debug_dumpBlock.json</a></p>
 <h2 id="method-debug_getbadblocks">Method debug_getBadBlocks<a class="headerlink" href="#method-debug_getbadblocks" title="Link to this section">¶</a></h2>
 <p>The <code>getBadBlocks</code> method returns a list of the last ‘bad blocks’ that the client has seen on the network and returns them as a JSON list of block-hashes.</p>
 <p>Parameters:</p>
@@ -1792,7 +1781,7 @@
 <span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </code></pre></div>
 <p>Response:</p>
-<p>See <a href="../debug_gcStats_response.json">debug_gcStats.json</a> </p>
+<p>See <a href="../debug_gcStats_response.json">debug_gcStats.json</a></p>
 <h2 id="method-debug_getblockrlp">Method debug_getBlockRlp<a class="headerlink" href="#method-debug_getblockrlp" title="Link to this section">¶</a></h2>
 <p>The <code>getBlockRlp</code> retrieves the RLP encoded for of a single block.</p>
 <p>Parameters:</p>
@@ -1980,31 +1969,6 @@
 <span class="w">  </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Block(#0): Size: 669.00 B {\nMinerHash: 5b1ad24d49ce2360509d0c13fd05358abbab323bf6021d8e85ebcc2b2ec7841f\nHeader(4a9d748bd78a8d0385b67788c2435dcdb914f98a96250b68863a1f8b7642d6b1):\n[\n\tParentHash:\t    0000000000000000000000000000000000000000000000000000000000000000\n\tUncleHash:\t    1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347\n\tCoinbase:\t    0000000000000000000000000000000000000000\n\tRoot:\t\t    49be235b0098b048f9805aed38a279d8c189b469ff9ba307b39c7ad3a3bc55ae\n\tTxSha\t\t    56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421\n\tReceiptSha:\t    56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421\n\tBloom:\t\t    00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\n\tDifficulty:\t    1\n\tNumber:\t\t    0\n\tGasLimit:\t    4700000\n\tGasUsed:\t    0\n\tTime:\t\t    1559211559\n\tExtra:\t\t    \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000%ĸ[K7ĸĸ|ĸĸWsŐ_sgp\"ĸĸĸĸԝ\n,ĸĸĸĸĸĸX\u001aĸeĸNȲĸĸĸޡ\u0000j\\ĸ}ĸĸĸĸĸĸidbĸe\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\n\tMixDigest:      0000000000000000000000000000000000000000000000000000000000000000\n\tNonce:\t\t    0000000000000000\n]\nTransactions:\n[]\nUncles:\n[]\n}\n"</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="method-debug_seedhash">Method debug_seedHash<a class="headerlink" href="#method-debug_seedhash" title="Link to this section">¶</a></h2>
-<p>The <code>seedHash</code> method retrieves the seed hash of a block.</p>
-<p>Parameters:</p>
-<ul>
-<li>number: uint64, required, block number</li>
-</ul>
-<p>Returns:</p>
-<p>result: string</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="si">${</span><span class="nv">RPC</span><span class="si">}</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
-<span class="s1">  "jsonrpc": "2.0",</span>
-<span class="s1">  "id": 1001,</span>
-<span class="s1">  "method": "debug_seedHash",</span>
-<span class="s1">  "params": [</span>
-<span class="s1">    0</span>
-<span class="s1">  ]</span>
-<span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
-</code></pre></div>
-<p>Response:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">"jsonrpc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000000000000000000000000000"</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="method-debug_setblockprofilerate">Method debug_setBlockProfileRate<a class="headerlink" href="#method-debug_setblockprofilerate" title="Link to this section">¶</a></h2>

@@ -1310,6 +1310,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#method-xdpos_getrewardbyaccount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method XDPoS_getRewardByAccount
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-xdpos_getblockinfobyv2epochnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method XDPoS_getBlockInfoByV2EpochNum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-xdpos_calculateblockinfobyv1epochnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method XDPoS_calculateBlockInfoByV1EpochNum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#method-xdpos_networkinformation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1735,6 +1768,65 @@ curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>
 <span class="w">    </span><span class="nt">"Error"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div>
+<h2 id="method-xdpos_getrewardbyaccount">Method XDPoS_getRewardByAccount<a class="headerlink" href="#method-xdpos_getrewardbyaccount" title="Link to this section">¶</a></h2>
+<p>Parameters:</p>
+<ul>
+<li>account: string, required, account address</li>
+<li>begin: string, required, begin block number (<code>BlockNumber</code>)</li>
+<li>end: string, required, end block number (<code>BlockNumber</code>)</li>
+</ul>
+<p>Returns:</p>
+<p>result: object AccountRewardResponse:</p>
+<ul>
+<li>EpochRewards: array of account rewards grouped by epoch files</li>
+<li>Total: aggregated rewards in the queried range</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="si">${</span><span class="nv">RPC</span><span class="si">}</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "jsonrpc": "2.0",</span>
+<span class="s1">  "id": 1,</span>
+<span class="s1">  "method": "XDPoS_getRewardByAccount",</span>
+<span class="s1">  "params": [</span>
+<span class="s1">    "0x0000000000000000000000000000000000000000",</span>
+<span class="s1">    "latest",</span>
+<span class="s1">    "latest"</span>
+<span class="s1">  ]</span>
+<span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</code></pre></div>
+<h2 id="method-xdpos_getblockinfobyv2epochnum">Method XDPoS_getBlockInfoByV2EpochNum<a class="headerlink" href="#method-xdpos_getblockinfobyv2epochnum" title="Link to this section">¶</a></h2>
+<p>Parameters:</p>
+<ul>
+<li>epochNumber: integer, required, v2 epoch number</li>
+</ul>
+<p>Returns:</p>
+<p>result: object EpochNumInfo</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="si">${</span><span class="nv">RPC</span><span class="si">}</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "jsonrpc": "2.0",</span>
+<span class="s1">  "id": 1,</span>
+<span class="s1">  "method": "XDPoS_getBlockInfoByV2EpochNum",</span>
+<span class="s1">  "params": [</span>
+<span class="s1">    89300</span>
+<span class="s1">  ]</span>
+<span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</code></pre></div>
+<h2 id="method-xdpos_calculateblockinfobyv1epochnum">Method XDPoS_calculateBlockInfoByV1EpochNum<a class="headerlink" href="#method-xdpos_calculateblockinfobyv1epochnum" title="Link to this section">¶</a></h2>
+<p>Parameters:</p>
+<ul>
+<li>targetEpochNum: integer, required, v1 epoch number</li>
+</ul>
+<p>Returns:</p>
+<p>result: object EpochNumInfo</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="si">${</span><span class="nv">RPC</span><span class="si">}</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">'{</span>
+<span class="s1">  "jsonrpc": "2.0",</span>
+<span class="s1">  "id": 1,</span>
+<span class="s1">  "method": "XDPoS_calculateBlockInfoByV1EpochNum",</span>
+<span class="s1">  "params": [</span>
+<span class="s1">    100</span>
+<span class="s1">  ]</span>
+<span class="s1">}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
 </code></pre></div>
 <h2 id="method-xdpos_networkinformation">Method XDPoS_networkInformation<a class="headerlink" href="#method-xdpos_networkinformation" title="Link to this section">¶</a></h2>
 <p>Parameters:</p>
