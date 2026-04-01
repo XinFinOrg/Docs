@@ -92,9 +92,13 @@ The XDC protocol serves as a messaging and confirmation layer for global payment
         <div>XDC Chain</div>
         <p>Get started with XDC Network: Unlock the power of decentralized finance and global trade.</p>
     </a>
-        <a href="whitepaper" class="grid-item">
+    <a href="whitepaper" class="grid-item">
         <div>White Paper</div>
         <p>Technical and Business White Paper of the XDC Network</p>
+    </a>
+    <a href="./XDPoSChain" class="grid-item">
+        <div>XDPoSChain documents</div>
+        <p>JSONRPC documents from XDPoSChain</p>
     </a>
     <a href="./xdcchain/developers/rpc/" class="grid-item">
         <div>XDC Network: RPC Endpoints </div>
