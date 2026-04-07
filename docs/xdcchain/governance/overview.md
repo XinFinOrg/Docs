@@ -8,6 +8,16 @@ title: Overview - XDCDAO
 
 The DAO Treasury within the [XDCDAO](https://www.xdcdao.org/) framework plays a critical role in the XDC Network's decentralized governance system. It is meticulously designed to manage the community's collective resources efficiently, securely, and transparently. This section provides a structured overview of the DAO Treasury, highlighting its purpose, operation, funding sources, and significance within the DAOFIN ecosystem.
 
+## Upcoming Protocol Upgrades
+
+> 🔔 **New Proposal**: [XDC Network Reward Mechanism Upgrade (XDC 2.0)](./proposal-reward-mechanism-upgrade.md)
+> 
+> This proposal introduces:
+> - Three-tier node system (Master, Protector, Observer)
+> - Unlimited staking with fixed rewards
+> - Fee burning mechanism
+> - Enhanced gas model
+
 ## Purpose of the DAO Treasury
 
 The DAO Treasury's primary objective is to support the sustainable growth and development of the XDC Network by financing projects and initiatives that align with the community's goals. It acts as the financial hub for:
