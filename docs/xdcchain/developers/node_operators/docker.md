@@ -58,7 +58,7 @@ nano .env
 **For Mainnet run the following commands:**
 ```bash
 cd mainnet
-sudo docker-compose -f docker-compose.yml up -d
+bash docker-up.sh
 ```
 At this point you should be able to see your masternode on the list of nodes here or as shown below:
 
@@ -67,7 +67,7 @@ At this point you should be able to see your masternode on the list of nodes her
 For Testnet run the following commands:
 ```bash
 cd testnet
-sudo docker-compose -f docker-compose.yml up -d
+bash docker-up.sh
 ```
 You should be able to see your node listed on the [Apothem Network] page. Select **"Switch to LiveNet"** to check **LiveNetwork** Stats and Select **"Switch to TestNet"** for **TestNetwork**.
 
@@ -75,7 +75,7 @@ Your coinbase address can be found in xdcchain/coinbase.txt file.
 
 For troubleshooting purposes, you can stop the node by using the following command on either Mainnet or Testnet:
 ```bash
-sudo docker-compose -f docker-compose.yml down
+bash docker-down.sh
 ```
 
 **Downloading a Network Snapshot (Mainnet or Apothem)**
@@ -88,7 +88,7 @@ The following steps are to expedite the syncing process of your node with the XD
 
 **Bring down your node:**
 ```bash
-sudo docker-compose -f docker-compose.yml down
+bash docker-down.sh
 ```
 **Remove the old xdchain file from the server**
 ```bash
@@ -130,7 +130,7 @@ This command will bring your node up and it will start syncing to the network. O
 
 **Bring down your node:** 
 ```bash
-sudo docker-compose -f docker-compose.yml down
+bash docker-down.sh
 ```
 
 **Remove the old xdchain file from the server**
@@ -162,7 +162,7 @@ mv XDC xdcchain-testnet
 
 **Bring up the node**
 ```bash
-sudo docker-compose -f docker-compose.yml up -d
+bash docker-up.sh
 ```
 
 
