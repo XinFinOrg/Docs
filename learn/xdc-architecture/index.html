@@ -790,6 +790,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-hybrid-public-private-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Hybrid (Public + Private) Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-evm-compatibility-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 EVM Compatibility Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-high-performance-execution-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 High-Performance Execution Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-enterprise-interoperability-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Enterprise Interoperability Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1779,6 +1829,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-hybrid-public-private-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Hybrid (Public + Private) Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-evm-compatibility-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 EVM Compatibility Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-high-performance-execution-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 High-Performance Execution Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-enterprise-interoperability-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Enterprise Interoperability Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2211,40 +2311,68 @@
 
 
 <div><h1 id="xdc-network-architecture">XDC Network Architecture<a class="headerlink" href="#xdc-network-architecture" title="Link to this section">¶</a></h1>
-<p>This document explains the technical architecture of XDC Network, including its hybrid design, consensus mechanism, and key components.</p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Link to this section">¶</a></h2>
-<p>XDC Network is an <strong>enterprise-grade hybrid blockchain</strong> that combines:</p>
+<p>The XDC Network is a <strong>Layer-1</strong>, <strong>EVM-compatible hybrid blockchain</strong> architecture designed to support both public decentralization and private enterprise requirements.</p>
+<p><strong>It combines:</strong></p>
 <ul>
-<li><strong>Public Network</strong>: Open, permissionless mainnet</li>
-<li><strong>Private Subnets</strong>: Permissioned networks for enterprises</li>
-<li><strong>Interoperability</strong>: Cross-chain communication between networks</li>
+<li>Public blockchain transparency</li>
+<li>Private/permissioned network privacy</li>
+<li>Enterprise-grade interoperability and compliance</li>
 </ul>
-<div class="highlight"><pre><span></span><code>flowchart TB
-    subgraph "XDC Ecosystem"
-        subgraph "Public Layer"
-            A[XDC Mainnet]
-            B[108 Masternodes]
-        end
-
-        subgraph "Private Layer"
-            C[Enterprise Subnet 1]
-            D[Enterprise Subnet 2]
-        end
-
-        subgraph "Bridge Layer"
-            E[XDC Zero]
-            F[Checkpoint Contract]
-        end
-    end
-
-    B --&gt; A
-    C --&gt; F
-    D --&gt; F
-    F --&gt; A
-    E --&gt; A
-    E --&gt; C
-    E --&gt; D
-</code></pre></div>
+<p>This hybrid design enables XDC to serve trade finance, tokenization, payments, and regulated financial infrastructure use cases.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Link to this section">¶</a></h2>
+<p>The XDC architecture is built on four foundational principles:</p>
+<h3 id="21-hybrid-public-private-architecture">2.1 Hybrid (Public + Private) Architecture<a class="headerlink" href="#21-hybrid-public-private-architecture" title="Link to this section">¶</a></h3>
+<p>XDC enables coexistence of public and private states:</p>
+<ul>
+<li><strong>Public Layer (Mainnet):</strong><ul>
+<li>Shared, immutable ledger</li>
+<li>Global validator participation</li>
+<li>Transparent transaction verification</li>
+</ul>
+</li>
+<li><strong>Private / Permissioned Layers (Subnets / Enterprise Networks):</strong><ul>
+<li>Restricted access networks for enterprises</li>
+<li>Sensitive data remains private</li>
+<li>Only hashed proofs or checkpoints are anchored to the public chain</li>
+</ul>
+</li>
+</ul>
+<p>This ensures data privacy + auditability simultaneously, which is critical for regulated industries.</p>
+<h3 id="22-evm-compatibility-layer">2.2 EVM Compatibility Layer<a class="headerlink" href="#22-evm-compatibility-layer" title="Link to this section">¶</a></h3>
+<p>The XDC Network is a customized Ethereum-based protocol, enabling:</p>
+<ul>
+<li>Smart contracts written in Solidity</li>
+<li>Compatibility with:<ul>
+<li>Web3.js</li>
+<li>Ethers.js</li>
+<li>Existing Ethereum tooling</li>
+</ul>
+</li>
+</ul>
+<p>This allows seamless migration of dApps and developer adoption.</p>
+<h3 id="23-high-performance-execution-layer">2.3 High-Performance Execution Layer<a class="headerlink" href="#23-high-performance-execution-layer" title="Link to this section">¶</a></h3>
+<p>The execution environment is optimized for:</p>
+<ul>
+<li>~2 second block time</li>
+<li>Near-instant finality</li>
+<li>2000+ TPS throughput</li>
+<li>Near-zero transaction fees (&lt; $0.0001)</li>
+</ul>
+<p>This performance is achieved through:</p>
+<ul>
+<li>Efficient validator coordination</li>
+<li>Optimized block production</li>
+<li>Lightweight infrastructure requirements</li>
+</ul>
+<h3 id="24-enterprise-interoperability-layer">2.4 Enterprise Interoperability Layer<a class="headerlink" href="#24-enterprise-interoperability-layer" title="Link to this section">¶</a></h3>
+<p>XDC is designed to integrate with:</p>
+<ul>
+<li>ISO 20022 financial messaging systems</li>
+<li>R3 Corda ecosystem</li>
+<li>Traditional banking and trade systems</li>
+</ul>
+<p>This enables real-world financial system compatibility, not just isolated blockchain execution.</p>
+<p><img alt="image" src="../image/xdc-architecture1.png"></p>
 <h2 id="network-layers">Network Layers<a class="headerlink" href="#network-layers" title="Link to this section">¶</a></h2>
 <h3 id="layer-1-xdc-mainnet">Layer 1: XDC Mainnet<a class="headerlink" href="#layer-1-xdc-mainnet" title="Link to this section">¶</a></h3>
 <p>The public XDC mainnet is the foundation:</p>
@@ -2302,15 +2430,7 @@
 <li><strong>Rewards</strong> distributed to Masternodes and voters</li>
 </ol>
 <h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Link to this section">¶</a></h3>
-<div class="highlight"><pre><span></span><code>flowchart LR
-    A[XDPoS 2.0] --&gt; B[BFT Finality]
-    A --&gt; C[Forensic Monitoring]
-    A --&gt; D[Penalty Mechanism]
-
-    B --&gt; E[Instant Finality]
-    C --&gt; F[Detect Misbehavior]
-    D --&gt; G[Slash Bad Actors]
-</code></pre></div>
+<p><img alt="image" src="../image/xdc-architecture2.png"></p>
 <table>
 <thead>
 <tr>
@@ -2441,22 +2561,7 @@
 <span class="kd">const</span><span class="w"> </span><span class="nx">contract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">Contract</span><span class="p">(</span><span class="nx">ABI</span><span class="p">,</span><span class="w"> </span><span class="nx">address</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="transaction-lifecycle">Transaction Lifecycle<a class="headerlink" href="#transaction-lifecycle" title="Link to this section">¶</a></h2>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
-    participant User
-    participant Node
-    participant Mempool
-    participant Validator
-    participant Network
-
-    User-&gt;&gt;Node: Submit Transaction
-    Node-&gt;&gt;Node: Validate Tx
-    Node-&gt;&gt;Mempool: Add to Mempool
-    Validator-&gt;&gt;Mempool: Select Transactions
-    Validator-&gt;&gt;Validator: Create Block
-    Validator-&gt;&gt;Network: Propose Block
-    Network-&gt;&gt;Network: Validate &amp; Sign
-    Network-&gt;&gt;User: Transaction Confirmed (~2s)
-</code></pre></div>
+<p><img alt="image" src="../image/xdc-architecture3.png"></p>
 <h3 id="transaction-finality">Transaction Finality<a class="headerlink" href="#transaction-finality" title="Link to this section">¶</a></h3>
 <table>
 <thead>
