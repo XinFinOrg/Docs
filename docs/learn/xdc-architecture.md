@@ -1,42 +1,72 @@
 # XDC Network Architecture
 
-This document explains the technical architecture of XDC Network, including its hybrid design, consensus mechanism, and key components.
+The XDC Network is a **Layer-1**, **EVM-compatible hybrid blockchain** architecture designed to support both public decentralization and private enterprise requirements.
+
+**It combines:**
+
+- Public blockchain transparency
+- Private/permissioned network privacy
+- Enterprise-grade interoperability and compliance
+
+This hybrid design enables XDC to serve trade finance, tokenization, payments, and regulated financial infrastructure use cases.
 
 ## Overview
 
-XDC Network is an **enterprise-grade hybrid blockchain** that combines:
+The XDC architecture is built on four foundational principles:
 
-- **Public Network**: Open, permissionless mainnet
-- **Private Subnets**: Permissioned networks for enterprises
-- **Interoperability**: Cross-chain communication between networks
+### 2.1 Hybrid (Public + Private) Architecture
 
-```mermaid
-flowchart TB
-    subgraph "XDC Ecosystem"
-        subgraph "Public Layer"
-            A[XDC Mainnet]
-            B[108 Masternodes]
-        end
-        
-        subgraph "Private Layer"
-            C[Enterprise Subnet 1]
-            D[Enterprise Subnet 2]
-        end
-        
-        subgraph "Bridge Layer"
-            E[XDC Zero]
-            F[Checkpoint Contract]
-        end
-    end
-    
-    B --> A
-    C --> F
-    D --> F
-    F --> A
-    E --> A
-    E --> C
-    E --> D
-```
+XDC enables coexistence of public and private states:
+
+- **Public Layer (Mainnet):**
+    - Shared, immutable ledger
+    - Global validator participation
+    - Transparent transaction verification
+- **Private / Permissioned Layers (Subnets / Enterprise Networks):**
+    - Restricted access networks for enterprises
+    - Sensitive data remains private
+    - Only hashed proofs or checkpoints are anchored to the public chain
+
+This ensures data privacy + auditability simultaneously, which is critical for regulated industries.
+
+### 2.2 EVM Compatibility Layer
+
+The XDC Network is a customized Ethereum-based protocol, enabling:
+
+- Smart contracts written in Solidity
+- Compatibility with:
+    - Web3.js
+    - Ethers.js
+    - Existing Ethereum tooling
+
+This allows seamless migration of dApps and developer adoption.
+
+### 2.3 High-Performance Execution Layer
+
+The execution environment is optimized for:
+
+- ~2 second block time
+- Near-instant finality
+- 2000+ TPS throughput
+- Near-zero transaction fees (< $0.0001)
+
+This performance is achieved through:
+
+- Efficient validator coordination
+- Optimized block production
+- Lightweight infrastructure requirements
+
+### 2.4 Enterprise Interoperability Layer
+
+XDC is designed to integrate with:
+
+- ISO 20022 financial messaging systems
+- R3 Corda ecosystem
+- Traditional banking and trade systems
+
+This enables real-world financial system compatibility, not just isolated blockchain execution.
+
+![image](./image/xdc-architecture1.png)
 
 ## Network Layers
 
@@ -80,16 +110,7 @@ XDC uses **XinFin Delegated Proof of Stake (XDPoS)** version 2.0:
 
 ### Key Features
 
-```mermaid
-flowchart LR
-    A[XDPoS 2.0] --> B[BFT Finality]
-    A --> C[Forensic Monitoring]
-    A --> D[Penalty Mechanism]
-    
-    B --> E[Instant Finality]
-    C --> F[Detect Misbehavior]
-    D --> G[Slash Bad Actors]
-```
+![image](./image/xdc-architecture2.png)
 
 | Feature | Description |
 |---------|-------------|
@@ -161,23 +182,7 @@ const contract = new web3.eth.Contract(ABI, address);
 
 ## Transaction Lifecycle
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Node
-    participant Mempool
-    participant Validator
-    participant Network
-    
-    User->>Node: Submit Transaction
-    Node->>Node: Validate Tx
-    Node->>Mempool: Add to Mempool
-    Validator->>Mempool: Select Transactions
-    Validator->>Validator: Create Block
-    Validator->>Network: Propose Block
-    Network->>Network: Validate & Sign
-    Network->>User: Transaction Confirmed (~2s)
-```
+![image](./image/xdc-architecture3.png)
 
 ### Transaction Finality
 
