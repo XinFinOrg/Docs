@@ -13,29 +13,7 @@ Private Subnets are sovereign blockchain networks that:
 
 ## Architecture
 
-```mermaid
-flowchart TB
-    subgraph "XDC Mainnet"
-        A[Public Chain]
-        B[Checkpoint Contract]
-    end
-    
-    subgraph "Enterprise Subnet 1"
-        C[Private Nodes]
-        D[Enterprise Apps]
-    end
-    
-    subgraph "Enterprise Subnet 2"
-        E[Private Nodes]
-        F[Enterprise Apps]
-    end
-    
-    C -->|Checkpoint| B
-    E -->|Checkpoint| B
-    B -->|Verification| A
-    
-    C <-->|XDC Zero| E
-```
+![image](./img/subnet_architecture.png)
 
 ## Key Features
 

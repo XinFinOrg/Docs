@@ -54,19 +54,7 @@ RWA tokenization is the process of converting ownership rights of physical or fi
 
 ## Technical Architecture
 
-```mermaid
-flowchart TD
-    A[Real-World Asset] --> B[Legal Structure]
-    B --> C[SPV/Trust]
-    C --> D[Smart Contract]
-    D --> E[Token Minting]
-    E --> F[XRC20/XRC721 Tokens]
-    F --> G[Secondary Market]
-    
-    H[Oracle] --> D
-    I[Custodian] --> C
-    J[Auditor] --> C
-```
+![image](./img/rwa_architecture.png)
 
 ## Token Standards
 

@@ -11,13 +11,7 @@ A blockchain is a **distributed digital ledger** that records transactions acros
 - Cannot be altered once written
 - Automatically stays synchronized
 
-```mermaid
-flowchart LR
-    A[Transaction] --> B[Verification]
-    B --> C[Block Created]
-    C --> D[Added to Chain]
-    D --> E[Distributed to Network]
-```
+![image](./image/blockchain.png)
 
 ## Key Concepts
 
