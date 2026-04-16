@@ -1997,14 +1997,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="integration-architecture">Integration Architecture<a class="headerlink" href="#integration-architecture" title="Link to this section">¶</a></h2>
-<div class="highlight"><pre><span></span><code>flowchart LR
-    A[Core Banking System] --&gt;|ISO 20022| B[Message Converter]
-    B --&gt;|JSON/RPC| C[XDC Smart Contract]
-    C --&gt;|Events| D[Event Listener]
-    D --&gt;|ISO 20022| E[Reporting System]
-
-    F[SWIFT Network] --&gt;|MT/MX| A
-</code></pre></div>
+<p><img alt="image" src="../img/iso_integration_architecture.png"></p>
 <h2 id="benefits-for-financial-institutions">Benefits for Financial Institutions<a class="headerlink" href="#benefits-for-financial-institutions" title="Link to this section">¶</a></h2>
 <h3 id="operational-efficiency">Operational Efficiency<a class="headerlink" href="#operational-efficiency" title="Link to this section">¶</a></h3>
 <ul>

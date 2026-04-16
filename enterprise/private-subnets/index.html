@@ -2113,28 +2113,7 @@
 <li><strong>Scale horizontally</strong> for specific use cases</li>
 </ul>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Link to this section">¶</a></h2>
-<div class="highlight"><pre><span></span><code>flowchart TB
-    subgraph "XDC Mainnet"
-        A[Public Chain]
-        B[Checkpoint Contract]
-    end
-
-    subgraph "Enterprise Subnet 1"
-        C[Private Nodes]
-        D[Enterprise Apps]
-    end
-
-    subgraph "Enterprise Subnet 2"
-        E[Private Nodes]
-        F[Enterprise Apps]
-    end
-
-    C --&gt;|Checkpoint| B
-    E --&gt;|Checkpoint| B
-    B --&gt;|Verification| A
-
-    C &lt;--&gt;|XDC Zero| E
-</code></pre></div>
+<p><img alt="image" src="../img/subnet_architecture.png"></p>
 <h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Link to this section">¶</a></h2>
 <table>
 <thead>

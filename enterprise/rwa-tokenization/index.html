@@ -1982,18 +1982,7 @@
 </tbody>
 </table>
 <h2 id="technical-architecture">Technical Architecture<a class="headerlink" href="#technical-architecture" title="Link to this section">¶</a></h2>
-<div class="highlight"><pre><span></span><code>flowchart TD
-    A[Real-World Asset] --&gt; B[Legal Structure]
-    B --&gt; C[SPV/Trust]
-    C --&gt; D[Smart Contract]
-    D --&gt; E[Token Minting]
-    E --&gt; F[XRC20/XRC721 Tokens]
-    F --&gt; G[Secondary Market]
-
-    H[Oracle] --&gt; D
-    I[Custodian] --&gt; C
-    J[Auditor] --&gt; C
-</code></pre></div>
+<p><img alt="image" src="../img/rwa_architecture.png"></p>
 <h2 id="token-standards">Token Standards<a class="headerlink" href="#token-standards" title="Link to this section">¶</a></h2>
 <h3 id="xrc20-for-fungible-assets">XRC20 for Fungible Assets<a class="headerlink" href="#xrc20-for-fungible-assets" title="Link to this section">¶</a></h3>
 <p>Best for assets where each token is identical (e.g., gold-backed tokens, fractional real estate):</p>
