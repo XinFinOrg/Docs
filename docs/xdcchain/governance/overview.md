@@ -4,7 +4,11 @@ title: Overview - XDCDAO
 
 
 # XDC Governance Overview
-![governance](../img/xdcdao.png)
+<!-- ![governance](../img/xdcdao.png) -->
+
+![Image for Light Mode](../img/xdcdao.png#only-light)
+![Image for Dark Mode](../img/xdcdao-dark.png#only-dark)
+
 
 The DAO Treasury within the [XDCDAO](https://www.xdcdao.org/) framework plays a critical role in the XDC Network's decentralized governance system. It is meticulously designed to manage the community's collective resources efficiently, securely, and transparently. This section provides a structured overview of the DAO Treasury, highlighting its purpose, operation, funding sources, and significance within the DAOFIN ecosystem.
 
