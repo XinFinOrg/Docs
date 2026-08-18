@@ -19,6 +19,28 @@ The XDC Network’s data and analytics tools are critical for understanding the 
 
 ------------
 
+# Envio
+## Overview:
+Envio is the data layer for blockchain apps. It gives XDC developers the fastest, most flexible way to get real-time and historical on-chain data, from a single GraphQL API to raw high-speed access, with managed hosting on Envio Cloud.
+
+## Key Features:
+
+- **Any EVM Chain Support:** Envio's HyperIndex natively supports indexing any EVM chain out of the box, including XDC, using your own RPC as the data source.
+- **Flexible Data Access:** From a single GraphQL API to raw high-speed access to on-chain data.
+- **Managed Hosting:** Deploy and run indexers with managed hosting on Envio Cloud.
+
+## Use Cases:
+
+- **Application Backends:** Power dashboards, wallets, and dApps with real-time and historical XDC data.
+- **Onchain Analytics:** Query transactions, logs, and events to understand network and contract activity.
+
+**Envio links:**
+
+- [Envio](https://envio.dev/?utm_source=xdc&utm_medium=partner-docs) - the data layer for blockchain apps
+- [Envio Docs](https://docs.envio.dev/) - HyperIndex documentation
+
+------------
+
 # XDCScan - Mainnet
 ## Overview:
 [XDCScan](https://xdcscan.io/) is the official block explorer for the XDC Network, providing a user-friendly interface to explore and interact with the blockchain. It allows users to search for transactions, view block details, and explore smart contracts deployed on the network. XDCScan is a vital tool for anyone interacting with the XDC Network, from developers to casual users.
