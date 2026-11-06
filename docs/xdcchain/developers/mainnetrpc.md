@@ -21,6 +21,8 @@ Visit the [ChainList](https://chainlist.org/chain/50) and connect to your wallet
 
 You could find more endpoints from [here](https://chainlist.org/chain/50).
 
+To compare the live latency of the public XDC Mainnet RPC endpoints, see the [OpenChainBench XDC RPC benchmark](https://openchainbench.com/benchmarks/xdc-rpc), which probes each one every 60 seconds from US-East, EU-West and Singapore, and publishes p50 / p90 / p99 latency and success rate.
+
 - **WebSocket Endpoint:** wss://ws.xinfin.network
 - **Consensus Mechanism:** XDPoS (XinFin Delegated Proof of Stake)
 - **Block Finality:** >75%
