@@ -64,24 +64,16 @@ jobs:
           comment: false
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # The action's own comment looks the PR up from the event, which a workflow_run event does not carry. This step
-      # keeps one comment per PR up to date with the gh CLI. The marker is the one the action uses, so the "preview
-      # removed" comment from pr-preview-cleanup.yml edits the same comment.
+      # The action's own comment looks the PR up from the event, which a workflow_run event does not carry. This is the
+      # comment action it uses inside (same commit), told the PR number; header pr-preview is the action's own, so the
+      # "preview removed" note from pr-preview-cleanup.yml edits the same comment.
       - name: Comment preview link
         if: steps.pr.outputs.number != ''
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          PR: ${{ steps.pr.outputs.number }}
-          URL: ${{ steps.preview.outputs.preview-url }}
-          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: |
-          marker='<!-- Sticky Pull Request Commentpr-preview -->'
-          body=$(printf 'PR preview: %s\n\nBuilt from %s. It is removed when the PR is closed.\n%s' "$URL" "$HEAD_SHA" "$marker")
-          id=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
-            --jq ".[] | select(.user.login == \"github-actions[bot]\" and (.body | contains(\"$marker\"))) | .id" | head -n 1)
-          if [ -n "$id" ]; then
-            gh api -X PATCH "repos/$REPO/issues/comments/$id" -f body="$body" > /dev/null
-          else
-            gh api "repos/$REPO/issues/$PR/comments" -f body="$body" > /dev/null
-          fi
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
+        with:
+          header: pr-preview
+          number: ${{ steps.pr.outputs.number }}
+          message: |
+            PR preview: ${{ steps.preview.outputs.preview-url }}
+
+            Built from ${{ github.event.workflow_run.head_sha }}. It is removed when the PR is closed.
