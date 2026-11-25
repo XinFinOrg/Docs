@@ -1,0 +1,77 @@
+# Publishes the preview built by pr-preview-build.yml to gh-pages/pr-preview/pr-<N>/. This job has write access, so it
+# runs no PR code: it only downloads the built HTML. The PR number inside the artifact comes from the PR run, so it is
+# accepted only when that PR is open and its head commit is the commit that was built.
+name: PR Preview Deploy
+
+on:
+  workflow_run:
+    workflows: [PR Preview Build]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preview-deploy-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base repository
+        uses: actions/checkout@v4
+
+      - name: Download preview
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-preview
+          path: ${{ runner.temp }}/preview
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify PR number
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          PREVIEW_DIR: ${{ runner.temp }}/preview
+        run: |
+          pr=$(head -c 16 "$PREVIEW_DIR/pr-number" | tr -d '[:space:]')
+          if ! [[ "$pr" =~ ^[0-9]+$ ]]; then echo "::error::invalid PR number in artifact"; exit 1; fi
+          read -r state sha < <(gh api "repos/$REPO/pulls/$pr" --jq '"\(.state) \(.head.sha)"')
+          if [ "$state" != open ] || [ "$sha" != "$HEAD_SHA" ]; then
+            # A newer push has its own build run, which deploys instead.
+            echo "::notice::PR #$pr is not open at commit $HEAD_SHA; skipping"; exit 0
+          fi
+          echo "number=$pr" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy PR Preview
+        id: preview
+        if: steps.pr.outputs.number != ''
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ${{ runner.temp }}/preview/site
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: deploy
+          pr-number: ${{ steps.pr.outputs.number }}
+          deploy-commit-message: Deploy preview for PR ${{ steps.pr.outputs.number }}
+          comment: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # The action's own comment looks the PR up from the event, which a workflow_run event does not carry.
+      - name: Comment preview link
+        if: steps.pr.outputs.number != ''
+        uses: marocchino/sticky-pull-request-comment@67d0dec7b07ed060a405f9b2a64b8ab319fdd7db # v2.9.2
+        with:
+          header: pr-preview
+          number: ${{ steps.pr.outputs.number }}
+          message: |
+            PR preview: ${{ steps.preview.outputs.preview-url }}
+
+            Built from ${{ github.event.workflow_run.head_sha }}. It is removed when the PR is closed.

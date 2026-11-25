@@ -1,0 +1,30 @@
+# Removes gh-pages/pr-preview/pr-<N>/ when a PR is closed. `pull_request_target` gives the write token a fork PR needs
+# here; that is safe only because this job checks out the base repository and never runs PR code.
+name: PR Preview Cleanup
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preview-cleanup-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  remove-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base repository
+        uses: actions/checkout@v4
+
+      - name: Remove PR Preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: remove
+          token: ${{ secrets.GITHUB_TOKEN }}
