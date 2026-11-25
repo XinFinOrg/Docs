@@ -470,15 +470,15 @@ To download the XDC Network Mainnet snapshot, use the appropriate command based 
 
 - **For a Full Node (latest state only):**
 ```bash
-wget -c https://rpc.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
+wget -c https://snapshot.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
 ```
 
 - **For an Archive Node (complete history):**
 ```bash
-wget -c https://rpc.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
+wget -c https://snapshot.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
 ```
 
-**Note: Snapshots are published regularly (roughly every 1M blocks). See [https://rpc.xdc.network/snapshots](https://rpc.xdc.network/snapshots) for the latest block height and size. Snapshot files are very large (Full ~840 GB, Archive ~2.6 TB), so run the download inside `tmux` or `screen`. If the download is interrupted, run the same `wget -c` command again to resume it.**
+**Note: Snapshots are published regularly (roughly every 1M blocks). See [https://snapshot.xdc.network/snapshots](https://snapshot.xdc.network/snapshots) for the latest block height and size. Snapshot files are very large (Full ~840 GB, Archive ~2.6 TB), so run the download inside `tmux` or `screen`. If the download is interrupted, run the same `wget -c` command again to resume it.**
 
 Once the snapshot file has been downloaded, install `lz4` and extract the snapshot by running the following commands:
 
@@ -523,13 +523,13 @@ The official downloader asks you to choose the network (Mainnet or Testnet/Apoth
 ```bash
 sudo apt install -y tmux lz4
 tmux new -s download
-curl -fsSL https://rpc.xdc.network/download | bash
+curl -fsSL https://snapshot.xdc.network/download | bash
 ```
 To detach and leave the download running, press `Ctrl+B`, then `D`. To reattach later, run `tmux attach -t download`.
 
-Note: the downloader sends download statistics (start, completion or failure event, network, node type, download method, duration, size, speed and error code) to `https://rpc.xdc.network/telemetry`. Like any web request, this also exposes your server's IP address. If you prefer not to send them, use Option B.
+Note: the downloader sends download statistics (start, completion or failure event, network, node type, download method, duration, size, speed and error code) to `https://snapshot.xdc.network/telemetry`. Like any web request, this also exposes your server's IP address. If you prefer not to send them, use Option B.
 
-All available snapshots, with their block height and size, are listed at [https://rpc.xdc.network/snapshots](https://rpc.xdc.network/snapshots).
+All available snapshots, with their block height and size, are listed at [https://snapshot.xdc.network/snapshots](https://snapshot.xdc.network/snapshots).
 
 **Option B: Manual download**
 
@@ -547,12 +547,12 @@ rm -f mainnet_full_latest.tar.lz4 mainnet_archive_latest.tar.lz4
 
 Full Node snapshot: 
 ```bash
-wget -c https://rpc.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
+wget -c https://snapshot.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
 ```
 
 Archive Node snapshot: 
 ```bash
-wget -c https://rpc.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
+wget -c https://snapshot.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
 ```
 If the download is interrupted, run the same `wget -c` command again to resume it.
 
@@ -605,12 +605,12 @@ rm -f testnet_full_latest.tar.lz4 testnet_archive_latest.tar.lz4
 
 Full Node snapshot: 
 ```bash
-wget -c https://rpc.xdc.network/snapshots/testnet/full/testnet_full_latest.tar.lz4
+wget -c https://snapshot.xdc.network/snapshots/testnet/full/testnet_full_latest.tar.lz4
 ```
 
 Archive Node snapshot: 
 ```bash
-wget -c https://rpc.xdc.network/snapshots/testnet/archive/testnet_archive_latest.tar.lz4
+wget -c https://snapshot.xdc.network/snapshots/testnet/archive/testnet_archive_latest.tar.lz4
 ```
 
 **Unpack the snapshot file** (requires `lz4`; for an Archive Node, use `testnet_archive_latest.tar.lz4`)
