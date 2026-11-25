@@ -2822,16 +2822,16 @@ This command automates the installation of necessary dependencies and sets up th
 <ul>
 <li>
 <p><strong>For a Full Node (latest state only):</strong>
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://rpc.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://snapshot.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
 </code></pre></div>
 </li>
 <li>
 <p><strong>For an Archive Node (complete history):</strong>
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://rpc.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://snapshot.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
 </code></pre></div>
 </li>
 </ul>
-<p><strong>Note: Snapshots are published regularly (roughly every 1M blocks). See <a href="https://rpc.xdc.network/snapshots">https://rpc.xdc.network/snapshots</a> for the latest block height and size. Snapshot files are very large (Full ~840 GB, Archive ~2.6 TB), so run the download inside <code>tmux</code> or <code>screen</code>. If the download is interrupted, run the same <code>wget -c</code> command again to resume it.</strong></p>
+<p><strong>Note: Snapshots are published regularly (roughly every 1M blocks). See <a href="https://snapshot.xdc.network/snapshots">https://snapshot.xdc.network/snapshots</a> for the latest block height and size. Snapshot files are very large (Full ~840 GB, Archive ~2.6 TB), so run the download inside <code>tmux</code> or <code>screen</code>. If the download is interrupted, run the same <code>wget -c</code> command again to resume it.</strong></p>
 <p>Once the snapshot file has been downloaded, install <code>lz4</code> and extract the snapshot by running the following commands:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>lz4
 lz4<span class="w"> </span>-d<span class="w"> </span>-c<span class="w"> </span>mainnet_full_latest.tar.lz4<span class="w"> </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>-
@@ -2856,11 +2856,11 @@ lz4<span class="w"> </span>-d<span class="w"> </span>-c<span class="w"> </span>m
 <p>The official downloader asks you to choose the network (Mainnet or Testnet/Apothem) and node type (Full or Archive). It resumes automatically if the connection drops. Snapshot files are very large (400 GB to 2 TB+), so run it inside <code>tmux</code> or <code>screen</code>:
 </p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>tmux<span class="w"> </span>lz4
 tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>download
-curl<span class="w"> </span>-fsSL<span class="w"> </span>https://rpc.xdc.network/download<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://snapshot.xdc.network/download<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
 To detach and leave the download running, press <code>Ctrl+B</code>, then <code>D</code>. To reattach later, run <code>tmux attach -t download</code>.
-<p>Note: the downloader sends download statistics (start, completion or failure event, network, node type, download method, duration, size, speed and error code) to <code>https://rpc.xdc.network/telemetry</code>. Like any web request, this also exposes your server’s IP address. If you prefer not to send them, use Option B.</p>
-<p>All available snapshots, with their block height and size, are listed at <a href="https://rpc.xdc.network/snapshots">https://rpc.xdc.network/snapshots</a>.</p>
+<p>Note: the downloader sends download statistics (start, completion or failure event, network, node type, download method, duration, size, speed and error code) to <code>https://snapshot.xdc.network/telemetry</code>. Like any web request, this also exposes your server’s IP address. If you prefer not to send them, use Option B.</p>
+<p>All available snapshots, with their block height and size, are listed at <a href="https://snapshot.xdc.network/snapshots">https://snapshot.xdc.network/snapshots</a>.</p>
 <p><strong>Option B: Manual download</strong></p>
 <h1 id="mainnet-snapshot">Mainnet Snapshot<a class="headerlink" href="#mainnet-snapshot" title="Link to this section">¶</a></h1>
 <p><strong>Bring down your node:</strong>
@@ -2871,10 +2871,10 @@ To detach and leave the download running, press <code>Ctrl+B</code>, then <code>
 </code></pre></div>
 <strong>Download the snapshot</strong> 
 <p>Full Node snapshot: 
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://rpc.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://snapshot.xdc.network/snapshots/mainnet/full/mainnet_full_latest.tar.lz4
 </code></pre></div>
 <p>Archive Node snapshot: 
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://rpc.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://snapshot.xdc.network/snapshots/mainnet/archive/mainnet_archive_latest.tar.lz4
 </code></pre></div>
 If the download is interrupted, run the same <code>wget -c</code> command again to resume it.
 <p><strong>Unpack the snapshot file</strong> (requires <code>lz4</code>; for an Archive Node, use <code>mainnet_archive_latest.tar.lz4</code>)
@@ -2908,10 +2908,10 @@ mv<span class="w"> </span>XDC<span class="w"> </span>xdcchain
 </code></pre></div>
 <p><strong>Download the snapshot</strong></p>
 <p>Full Node snapshot: 
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://rpc.xdc.network/snapshots/testnet/full/testnet_full_latest.tar.lz4
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://snapshot.xdc.network/snapshots/testnet/full/testnet_full_latest.tar.lz4
 </code></pre></div>
 <p>Archive Node snapshot: 
-</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://rpc.xdc.network/snapshots/testnet/archive/testnet_archive_latest.tar.lz4
+</p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-c<span class="w"> </span>https://snapshot.xdc.network/snapshots/testnet/archive/testnet_archive_latest.tar.lz4
 </code></pre></div>
 <p><strong>Unpack the snapshot file</strong> (requires <code>lz4</code>; for an Archive Node, use <code>testnet_archive_latest.tar.lz4</code>)
 </p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>lz4
