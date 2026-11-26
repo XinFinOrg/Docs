@@ -19,6 +19,28 @@ The XDC Network’s data and analytics tools are critical for understanding the 
 
 ------------
 
+# Envio
+## Overview:
+Envio builds custom blockchain APIs and analytics. XDC developers can use HyperIndex to choose the contracts and events to track, write TypeScript handlers and query the result through a GraphQL API, then run it themselves or deploy to Envio Cloud.
+
+## Key Features:
+
+- **RPC Support:** HyperIndex works with XDC using your own RPC as the data source.
+- **GraphQL API:** Query your indexed XDC data through a generated GraphQL API.
+- **Managed Hosting:** Deploy and run indexers with managed hosting on Envio Cloud.
+
+## Use Cases:
+
+- **Application Backends:** Power dashboards, wallets, and dApps with real-time and historical XDC data.
+- **Onchain Analytics:** Query transactions, logs, and events to understand network and contract activity.
+
+**Envio links:**
+
+- [Envio](https://envio.dev/?utm_source=xdc&utm_medium=partner-docs) - custom blockchain APIs and analytics
+- [Envio Docs](https://docs.envio.dev/) - HyperIndex documentation
+
+------------
+
 # XDCScan - Mainnet
 ## Overview:
 [XDCScan](https://xdcscan.io/) is the official block explorer for the XDC Network, providing a user-friendly interface to explore and interact with the blockchain. It allows users to search for transactions, view block details, and explore smart contracts deployed on the network. XDCScan is a vital tool for anyone interacting with the XDC Network, from developers to casual users.
