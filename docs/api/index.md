@@ -66,6 +66,7 @@ XDC Network provides multiple APIs for developers to interact with the blockchai
 | XDC Official | `https://rpc1.xinfin.network` | Public |
 | Ankr | `https://rpc.ankr.com/xdc` | Tiered |
 | BlocksScan | `https://rpc.xdc.blocksscan.io` | Public |
+| dRPC | `https://xdc.drpc.org` | Public |
 
 ### Apothem Testnet
 
@@ -73,7 +74,7 @@ XDC Network provides multiple APIs for developers to interact with the blockchai
 |----------|----------|------------|
 | XDC Official | `https://rpc.apothem.network` | Public |
 | BlocksScan | `https://rpc.apothem.blocksscan.io` | Public |
-
+| dRPC | `https://xdc-testnet.drpc.org` | Public |
 ### WebSocket Endpoints
 
 | Network | Endpoint |
