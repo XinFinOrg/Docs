@@ -108,6 +108,7 @@ nav:
               # - Boot Node(WIP): ./xdcchain/developers/node_operators/node_architecture
         - Docker Image (WIP): ./xdcchain/developers/node_operators/dockerimg.md
         - Slashing: ./xdcchain/developers/node_operators/slashing.md  
+        - Alternative Clients (Experimental): ./xdcchain/developers/node_operators/alternative_clients.md
 
     - Governance:
         - Overview of XDCDAO: ./xdcchain/governance/overview.md
